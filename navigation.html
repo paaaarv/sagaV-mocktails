@@ -1,102 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>[Brand Name] — Alcohol-Free Mocktails</title>
-  <meta name="description" content="Sophisticated, alcohol-free mocktails crafted for taste, ritual, and style." />
-  <meta name="author" content="[GIT 450 WEB TEAM  Fall B 2025]" />
-  <title>ZeroProof — Alcohol-Free Mocktails</title>
-  <meta name="description" content="Bold mocktails for every mood — zero alcohol, maximum flavor." />
-
-  <!-- Box Icons -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-  <!-- Stylesheet Link -->
-    <link rel="stylesheet" href="styles.css" />
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zero-Proof</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Header / Navbar -->
+  <header>
+    <nav id="zp-desktop-nav">
+      <div class="zp-nav-container">
+        <!-- Logo -->
+        <div class="zp-logo">
+          <a href="index.html">Logo</a>
+        </div>
 
-<!-- Header / Navbar -->
-<header class="navbar">
-  <div class="container">
-    <!-- Logo -->
-    <a href="#" class="logo">BRAND NAME</a>
-
-    <!-- Desktop Navigation (PC) -->
-    <nav id="desktop-nav">
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Recipes</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="extras">
-      <input type="text" placeholder="Search recipes..." />
-    </div>
-
-    <!-- Hamburger Navigation (Mobile ONLY!) -->
-    <nav id="hamburger-nav">
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
+        <!-- Hamburger Button for Mobile -->
+        <div class="zp-hamburger" aria-label="Menu" tabindex="0">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <div class="menu-links">
-          <li><a href="#" onclick="toggleMenu()">Home</a></li>
-          <li><a href="#" onclick="toggleMenu()">Recipes</a></li>
-          <li><a href="#" onclick="toggleMenu()">About</a></li>
-          <li><a href="#" onclick="toggleMenu()">Blog</a></li>
-          <li><a href="#" onclick="toggleMenu()">Contact</a></li>
-        </div>
+
+        <!-- Navigation Links -->
+        <ul class="zp-nav-links">
+          <li><a href="menu.html">Products</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="team.html">About</a></li>
+          <li>
+            <a href="cart.html" class="zp-cart" aria-label="Shopping Cart">
+              <svg xmlns="http://www.w3.org/2000/svg" class="zp-icon" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="6" cy="19" r="2" />
+                <circle cx="17" cy="19" r="2" />
+                <path d="M17 17h-11v-14h-2" />
+                <path d="M6 5h14l-1 7h-13" />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
-  </div>
-</header>
+  </header>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container footer-container">
-    <!-- Footer Logo -->
-    <a href="#" class="logo">BRAND NAME</a>
+  <!-- Main Content -->
+  <main id="zp-main-content">
+    <div class="zp-spacer">
+      <p>This is where your page content goes.</p>
+    </div>
+  </main>
 
-    <!-- Footer Links -->
-    <ul class="footer-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Recipes</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+  <!-- Footer -->
+  <footer id="zp-site-footer">
+    <div class="zp-footer-container">
+      <!-- Left: Logo -->
+      <div class="zp-footer-logo">LOGO</div>
 
-    <!-- Newsletter Signup Section -->
-    <div class="newsletter">
-      <p>Subscribe to our newsletter</p>
-      <form action="#" method="post" class="newsletter-form">
-        <input type="email" placeholder="Enter your email" required />
-        <button type="submit">Subscribe</button>
-      </form>
+      <!-- Middle: Additional Links -->
+      <ul class="zp-footer-middle-links">
+        <li><a href="#">FAQs</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="menu.html">Products</a></li>
+        <li><a href="#products">Privacy Policy</a></li>
+      </ul>
     </div>
 
-    <!-- Box Icons -->
-    <div class="footer-socials">
-      <a href="#"><i class="bx bxl-facebook"></i></a>
-      <a href="#"><i class="bx bxl-instagram"></i></a>
-      <a href="#"><i class="bx bxl-twitter"></i></a>
-      <a href="#"><i class="bx bxl-pinterest"></i></a>
+    <!-- Bottom Section -->
+    <div class="zp-footer-bottom-section">
+      <p class="zp-footer-bottom">&copy; 2025 Zero-Proof. All rights reserved.</p>
+      <div class="zp-footer-social">
+        <a href="https://www.facebook.com/" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" class="zp-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="https://instagram.com" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" class="zp-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="4" />
+            <circle cx="12" cy="12" r="3" />
+            <path d="M16.5 7.5v.001" />
+          </svg>
+        </a>
+        <a href="https://www.youtube.com/" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" class="zp-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.42 4 12 4 12 4s-6.42 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29.91 29.91 0 0 0 1 12a29.91 29.91 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.58 20 12 20 12 20s6.42 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29.91 29.91 0 0 0 23 12a29.91 29.91 0 0 0-.46-5.58z"/>
+            <path d="M9.75 15.02V8.98l6.5 3.02-6.5 3.02z"/>
+          </svg>
+        </a>
+      </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    <p>&copy; GIT 450 WEB TEAM FALL A. All rights reserved.</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

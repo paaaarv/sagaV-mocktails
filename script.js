@@ -64,41 +64,35 @@ function toggleMenu() {
 
 const mocktailsArray = [
   {
-    name: "Mocktail 1",
-    desc: "Lorem Ipsum",
+    name: "The Sun",
+    desc: "Golden peach, honey, and vanilla blossom with sparkling water",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+1",
+    img: "https://placehold.co/450x450?text=The+Sun",
   },
   {
-    name: "Mocktail 2",
-    desc: "Lorem Ipsum",
+    name: "The Siren",
+    desc: "Sea salt, grapefruit, and rosemary",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+2",
+    img: "https://placehold.co/450x450?text=The+Siren",
   },
   {
-    name: "Mocktail 3",
-    desc: "Lorem Ipsum",
+    name: "The Fool",
+    desc: "Yuzu, Lime, and Green Apple",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+3",
+    img: "https://placehold.co/450x450?text=The+Fool",
   },
   {
-    name: "Mocktail 4",
-    desc: "Lorem Ipsum",
+    name: "The Magician",
+    desc: "Blood orange, gentian root, and herbal botanicals",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+4",
+    img: "https://placehold.co/450x450?text=The+Magician",
   },
   {
-    name: "Mocktail 5",
-    desc: "Lorem Ipsum",
+    name: "The Oracle",
+    desc: "Tomato, black tea, and shiitake with subtle spice",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+5",
-  },
-  {
-    name: "Mocktail 6",
-    desc: "Lorem Ipsum",
-    price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+6",
-  },
+    img: "https://placehold.co/450x450?text=The+Oracle",
+  }
 ];
 
 // Modal View functionality
@@ -108,7 +102,6 @@ const mocktail2Btn = document.getElementById("view-mocktail2");
 const mocktail3Btn = document.getElementById("view-mocktail3");
 const mocktail4Btn = document.getElementById("view-mocktail4");
 const mocktail5Btn = document.getElementById("view-mocktail5");
-const mocktail6Btn = document.getElementById("view-mocktail6");
 
 const btns = [
   mocktail1Btn,
@@ -117,23 +110,29 @@ const btns = [
   mocktail4Btn,
   mocktail4Btn,
   mocktail5Btn,
-  mocktail6Btn,
 ];
 
 const modal = document.createElement("div");
 
 const createModal = (productNum) => {
-  modal.innerHTML = `<article class="card">
-            <i class="fa-solid fa-x modal-x" id="close-modal"></i>
-            <div class="card-media">
-              <img src=${mocktailsArray[productNum].img} alt="Mocktail ${productNum}" />
-            </div>
-            <div class="card-body">
-              <h3>${mocktailsArray[productNum].name}</h3>
-              <p>${mocktailsArray[productNum].desc}</p>
-              <a href="/checkout.html" class="card-btn">Buy Now</a>
-            </div>
-          </article>`;
+  modal.innerHTML = 
+  `<i class="fa-solid fa-x modal-x" id="close-modal"></i>
+  <article class="modal-card">
+      <div class="modal-card-top">
+          <img class="modal-card-img" src=${mocktailsArray[productNum].img} alt="Mocktail ${productNum}" />
+        <div class="modal-product-detail">
+          <h3>${mocktailsArray[productNum].name}</h3>
+          <p class="modal-price">${mocktailsArray[productNum].price}</p>
+          <p>${mocktailsArray[productNum].desc}</p>
+        </div>
+      </div>
+      <div class="modal-card-bottom">
+        <input class="product-qty" type="number"/> 
+        <a href="/checkout.html" class="modal-card-btn">ADD TO CART</a>
+        </div>
+      </div>
+      
+    </article>`;
 }
 
 const closeModal = () => {
