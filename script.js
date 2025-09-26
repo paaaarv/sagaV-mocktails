@@ -153,3 +153,13 @@ const viewProductDetails = (e) => {
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", viewProductDetails);
 }
+
+
+const dots = document.querySelectorAll('.dot');
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    document.querySelector('.dot.active').classList.remove('active');
+    dot.classList.add('active');
+    // Trigger carousel slide change here
+  });
+});
