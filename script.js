@@ -67,35 +67,40 @@ const mocktailsArray = [
     id: 1,
     name: "The Sun",
     desc: "Golden peach, honey, and vanilla blossom with sparkling water",
-    price: 12.99,
+    flavor: ["Bright", "Uplifting", "Approachable"],
+    price: 52.99,
     img: "assets/the-sun.jpg",
   },
   {
     id: 2,
     name: "The Siren",
     desc: "Sea salt, grapefruit, and rosemary",
-    price: 12.99,
+    flavor: ["Savory", "Intriguing", "Adventurous"],
+    price: 52.99,
     img: "assets/the-siren.jpg",
   },
   {
     id: 3, 
     name: "The Fool",
     desc: "Yuzu, Lime, and Green Apple",
-    price: 12.99,
+    flavor: ["Tangy", "Playful", "Energizing"],
+    price: 52.99,
     img: "assets/the-fool.jpg",
   },
   {
     id: 4,
     name: "The Magician",
     desc: "Blood orange, gentian root, and herbal botanicals",
-    price: 12.99,
+    flavor: ["Complex", "Sophisticated", "Contemplative"],
+    price: 52.99,
     img: "assets/the-magician.jpg",
   },
   {
     id: 5,
     name: "The Oracle",
     desc: "Tomato, black tea, and shiitake with subtle spice",
-    price: 12.99,
+    flavor: ["Earthy", "Grounding", "Savory"],
+    price: 52.99,
     img: "assets/the-oracle.jpg",
   }
 ];
@@ -134,8 +139,17 @@ $("#product-detail").dialog({
 
 
 const updateProductDetailCard = (product) => {
-  console.log("HERE IS PRODUCT", product) ;
+  console.log("HERE IS PRODUCT", product);
   $("#product-name").text(product.name); 
-  $("#flavors").text(product.desc); 
+  $(".modal-card").attr("id", `modal-${product.id}`); 
+  let flavorsDiv = $("#flavors"); 
+  for (let i=0;i < product.flavor.length; i++){
+    flavorsDiv.append(
+      `<div class="flavor-tag"> 
+        ${product.flavor[i]}
+      </div>`
+    )
+  }
+  $("#description").text(product.desc); 
 }
 
