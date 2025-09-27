@@ -139,13 +139,20 @@ $("#product-detail").dialog({
 
 
 const updateProductDetailCard = (product) => {
+  /*clear out content */ 
+  $("#product-name").text(""); 
+  $(".modal-price").text(""); 
+  $("#flavors").text("");
+
+
   console.log("HERE IS PRODUCT", product);
   $("#product-name").text(product.name); 
+  $(".modal-price").text(`$${product.price} / bottle (750mL)`); 
   $(".modal-card").attr("id", `modal-${product.id}`); 
   let flavorsDiv = $("#flavors"); 
   for (let i=0;i < product.flavor.length; i++){
     flavorsDiv.append(
-      `<div class="flavor-tag"> 
+      `<div class="badge badge-pill modal-card-btn flavor-tag"> 
         ${product.flavor[i]}
       </div>`
     )
