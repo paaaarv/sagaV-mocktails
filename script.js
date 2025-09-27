@@ -14,28 +14,25 @@ const prefersReduced = window.matchMedia(
 ).matches;
 // if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { /* no-op */}
 
-//Order Summary
+//Order Summary 
 // Sample order data
 const orderItems = [
-  { name: "Product A", price: 12.99, quantity: 1 },
-  { name: "Product B", price: 5.5, quantity: 2 },
-  { name: "Product C", price: 20.0, quantity: 1 },
+  { name: 'The Sun', price: 10, quantity: 1 },
+  { name: 'The Fool', price: 10, quantity: 1},
 ];
 
 function renderOrderSummary() {
-  const itemList = document.getElementById("cart-items");
-  const orderTotalSpan = document.getElementById("order-total");
+  const itemList = document.getElementById('cart-items');
+  const orderTotalSpan = document.getElementById('order-total');
   let total = 0;
 
   // Clear existing items
-  itemList.innerHTML = "";
+  itemList.innerHTML = '';
 
   // Add each item to the list
-  orderItems.forEach((item) => {
-    const listItem = document.createElement("li");
-    listItem.textContent = `${item.name} (x${item.quantity}) - $${(
-      item.price * item.quantity
-    ).toFixed(2)}`;
+  orderItems.forEach(item => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${item.name} Bottle Size - $${(item.price * item.quantity).toFixed(2)}`;
     itemList.appendChild(listItem);
     total += item.price * item.quantity;
   });
@@ -45,21 +42,21 @@ function renderOrderSummary() {
 }
 
 // Call the function to render the summary when the page loads
-document.addEventListener("DOMContentLoaded", renderOrderSummary);
+document.addEventListener('DOMContentLoaded', renderOrderSummary);
 
 // Example of adding a new item (could be triggered by user action)
 function addItemToOrder(name, price, quantity) {
   orderItems.push({ name, price, quantity });
-  renderOrderSummary();
-}
+  renderOrderSummary();}
 
-function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
-}
+  function show(shown, hidden){
+    document.getElementById(shown).style.display='block';
+    document.getElementById(hidden).style.display='none';
+    return false;
+  }
 
+
+  
 // Mocktail product details
 
 const mocktailsArray = [
