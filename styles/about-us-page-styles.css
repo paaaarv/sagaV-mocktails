@@ -1,6 +1,7 @@
 /*Imported Fonts */
-
+/* Imported Metamophous and Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 /* ========== CSS Reset (modern, minimal) ========== */
@@ -176,7 +177,7 @@ table {
   
   /* The background could be bigger */
   .hero {
-    background: url('../Content/About-Us-Hero.jpg');
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('../Content/About-Us-Hero.jpg') lightgray 50% / cover no-repeat;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -206,13 +207,14 @@ table {
   
   .story-text {
     text-align: center;
+    
   }
   /* Added story text p spacing because my paragraphs were too close together. */
   .story-text p {
     margin-bottom: 1.5rem;
     line-height: 1.6;
     font-family: "Roboto";
-    font-size: 1rem;
+    font-size: 16px;
   }
   
   .story .story-header h2 {
@@ -227,7 +229,9 @@ table {
   }
 
   .intro  {
-    font-size: 2rem;
+    font-size: 32px;
+    margin-top: 0.5rem;
+    font-family: "Roboto";
   }
   /* Beginning of the milestone section */
   
@@ -235,13 +239,22 @@ table {
     padding: 2rem 1rem;
     text-align: center;
     color: #000;
-    font-weight: bold;
+    font-weight: normal;
+    
+    
     
   }
 
+  /* I added new styles to the mobile screen for the milestone subheading, it currently is too close to the heading for the milestone. */
+
+  .milestones-subhead {
+    margin-top: 1rem;
+  }
+    
+
   .milestones h2 {
     font-family: "Metamorphous";
-    font-size: 2rem;
+    font-size: 40px;
   }
   
   .timeline {
@@ -302,8 +315,8 @@ table {
   
   /* Image styling */
   .milestone-image {
-    width: 80px;
-    height: 80px;
+    width: 117px;
+    height: 117px;
     object-fit: cover;
     border-radius: 50%;
     
@@ -462,6 +475,7 @@ table {
   /* ========== Tablet ========== */
 /* ========= ABOUT US TABLET MEDIA QUERY ====== */
 /* Look at mobile styles for the about section I need to recode the about us section. */
+/* I had to use the important to get rid of the dropdown menu that was from the hamburger menu, it was still showing on the tablet screen and this was the only way I knew how to get rid of it. */
 @media screen and (min-width: 768px) {
 
     /* Styles for the header */
@@ -526,6 +540,10 @@ table {
         transform: translateY(-50%);
         order: unset;
         margin: 0;
+    }
+
+    h1 {
+        font-size: 96px;
     }
   
   
@@ -596,8 +614,8 @@ table {
     }
     .milestone-image {
       object-fit: cover;
-      width: 120px;
-      height: 120px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
     }
   
@@ -605,6 +623,11 @@ table {
     /* Styling for the newsletter section */
     .newsletter h3 {
       font-size: 2rem;
+    }
+
+    .newsletter {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
   
     /* Styling of footer for tablet */
@@ -661,6 +684,7 @@ table {
         align-self: flex-start;
         order: unset;
         margin-top: 2rem;
+        
     }
 
     .link-column {
@@ -670,18 +694,60 @@ table {
 
   /* ========== Desktop ========== */
 @media screen and (min-width: 1280px) {
+    .nav-menu ul li a {
+        font-size: 1.5rem;
+    }
+
+    .cart-icon,
+    .search-icon,
+    .user-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    h1 {
+     font-size: 128px;
+    }
     .story-text {
-     margin-left: 2rem;
+     margin-top: 3rem;
+     margin-left: 3rem;
+     
      
     }
+
+    /* New CSS I added for the desktop for the three paragraph tags. */
+    
+
+    /* New CSS I added */
  
     .milestones h2 {
      font-size: 2rem;
+    }
+
+    .newsletter h3 {
+        font-size: 40px;
+    }
+
+    .newsletter {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
  
     .footer-links {
       display: flex;
       gap: 4rem;
+      justify-content: flex-end;
+      margin-top: 2rem;
+      
+    }
+
+    .footer-social svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .link-column {
+        gap: 0.3rem;
     }
  }
 
