@@ -73,9 +73,32 @@
 
   <!-- Main content -->
   <main id="main">
-    <div id="overlay" class="overlay-hide" hidden></div>
+    <div id="shop-overlay"></div>
 
     <h1 class="shop-heading">Products</h1>
+
+
+    <!-- MODAL -->
+
+  <div id="product-detail"> 
+    <article class="modal-card" id="modal-1">
+      <i class="fa-solid fa-x modal-x" id="close-modal"></i>
+        <div class="modal-card-top">
+            <img class="modal-card-img" src="assets/the-oracle.jpg" alt="Mocktail 1" />
+          <div class="modal-product-detail">
+            <h3>The Oracle</h3>
+            <p class="modal-price">$500 / bottle </p>
+            <p class="flavor-detail"> Profile: </p>
+            <p class="flavor-detail"> Flavors: </p>
+          </div>
+        </div>
+        <div class="modal-card-bottom">
+          <input class="product-qty" type="number" min="1" max="10" value="1"/> 
+          <a href="/checkout.html" class="modal-card-btn">ADD TO CART</a>
+        </div>
+      </div>
+    </article>
+  </div> 
     
     <section id="products">
        <article class="card">
@@ -90,7 +113,7 @@
               <p>Golden peach, honey, and vanilla blossom with sparkling water.</p>
               <div class="card-controls">
                 <button class="card-btn">Buy Now</button>
-                <button id="view-mocktail1" class="card-btn" data-mocktail="0">View Product</button>
+                <button id="view-mocktail1" class="card-btn view-product" data-mocktail="0">View Product</button>
               </div>
             </div>
           </article>
@@ -106,7 +129,7 @@
               <p>Sea salt, grapefruit, and rosemary.</p>
               <div class="card-controls">
                 <button class="card-btn">Buy Now</button>
-                <button id="view-mocktail2" class="card-btn" data-mocktail="1">View Product</button>
+                <button id="view-mocktail2" class="card-btn view-product" data-mocktail="1">View Product</button>
               </div>
             </div>
           </article>
@@ -122,7 +145,7 @@
               <p>Yuzu, Lime, and Green Apple.</p>
               <div class="card-controls">
                 <button class="card-btn">Buy Now</button>
-                <button id="view-mocktail3" class="card-btn" data-mocktail="2">View Product</button>
+                <button id="view-mocktail3" class="card-btn view-product" data-mocktail="2">View Product</button>
               </div>
             </div>
           </article>
@@ -138,7 +161,7 @@
               <p>Blood orange, gentian root, and herbal botanicals.</p>
               <div class="card-controls">
                 <button class="card-btn">Buy Now</button>
-                <button id="view-mocktail4" class="card-btn" data-mocktail="3">View Product</button>
+                <button id="view-mocktail4" class="card-btn view-product" data-mocktail="3">View Product</button>
               </div>
             </div>
           </article>
@@ -155,7 +178,7 @@
               
               <div class="card-controls">
                 <button class="card-btn">Buy Now</button>
-                <button id="view-mocktail5" class="card-btn" data-mocktail="4">View Product</button>
+                <button id="view-mocktail5" class="card-btn view-product" data-mocktail="4">View Product</button>
               </div>
             </div>
           </article>
@@ -237,7 +260,8 @@
     </ul>
     </div>
   </footer>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
   <script src="https://kit.fontawesome.com/982a1daf20.js" crossorigin="anonymous"></script>
   <script src="script.js" defer></script>
 </body>

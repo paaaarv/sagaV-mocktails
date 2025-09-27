@@ -64,30 +64,35 @@ function toggleMenu() {
 
 const mocktailsArray = [
   {
+    id: 1,
     name: "The Sun",
     desc: "Golden peach, honey, and vanilla blossom with sparkling water",
     price: 12.99,
     img: "assets/the-sun.jpg",
   },
   {
+    id: 2,
     name: "The Siren",
     desc: "Sea salt, grapefruit, and rosemary",
     price: 12.99,
     img: "assets/the-siren.jpg",
   },
   {
+    id: 3, 
     name: "The Fool",
     desc: "Yuzu, Lime, and Green Apple",
     price: 12.99,
     img: "assets/the-fool.jpg",
   },
   {
+    id: 4,
     name: "The Magician",
     desc: "Blood orange, gentian root, and herbal botanicals",
     price: 12.99,
     img: "assets/the-magician.jpg",
   },
   {
+    id: 5,
     name: "The Oracle",
     desc: "Tomato, black tea, and shiitake with subtle spice",
     price: 12.99,
@@ -112,43 +117,45 @@ const btns = [
   mocktail5Btn,
 ];
 
-const modal = document.createElement("div");
+$(".view-product").on("click",function(e){
+  const cardId = parseInt(e.target.dataset.mocktail); 
+  const card = mocktailsArray.filter((x) => x.id === cardId)[0]; 
+  console.log(card); 
 
-const createModal = (productNum) => {
-  modal.innerHTML = 
-  `<i class="fa-solid fa-x modal-x" id="close-modal"></i>
-  <article class="modal-card" id="modal-${productNum}">
-      <div class="modal-card-top">
-          <img class="modal-card-img" src=${mocktailsArray[productNum].img} alt="Mocktail ${productNum}" />
-        <div class="modal-product-detail">
-          <h3>${mocktailsArray[productNum].name}</h3>
-          <p class="modal-price">${mocktailsArray[productNum].price}</p>
-          <p>${mocktailsArray[productNum].desc}</p>
-        </div>
-      </div>
-      <div class="modal-card-bottom">
-        <input class="product-qty" type="number"/> 
-        <a href="/checkout.html" class="modal-card-btn">ADD TO CART</a>
-        </div>
-      </div>
-      
-    </article>`;
-}
+});
 
-const closeModal = () => {
-  overlay.classList.add("overlay-hide");
-  overlay.classList.remove("overlay-show");
-};
+$("#close-modal").on("click", function(){
+    $("#shop-overlay").fadeOut(1000);
+  $("#product-detail").dialog("close"); 
+});
 
-const viewProductDetails = (e) => {
+$("#product-detail").dialog({
+      autoOpen: false, 
+      width: '75vw',
+      modal: true,
+      show: {
+        effect: "fade",
+        duration: 1000
+      },
+      open: function(){
+        $("#shop-overlay").fadeIn(1000);
+      },
+      hide: {
+        effect: "fade",
+        duration: 1000
+      },
+    });
+
+
+
+  const viewProductDetails = (e) => {
   e.preventDefault();
-  const productNumber = e.target.dataset.mocktail
-  createModal(productNumber)
-  overlay.classList.remove("overlay-hide");
-  overlay.classList.add("overlay-show");
+  $("#product-detail").dialog("open");
+  /*
   document.getElementById("overlay").appendChild(modal);
-  document.getElementById("close-modal").addEventListener("click", closeModal);
+  document.getElementById("close-modal").addEventListener("click", closeModal);*/
 };
+
 
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", viewProductDetails);
