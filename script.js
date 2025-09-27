@@ -67,31 +67,31 @@ const mocktailsArray = [
     name: "The Sun",
     desc: "Golden peach, honey, and vanilla blossom with sparkling water",
     price: 12.99,
-    img: "https://placehold.co/450x450?text=The+Sun",
+    img: "assets/the-sun.jpg",
   },
   {
     name: "The Siren",
     desc: "Sea salt, grapefruit, and rosemary",
     price: 12.99,
-    img: "https://placehold.co/450x450?text=The+Siren",
+    img: "assets/the-siren.jpg",
   },
   {
     name: "The Fool",
     desc: "Yuzu, Lime, and Green Apple",
     price: 12.99,
-    img: "https://placehold.co/450x450?text=The+Fool",
+    img: "assets/the-fool.jpg",
   },
   {
     name: "The Magician",
     desc: "Blood orange, gentian root, and herbal botanicals",
     price: 12.99,
-    img: "https://placehold.co/450x450?text=The+Magician",
+    img: "assets/the-magician.jpg",
   },
   {
     name: "The Oracle",
     desc: "Tomato, black tea, and shiitake with subtle spice",
     price: 12.99,
-    img: "https://placehold.co/450x450?text=The+Oracle",
+    img: "assets/the-oracle.jpg",
   }
 ];
 
@@ -117,7 +117,7 @@ const modal = document.createElement("div");
 const createModal = (productNum) => {
   modal.innerHTML = 
   `<i class="fa-solid fa-x modal-x" id="close-modal"></i>
-  <article class="modal-card">
+  <article class="modal-card" id="modal-${productNum}">
       <div class="modal-card-top">
           <img class="modal-card-img" src=${mocktailsArray[productNum].img} alt="Mocktail ${productNum}" />
         <div class="modal-product-detail">

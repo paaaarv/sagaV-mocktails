@@ -1,0 +1,244 @@
+/* ------------------ RESET ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Cinzel", serif;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  padding-top: 70px;
+}
+
+main {
+  flex: 1;
+}
+
+/* ------------------ NAVIGATION ------------------ */
+#zp-desktop-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #444;
+}
+
+.zp-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+}
+
+/* Logo */
+.zp-logo {
+  font-size: 1.2rem;
+  color: black;
+  background: #999;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+.zp-logo a {
+  color: black;
+  text-decoration: none;
+}
+.zp-logo:hover { background: #bbb; }
+
+/* Nav Links */
+.zp-nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+}
+
+.zp-nav-links a:not(.zp-cart) {
+  background: #999;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.zp-nav-links a:not(.zp-cart):hover { background: #bbb; }
+
+.zp-nav-links .zp-cart {
+  background: none;
+  padding-right: 1.2rem;
+  display: flex;
+  transition: transform 0.3s ease;
+}
+.zp-nav-links .zp-cart:hover { transform: scale(1.1); }
+.zp-nav-links .zp-cart .zp-icon {
+  width: 30px;
+  height: 30px;
+  stroke: #999;
+}
+
+/* Hamburger Menu */
+.zp-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+.zp-hamburger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile */
+@media screen and (max-width: 900px) {
+  .zp-hamburger { display: flex; }
+
+  .zp-nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    flex-direction: column;
+    background-color: #444;
+    padding-top: 5rem;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  .zp-nav-links.active { right: 0; }
+  .zp-nav-links a:not(.zp-cart) {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Hamburger Animation */
+.zp-hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px,5px);
+}
+.zp-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.zp-hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px,-6px);
+}
+
+/* ------------------ MAIN CONTENT ------------------ */
+#zp-main-content {
+  flex: 1;
+  min-height: 60vh;
+  padding: 2rem 1.5rem;
+}
+
+.zp-spacer {
+  background: #f5f5f5;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ------------------ FOOTER ------------------ */
+#zp-site-footer {
+  background: #444;
+  color: #fff;
+  padding: 2rem 1.5rem 1rem;
+  margin-top: auto;
+}
+
+.zp-footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* Footer Logo */
+.zp-footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  background: #999;
+  color: black;
+  padding: 1rem 2.5rem;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: 5rem;
+}
+.zp-footer-logo:hover { background: #bbb; }
+
+/* Middle Links - two column grid */
+.zp-footer-middle-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 4rem;
+  row-gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  margin-right: 30rem;
+}
+.zp-footer-middle-links li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+.zp-footer-middle-links li a:hover { color: #fff; }
+
+/* Social Icons - bottom right */
+.zp-footer-social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.zp-footer-social .zp-icon {
+  width: 28px;
+  height: 28px;
+  stroke: #ddd;
+  transition: stroke 0.3s ease, transform 0.3s ease;
+}
+.zp-footer-social a:hover .zp-icon {
+  stroke: #bbb;
+  transform: scale(1.1);
+}
+
+.zp-footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+  .zp-footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .zp-footer-middle-links {
+    grid-template-columns: 1fr;
+    row-gap: 0.6rem;
+    margin-right: 0;
+  }
+  .zp-footer-social {
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+}

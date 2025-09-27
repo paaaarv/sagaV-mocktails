@@ -32,7 +32,9 @@
 
   <!-- Stylesheet Link -->
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles/shop-styles.css"
+  <link rel="stylesheet" href="styles/shop-styles.css" />
+  <style>@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');</style>
 
 </head>
 
@@ -73,12 +75,12 @@
   <main id="main">
     <div id="overlay" class="overlay-hide" hidden></div>
 
-    <h1 class="shop-heading">Our Mocktails</h1>
+    <h1 class="shop-heading">Products</h1>
     
     <section id="products">
        <article class="card">
             <div class="card-top">
-              <img class="card-img" src="https://placehold.co/400x600?text=The+Sun" alt="Mocktail 1" />
+              <img class="card-img" src="assets/the-sun.jpg" alt="Mocktail 1" />
             </div>
             <div class="card-body">
               <span class="card-detail">
@@ -86,13 +88,15 @@
                 <p>$$$</p>
               </span>
               <p>Golden peach, honey, and vanilla blossom with sparkling water.</p>
-              <a href="/checkout.html" class="card-btn">Buy Now</a>
-              <button id="view-mocktail1" class="card-btn" data-mocktail="0">View Product</button>
+              <div class="card-controls">
+                <button class="card-btn">Buy Now</button>
+                <button id="view-mocktail1" class="card-btn" data-mocktail="0">View Product</button>
+              </div>
             </div>
           </article>
           <article class="card">
             <div class="card-top">
-              <img class="card-img" src="https://placehold.co/400x600?text=The+Siren" alt="Mocktail 2" />
+              <img class="card-img" src="assets/the-siren.jpg" alt="Mocktail 2" />
             </div>
             <div class="card-body">
               <span class="card-detail">
@@ -100,13 +104,15 @@
                 <p>$$$</p>
               </span>
               <p>Sea salt, grapefruit, and rosemary.</p>
-              <a href="/checkout.html" class="card-btn">Buy Now</a>
-              <button id="view-mocktail2" class="card-btn" data-mocktail="1">View Product</button>
+              <div class="card-controls">
+                <button class="card-btn">Buy Now</button>
+                <button id="view-mocktail2" class="card-btn" data-mocktail="1">View Product</button>
+              </div>
             </div>
           </article>
           <article class="card">
             <div class="card-top">
-              <img class="card-img" src="https://placehold.co/400x600?text=The+Fool" alt="Mocktail 3" />
+              <img class="card-img" src="assets/the-fool.jpg" alt="Mocktail 3" />
             </div>
             <div class="card-body">
               <span class="card-detail">
@@ -114,13 +120,15 @@
                 <p>$$$</p>
               </span>
               <p>Yuzu, Lime, and Green Apple.</p>
-              <a href="/checkout.html" class="card-btn">Buy Now</a>
-              <button class="card-btn" id="view-mocktail3" data-mocktail="2">View Product</button>
+              <div class="card-controls">
+                <button class="card-btn">Buy Now</button>
+                <button id="view-mocktail3" class="card-btn" data-mocktail="2">View Product</button>
+              </div>
             </div>
           </article>
           <article class="card">
             <div class="card-top">
-              <img class="card-img" src="https://placehold.co/400x600?text=The+Magician" alt="Mocktail 4" />
+              <img class="card-img" src="assets//the-magician.jpg" alt="Mocktail 4" />
             </div>
             <div  class="card-body">
               <span class="card-detail">
@@ -128,13 +136,15 @@
                 <p>$$$</p>
               </span>
               <p>Blood orange, gentian root, and herbal botanicals.</p>
-              <a href="/checkout.html" class="card-btn">Buy Now</a>
-              <button id="view-mocktail4" class="card-btn" data-mocktail="3">View Product</button>
+              <div class="card-controls">
+                <button class="card-btn">Buy Now</button>
+                <button id="view-mocktail4" class="card-btn" data-mocktail="3">View Product</button>
+              </div>
             </div>
           </article>
           <article class="card">
             <div class="card-top">
-              <img class="card-img" src="https://placehold.co/400x600?text=The+Oracle" alt="Mocktail 5" />
+              <img class="card-img" src="assets/the-oracle.jpg" alt="Mocktail 5" />
             </div>
             <div class="card-body">
               <span class="card-detail">
@@ -143,8 +153,10 @@
               </span>
               <p>Tomato, black tea, and shiitake with subtle spice.</p>
               
-              <a href="/checkout.html" class="card-btn">Buy Now</a>
-              <button id="view-mocktail5" class="card-btn" data-mocktail="4">View Product</button>
+              <div class="card-controls">
+                <button class="card-btn">Buy Now</button>
+                <button id="view-mocktail5" class="card-btn" data-mocktail="4">View Product</button>
+              </div>
             </div>
           </article>
     </section>

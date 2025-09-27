@@ -4,17 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>[Brand Name] — Confirmation</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Molle&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Molle&family=Montserrat&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- Bootstrap Link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <!-- CSS Link -->
+   <link rel="stylesheet" href="styles.css">
    <link rel="stylesheet" href="styles/confirmation.css">
 </head>
-<body>
-  <a href="/zero-index-website/cart">&larr; Back to Cart</a>
+<body style="margin:0; padding:0; height:100vh; background: url('Content/background.jpeg') no-repeat center center fixed; background-size: cover;">
+  <header role="banner" class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="/">Saga V</a>
+      <!-- Mobile nav button // INSERT NAVIGATION HERE  -->
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
+      <span class="nav-toggle-box" aria-hidden="true">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+      </span>
+      <span class="nav-toggle-text">Menu</span>
+      </button>
+
+      <nav id="primary-nav" aria-label="Primary">
+        <a href="menu.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <!-- <a href="/zero-index-website/cart">&larr; Back to Cart</a> -->
   <div class="left-right">
     <!-- LEFT COLUMN -->
     <div class="left">
-      <h1>Checkout</h1>
       <div class="progress-tracker">
         <div class="step">
           <div class="circle"></div>
@@ -32,8 +59,11 @@
         </div>
       </div>
       <div class="order-header">
-        <div style="width: 100px;height:100px;background-color: gray;display: inline-block;"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="169" height="173" viewBox="0 0 169 173" fill="none">
+          <path d="M154.471 80.0408V86.65C154.462 102.141 149.583 117.215 140.562 129.622C131.54 142.03 118.859 151.107 104.409 155.499C89.9601 159.891 74.5169 159.364 60.383 153.995C46.2492 148.627 34.1819 138.705 25.9809 125.709C17.7799 112.713 13.8847 97.3399 14.8761 81.8822C15.8675 66.4244 21.6924 51.7103 31.4822 39.9342C41.2719 28.1581 54.5019 19.951 69.1991 16.537C83.8962 13.123 99.2731 14.685 113.036 20.9899M154.471 29.1795L84.5979 101.089L63.6359 79.538" stroke="#CFB482" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         <div>
+          <h1>Order Placed</h1>
           <p><small>Order #123</small></p>
           <p><strong>Alyssa, your order has been placed!<br>Thank you!</strong></p>
         </div>
@@ -42,7 +72,7 @@
         <h2><strong>Order Updates</strong></h2>
         <p>You will receive order and shipping updates via email</p>
       </div>
-      <div style="width: 800px;height:200px;background-color: gray;display: inline-block;" class="big-box"></div>
+      <div style="width: 786px; height: 105px; flex-shrink: 0; border-radius: 13px; border: 2px solid #CFB482; background: rgba(156, 112, 76, 0.40);" class="big-box"></div>
       <div class="contact">
         <p>Contact</p>
         <p>alyssa@asu.edu</p>
@@ -56,42 +86,35 @@
 
     <!-- RIGHT COLUMN -->
     <div class="right">
-      <div style="width: 40px;height:40px;background-color: gray;display: inline-block;"></div>
-      <h2><strong>Order Summary (3)</strong></h2>
+      <svg xmlns="http://www.w3.org/2000/svg" width="38" height="35" viewBox="0 0 38 35" fill="none">
+      <path d="M1.58789 1.54163H7.92122L12.1646 22.1845C12.3093 22.8943 12.7059 23.5319 13.2848 23.9857C13.8638 24.4394 14.5882 24.6805 15.3312 24.6666H30.7212C31.4643 24.6805 32.1887 24.4394 32.7676 23.9857C33.3465 23.5319 33.7431 22.8943 33.8879 22.1845L36.4212 9.24996H9.50456M15.8379 32.375C15.8379 33.2264 15.129 33.9166 14.2546 33.9166C13.3801 33.9166 12.6712 33.2264 12.6712 32.375C12.6712 31.5235 13.3801 30.8333 14.2546 30.8333C15.129 30.8333 15.8379 31.5235 15.8379 32.375ZM33.2546 32.375C33.2546 33.2264 32.5457 33.9166 31.6712 33.9166C30.7968 33.9166 30.0879 33.2264 30.0879 32.375C30.0879 31.5235 30.7968 30.8333 31.6712 30.8333C32.5457 30.8333 33.2546 31.5235 33.2546 32.375Z" stroke="#CFB482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h2><strong>Order Summary (2)</strong></h2>
       <div class="item">
-        <div style="width: 80px;height:80px;background-color: gray;display: inline-block;"></div>
-        <p><strong>Smooth Velvet</strong><br><small>Pack of 4</small></p>
-        <div style="width: 40px;height:40px;background-color: gray;display: inline-block;"></div>
-        <p>$$$</p>
+        <div style="width: 97px; height: 118px; border-radius: 10px; border: 1px solid #CFB482; background: rgba(156, 112, 76, 0.23);"></div>
+        <p><strong>The Sun</strong><br><small>Bottle Size</small></p>
+        <p><strong>$</strong></p>
       </div>
       <div class="item">
-        <div style="width: 80px;height:80px;background-color: gray;display: inline-block;"></div>
-        <p><strong>Smooth Velvet</strong><br><small>Pack of 4</small></p>
-        <div style="width: 40px;height:40px;background-color: gray;display: inline-block;"></div>
-        <p>$$$</p>
-      </div>
-      <div class="item">
-        <div style="width: 80px;height:80px;background-color: gray;display: inline-block;"></div>
-        <p><strong>Smooth Velvet</strong><br><small>Pack of 4</small></p>
-        <div style="width: 40px;height:40px;background-color: gray;display: inline-block;"></div>
-        <p>$$$</p>
+        <div style="width: 97px; height: 118px; border-radius: 10px; border: 1px solid #CFB482; background: rgba(156, 112, 76, 0.23);"></div>
+        <p><strong>The Fool</strong><br><small>Bottle Size</small></p>
+        <p><strong>$</strong></p>
       </div>
       <div class="totals">
-        <hr>
         <p>Subtotal</p>
-        <p>$$$</p>
+        <p>$</p>
         <p>Taxes and Fees</p>
-        <p>$$$</p>
+        <p>$</p>
         <p>Delivery Fee</p>
-        <p>$$$</p>
-        <hr>
+        <p>$</p>
       </div>
       <div class="total">
         <p>Total</p>
-        <p>$$$</p>
+        <p>$</p>
       </div>
     </div>
-
   </div>
+  <footer>
+  </footer>
 </body>
 </html>
