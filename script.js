@@ -102,25 +102,11 @@ const mocktailsArray = [
 
 // Modal View functionality
 
-const mocktail1Btn = document.getElementById("view-mocktail1");
-const mocktail2Btn = document.getElementById("view-mocktail2");
-const mocktail3Btn = document.getElementById("view-mocktail3");
-const mocktail4Btn = document.getElementById("view-mocktail4");
-const mocktail5Btn = document.getElementById("view-mocktail5");
-
-const btns = [
-  mocktail1Btn,
-  mocktail2Btn,
-  mocktail3Btn,
-  mocktail4Btn,
-  mocktail4Btn,
-  mocktail5Btn,
-];
-
 $(".view-product").on("click",function(e){
   const cardId = parseInt(e.target.dataset.mocktail); 
   const card = mocktailsArray.filter((x) => x.id === cardId)[0]; 
-  console.log(card); 
+  updateProductDetailCard(card); 
+  $("#product-detail").dialog("open");
 
 });
 
@@ -147,16 +133,9 @@ $("#product-detail").dialog({
     });
 
 
-
-  const viewProductDetails = (e) => {
-  e.preventDefault();
-  $("#product-detail").dialog("open");
-  /*
-  document.getElementById("overlay").appendChild(modal);
-  document.getElementById("close-modal").addEventListener("click", closeModal);*/
-};
-
-
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", viewProductDetails);
+const updateProductDetailCard = (product) => {
+  console.log("HERE IS PRODUCT", product) ;
+  $("#product-name").text(product.name); 
+  $("#flavors").text(product.desc); 
 }
+

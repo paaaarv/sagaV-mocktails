@@ -166,14 +166,16 @@ h1 {
 }
 
 /* Modal Styles */
-#overlay {
+#shop-overlay {
+  display: none; 
   height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url("/Users/parvathikumar/Desktop/school/git450/zero-proof-website/zero-proof-website/Content/shop-background.png"); 
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .overlay-show {
@@ -335,4 +337,15 @@ input {
 
 #modal-4 .modal-card-btn {
   background-color: var(--oracle-accent);
+}
+
+
+/* product detail styles */ 
+
+#product-detail{
+  z-index: 1000; 
+} 
+
+.ui-dialog-titlebar-close {
+        display: none;
 }
