@@ -53,10 +53,41 @@
 
   <!-- Main content -->
   <main id="main">
+
+
+    <!-- MODAL -->
+
+  <div id="product-detail"> 
+    <article class="modal-card">
+      <i class="fa-solid fa-x modal-x" id="close-modal"></i>
+        <div class="modal-card-top">
+            <img class="modal-card-img" src="assets/the-oracle.jpg" alt="Mocktail 1" />
+          <div class="modal-product-detail">
+            <h3 id="product-name"></h3>
+            <p id="flavors" class="flavor-detail"> </p>
+            <p id="description" class="flavor-detail"> Description: </p>
+
+            <p class="modal-price"> </p>
+          </div>
+        </div>
+        <div class="modal-card-bottom">
+          <input class="product-qty" type="number" min="1" max="10" value="1"/> 
+          <button id="product-button" class="shop-btn modal-card-btn">ADD TO CART</button>
+        </div>
+      </div>
+    </article>
+  </div> 
+
+
+
+    <div id="shop-overlay"></div>
+
+
+    <h1 class="shop-heading">Products</h1>
     <div id="overlay" class="overlay-hide" hidden></div>
 
     <div class="shop-header"><h1 id="shop-heading">Products</h1></div>
-    
+
     
     <section id="products">
        <article class="card">
@@ -70,7 +101,7 @@
               </span>
               <p>Golden peach, honey, and vanilla blossom with sparkling water.</p>
               <div class="card-controls">
-                <button class="card-btn">Buy Now</button>
+                <button class="shop-btn card-btn" data-mocktail="1">Buy Now</button>
                 <button id="view-mocktail1" class="card-btn view-product" data-mocktail="1">View Product</button>
               </div>
             </div>
@@ -86,7 +117,7 @@
               </span>
               <p>Sea salt, grapefruit, and rosemary.</p>
               <div class="card-controls">
-                <button class="card-btn">Buy Now</button>
+                <button class="shop-btn card-btn" data-mocktail="2">Buy Now</button>
                 <button id="view-mocktail2" class="card-btn view-product" data-mocktail="2">View Product</button>
               </div>
             </div>
@@ -102,7 +133,7 @@
               </span>
               <p>Yuzu, Lime, and Green Apple.</p>
               <div class="card-controls">
-                <button class="card-btn">Buy Now</button>
+                <button class="shop-btn card-btn" data-mocktail="3">Buy Now</button>
                 <button id="view-mocktail3" class="card-btn view-product" data-mocktail="3">View Product</button>
               </div>
             </div>
@@ -118,7 +149,7 @@
               </span>
               <p>Blood orange, gentian root, and herbal botanicals.</p>
               <div class="card-controls">
-                <button class="card-btn">Buy Now</button>
+                <button class="shop-btn card-btn" data-mocktail="4">Buy Now</button>
                 <button id="view-mocktail4" class="card-btn view-product" data-mocktail="4">View Product</button>
               </div>
             </div>
@@ -135,7 +166,7 @@
               <p>Tomato, black tea, and shiitake with subtle spice.</p>
               
               <div class="card-controls">
-                <button class="card-btn">Buy Now</button>
+                <button class="shop-btn card-btn" data-mocktail="5">Buy Now</button>
                 <button id="view-mocktail5" class="card-btn view-product" data-mocktail="5">View Product</button>
               </div>
             </div>
