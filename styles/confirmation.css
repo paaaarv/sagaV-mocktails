@@ -320,6 +320,8 @@ body {
 
   .progress-tracker{
     display: flex !important;
+    justify-content: center;
+    gap: 20px;
   }
 
   .progress-tracker p{
@@ -620,6 +622,8 @@ strong{
 .total{
   border: 1px solid var(--text) !important;
   padding: 20px;
+  display: flex !important;
+  gap: 300px !important;
 }
 
 .total p:first-of-type{
