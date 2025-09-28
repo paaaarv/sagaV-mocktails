@@ -315,8 +315,6 @@ body {
 
   .progress-tracker{
     display: flex !important;
-    justify-content: center;
-    gap: 20px;
   }
 
   .progress-tracker p{
@@ -583,8 +581,6 @@ strong{
 .total{
   border: 0.5px solid var(--accent-strong);
   padding: 20px;
-  display: flex !important;
-  gap: 300px !important;
 }
 
 .left .btn{
