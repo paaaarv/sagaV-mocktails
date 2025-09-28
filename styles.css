@@ -21,426 +21,9 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
+	font: inherit;
 	vertical-align: baseline;
 }
-
-/* ========== PART 1 THE CODE BELOW WAS ADDED ========== ========== THE CODE BELOW WAS ADDED ========== */
-
-/*hero image*/
-#header-img-container {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-}
-
-/* Circle Image */
-#circle-header-img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-#circle-header-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Polygon/Background Image */
-#polygon-header-img {
-  position: relative;
-  width: 450px;   
-  height: 500px;  
-  overflow: hidden;
-  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-#polygon-header-img img {
-  width: auto;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Product section */
-.products {
-  padding: var(--space-6) 0;
-  text-align: center;
-}
-
-.products h2 {
-  font-size: var(--font-size-2);
-  margin-bottom: var(--space-4);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Grid */
-#product-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  #product-grid {
-    grid-template-columns: 1fr; 
-  }
-}
-
-/* Cards (override shop page conflicts) */
-.products .card {
-  background: #1b2030; 
-  border: 1px solid #2a3245;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.products .card-media img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  display: block;
-}
-
-.products .card-body {
-  padding: 1rem;
-}
-
-.products .card-body h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-  color: var(--accent-strong);
-}
-
-.products .card-body .button {
-  background: #c9a96e; /* gold */
-  color: #000;
-  border-radius: 20px;
-  padding: 0.5rem 1.25rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.products .card-body .button:hover {
-  background: #b28a55;
-}
-
-/* View All Button */
-.view-all-wrapper {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center; 
-}
-
-#view-all {
-  padding: 0.75rem 2rem;
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-/* Ingredients section */
-#ingredients {
-  padding: var(--space-6) 5%;
-  background: #fdfcf7;
-}
-#ingredients-container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); 
-  gap: var(--space-3);
-  justify-items: center;
-  align-items: center;
-}
-.circle-photo img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border: 2px solid #ccc;
-}
-
-/* Cart/About split Section */
-#cart-products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-6);
-  padding: var(--space-6) 5%;
-  align-items: center;
-  background: #fff;
-}
-#summary-about, #cart-div { flex: 1; }
-#cart-div img { max-width: 300px; border-radius: 50%; }
-
-/* Blog Section */
-#blog-highlight {
-  padding: var(--space-6) 5%;
-  text-align: center;
-}
-#blog-highlight h3 { margin-bottom: var(--space-4); }
-#blog-highlight .carousel img {
-  border-radius: var(--r);
-  max-height: 400px;
-  object-fit: cover;
-}
-
-/* Extra icon grid and fullscreen image */
-#photo-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: var(--space-4);
-  padding: var(--space-6) 5%;
-  background: #fdfcf7;
-  text-align: center;
-}
-#photo-container p { margin-top: var(--space-2); font-weight: 500; }
-.fullscreen-img img {
-  width: 100%;
-  display: block;
-  margin-top: var(--space-4);
-  border-radius: var(--r);
-}
-
-/* catchphrase section */
-#catchphrase {
-  text-align: center;
-  padding: var(--space-6) 5%;
-  background: #fff;
-}
-#catchphrase h2 {
-  font-size: var(--font-size-2);
-  color: #6a4c3d;
-}
-
-/* Newsletter signup */
-.newsletter {
-  background: #e3d5c9;
-  padding: var(--space-6) 5%;
-  text-align: center;
-}
-.newsletter form {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: var(--space-3);
-}
-.newsletter input {
-  padding: 0.75rem 1rem;
-  width: 280px;
-  border: 1px solid #aaa;
-  border-radius: 30px;
-}
-.newsletter button {
-  border-radius: 30px;
-  padding: 0.75rem 1.5rem;
-  background: #333;
-  color: white;
-  border: none;
-}
-.newsletter button:hover { background: #555; }
-
-
-/* Custom Fonts */
-@font-face {
-  font-family: 'Metamorphous';
-  src: url('fonts/Metamorphous-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('fonts/Roboto-Regular.ttf') format('truetype');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('fonts/Roboto-Bold.ttf') format('truetype');
-  font-weight: 700;
-}
-
-h1, h2, h3 {
-  font-family: 'Metamorphous', serif;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
-/* ========== END OF PART 1 THE CODE ABOVE WAS ADDED ========== ========== THE CODE ABOVE WAS ADDED ========== */
-
-/* ========== PART 2 CODE BELOW WAS ADDED ========== CODE BELOW WAS ADDED ========== */
-#amazon-promo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--space-6) 5%;
-  background: var(--panel);
-  color: var(--accent-strong);
-  gap: var(--space-4);
-}
-
-#amazon-promo .promo-left {
-  flex: 1;
-  background: #b08b67; /* brown background */
-  padding: var(--space-4);
-  border-radius: var(--r);
-  color: #fff;
-}
-
-#amazon-promo .promo-left h3 {
-  margin-bottom: var(--space-2);
-  font-size: var(--font-size-2);
-}
-
-#amazon-promo .promo-left p {
-  margin-bottom: var(--space-3);
-  font-size: var(--font-size-0);
-}
-
-#amazon-promo .promo-left .button {
-  background: #fff;
-  color: #000;
-  border-radius: 30px;
-  padding: 0.5rem 1.25rem;
-  font-weight: 600;
-}
-
-#amazon-promo .promo-right {
-  flex: 1;
-  text-align: center;
-}
-
-#amazon-promo .promo-right img {
-  max-width: 100%;
-  border-radius: var(--r);
-}
-
-/* Value Proposition Section */
-#value-props {
-  background: #fdfcf7;
-  padding: var(--space-6) 5%;
-}
-
-.value-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  grid-template-rows: repeat(2, auto);   
-  gap: var(--space-6) var(--space-4);    
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto; 
-}
-
-.value-item img {
-  background: #0f1115; 
-  border-radius: 50%;
-  padding: 1rem;
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: var(--space-2);
-}
-
-.value-item p {
-  font-size: var(--font-size-0);
-  font-weight: 600;
-}
-
-/* Tarot Card Section */
-#tarot-cards {
-  background: black; 
-  padding: var(--space-6) 5%;
-  text-align: center;
-}
-
-.tarot-banner {
-  width: 95%;          
-  max-width: 1400px;   
-  height: auto;        
-  display: block;
-  margin: 0 auto;
-  border-radius: var(--r);
-  box-shadow: var(--shadow);
-}
-
-/* Footer */
-.site-footer {
-  background: #0f1115;
-  color: #ddd;
-  padding: var(--space-6) 5% var(--space-4);
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: var(--space-6);
-}
-
-.footer-left {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-left a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.footer-links {
-  flex: 2;
-  display: flex;
-  gap: var(--space-6);
-  justify-content: center;
-}
-
-.footer-links ul {
-  list-style: none;
-}
-
-.footer-links ul li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-links ul li a {
-  color: #ddd;
-  text-decoration: none;
-  font-size: var(--font-size-0);
-}
-
-.footer-links ul li a:hover {
-  color: #fff;
-}
-
-.footer-right {
-  flex: 1;
-  text-align: center;
-  min-width: 200px;
-}
-
-.footer-logo img {
-  max-width: 60px;
-  margin-bottom: var(--space-2);
-}
-
-.footer-social a img {
-  width: 24px;
-  height: 24px;
-  margin: 0 0.25rem;
-}
-
-.footer-social a:hover img {
-  opacity: 0.8;
-}
-/* ========== END OF PART 2 THE CODE ABOVE WAS ADDED ========== CODE BELOW WAS ADDED ========== */
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -688,322 +271,297 @@ h3{
   margin-bottom: var(--space-3);
 }
 
-/* ========== Confirmation Page ========== */
-a{
-  text-decoration: none;
-  color: var(--accent-strong);
-  margin: 5px 20px;
-}
-
-.left p:nth-of-type(2){
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.left-right{
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 20px;
-  margin: 5px 80px;
-}
-
-.left-right h1{
-  font-weight: bold;
-  font-size: 40px;
-}
-
-.order-updates{
-  border: 0.5px solid var(--accent-strong);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-}
-
-.order-updates h2{
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.order-style{
+/* ========== ABOUT US SECTION (Sebastian’s Task) ========= */
+.header-nav {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
   display: flex;
-}
-
-.contact{
-  border: 0.5px solid var(--accent-strong);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  row-gap: 15px;
-}
-
-.contact p:nth-of-type(2){
-  font-weight: 300;
-  font-size: 15px;
-}
-
-.right{
-  border: 0.5px solid var(--accent-strong);
-  padding: 30px 20px 80px;
-  margin-bottom: 30px;
-}
-
-.right h2{
-  font-weight: bold;
-  font-size: 35px;
-}
-
-.right .item {
-  display: grid;
-  grid-template-columns: 80px 1fr 40px auto;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  padding: 15px 0;
-  border-bottom: 1px solid var(--accent-strong);
 }
 
-.right .item:last-of-type {
-  border-bottom: none;
+.logo-zero {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+
 }
 
-.right .item p {
-  margin: 0;
-}
-
-.right .item strong {
-  display: block;
-  margin-bottom: 2px;
-}
-
-.right .item small {
-  font-size: 14px;
-  color: #444;
-}
-
-.right .totals {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  row-gap: 10px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.right .totals hr {
-  grid-column: 1 / -1;
-  border: 0;
-  border-top: 1px solid var(--accent-strong);
-  margin: 15px 0;
-}
-
-.right .totals p {
-  margin: 0;
-}
-
-.right .total {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  border: 0.5px solid var(--accent-strong);
-  padding: 15px;
-  font-weight: bold;
-}
-
-.right > div:first-of-type, .right > h2{
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.right > div:first-of-type{
-  margin-right: 15px;
-}
-
-.item {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 15px;
-}
-
-.item > p:last-of-type{
-  grid-column: 3;
-  grid-row: 2;
-  justify-self: center;
-}
-
-.item > div:nth-of-type(2){
-  grid-column: 3;
-  grid-row: 1;
-  justify-self: center;
-}
-
-strong{
-  font-weight: bold;
-}
-
-.total{
-  border: 0.5px solid var(--accent-strong);
-  padding: 20px;
-}
-
-.left .btn{
-  display: block;
-  margin-left: auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  padding: 20px 80px;
-}
-
-.order-header{
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.contact p:nth-of-type(even) {
-  border-bottom: 1px solid var(--accent-strong);
-  padding-bottom: 8px;
-  margin-bottom: 8px;
-  grid-column: 2;
-}
-
-.contact p:nth-of-type(odd) {
-  border-bottom: 1px solid var(--accent-strong);
-  padding-bottom: 8px;
-  margin-bottom: 8px;
-  grid-column: 1;
-}
-
-.contact p:last-of-type,
-.contact p:nth-last-of-type(2) {
-  border-bottom: none;
-}
-
-.progress-tracker{
+.menu-toggle {
   display: none;
 }
 
-/* ========== BLOG ========== */
-
-.mix-it-up {
-  padding: var(--space-6) 0;
-  background: linear-gradient(180deg, #1b2030 0%, #0f1115 100%);
+.menu-icon {
+  cursor: pointer;
+  color: #fff;
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
-.scroll-wrapper {
+
+.nav-menu {
+  display: none;
+  background-color: #444;
+  padding: 1rem;
+  border-radius: 8px;
+  top: 100%;
+  right: 1rem;
+  z-index: 10;
+  position: absolute;
+}
+
+.nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin-bottom: 1rem;
+}
+
+.nav-menu li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-toggle:checked + .menu-icon + .nav-menu {
+  display: block;
+}
+
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--bg);
+  width: 111px;
+  height: 35px;
+  flex-shrink: 0;
+  padding: 3px;
+  background-color: #B6B6B6;
+}
+
+
+/* The background could be bigger */
+.hero {
+  background: url("https://placehold.co/1200x600") no-repeat center center/cover;
+  color: var(--bg);
+}
+/* Beginning of h2 */
+.story {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.story-header {
+  margin-bottom: 1rem;
+}
+
+.story-image-container img {
+   max-width: 100%;
+   height: auto;
+   margin: 1rem 0;
+}
+
+.story-text {
+  text-align: center;
+}
+
+.story .story-header h2 {
+  color: #000;
+  font-size: 2rem;
+}
+
+.story-content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+/* Beginning of the milestone section */
+
+.milestones {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* This is the vertical stick */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: #000;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.milestone {
+  position: relative;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  margin: 3rem 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.milestone::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background-color: #666;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.milestone::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  background-color: #000;
+  
+}
+
+/* Image styling */
+.milestone-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  
+}
+
+/* Content of title and year */
+.milestone-content {
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 250px;
+}
+
+/* Images being placed in their respected spots. Both 1 and 3 are on the left side.*/ 
+.milestone:nth-child(1),
+.milestone:nth-child(3) {
+  align-self: flex-start;
+  text-align: left;
+}
+/* Image on the right side */
+.milestone:nth-child(2) {
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/* Beginning of newsletter styles */
+.newsletter {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #F2F2F2;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.newsletter form {
+  margin-top: 1rem;
+}
+.newsletter label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+#email {
+  padding: 0.5rem;
+  width: 250px;
+  border: 1px solid;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  /* The button in the figma file is black and it blends in with the body background color. I chose a light gray for now. */
+  background-color: lightgray;
+  color: var(--bg);
+}
+
+/* beginning styles of footer */
+.footer {
+  padding: 2rem;
+  background-color: #666;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 4rem;
+}
+
+.link-column {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
-.card-row {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  gap: 1rem;
-  padding: 1rem 0;
-  flex: 1;
-}
-
-.recipe-card {
-  flex: 0 0 180px;
-  background: #eee;
-  border: 1px solid #ccc;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  border-radius: 6px;
-}
-
-.image-placeholder {
-  background: #ccc;
-  margin: 5px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  color: #333;
-}
-
-.recipe-card h3,
-.recipe-card p,
-.recipe-card button {
-  margin: 5px;
-}
-
-.recipe-card h3 {
+.link-column a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1rem;
   font-weight: bold;
 }
 
-.scroll-btn {
-  background: #ccc;
-  border: none;
-  padding: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
+.link-column a:hover {
+  text-decoration: underline;
 }
 
-.now-you-know {
-  background-color: lightgray;
-  color: black;
-  padding: 3rem 2rem;
-  text-align: center;
-  font-family: 'serif';
-  
-}
-
-.now-you-know h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: black;
-  letter-spacing: 0.5px;
-}
-
-.email-signup {
-  
+.footer-social-wrapper {
   display: flex;
-  align-items: center;
-  max-width: 400px;
-  margin: 0 auto;
+  justify-content: flex-end;
+}
+
+.footer-social {
+  list-style: none;
+  padding: 0;
+  display: flex;
   gap: 1rem;
 }
 
-.email-signup label {
-  font-size: 1rem;
-  color: black;
+.footer-social svg {
+  width: 35px;
+  height: 35px;
+  transition: fill 0.3s ease;
+  color: #fff;
 }
-.email-signup input[type="email"] {
-padding: .75rem 1rem;
-width: 100%;
-border: 1px solid #555;
-border-radius: 6px;
-color: black;
-font-size: 1rem;
-font-family: inherit;
-}
-
-.email-signup input::placeholder {
-  color: #888;
-  font-style: italic;
-}
-
-.email-signup button {
-  background-color: lightgray;
-  color: white;
-  border: none;
-  padding: .75rem 1.5rem;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.email-signup button:hover {
-  background-color: gray;
-}
-
 
 
 /* ========== FOOTER ========== */
@@ -1437,8 +995,212 @@ li{
 
 
 /* ========== Tablet ========== */
+/* ========= ABOUT US TABLET MEDIA QUERY ====== */
+/* Look at mobile styles for the about section I need to recode the about us section. */
+@media screen and (min-width: 768px) {
 
-/* ========== Destkop ========== */
+  /* Styles for the header */
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 100;
+    position: relative;
+  }
+
+  /* Styles for the navigation */
+  /* Note: I had to use transparent background color as the navigation links had a background color of the dropdown menu from the hamburger menu from the mobile screen. This is a temporary fix. */
+
+  nav {
+    margin: 0;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    
+  }
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 2rem;
+    background-color: transparent;
+
+  }
+
+  .nav-menu ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-icon {
+    display: none;
+
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+
+  /* Styles for "Our Story" section */
+  .story {
+    padding: 3rem 1rem;
+    text-align: center;
+
+  }
+
+  .story-header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+  }
+
+  .story-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .intro {
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.5rem;
+  }
+
+  .story-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 4rem;
+  }
+
+  .story-text {
+    grid-column: 1;
+    max-width: none;
+    
+
+  }
+
+  .story-image-container {
+    grid-column: 2;
+    justify-self: center;
+  }
+  
+
+
+  /* Styling for the milestone section */
+
+  .milestones h2 {
+    font-size: 2rem;
+    font-weight: bold;
+
+  }
+   /* This section is for the horizontal stick thats suppose to connect to the circle placeholder images. This is as far as I have gotten but I can't seem to get it right. I can also copy and paste this code to the mobile phone section as well. */
+  .milestone::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+  }
+
+  .milestone-content h3 {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .milestone-image {
+    object-fit: cover;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+
+  /* Styling for the newsletter section */
+  .newsletter h3 {
+    font-size: 2rem;
+  }
+
+  /* Styling of footer for tablet */
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 768px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .link-column {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .link-column li a {
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .footer-social-wrapper {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-social li svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+  }
+}
+
+/* ========== Desktop ========== */
+@media screen and (min-width: 1280px) {
+   .story-text {
+    margin-left: 2rem;
+    
+   }
+
+   .milestones h2 {
+    font-size: 2rem;
+   }
+
+   .footer-links {
+     display: flex;
+     gap: 4rem;
+   }
+}
 
 /* ========== Focus visibility for keyboard users ========== */
 :focus-visible { 
@@ -1596,6 +1358,228 @@ hr {
 .qty-btn:hover {
   background: var(--figma-bronze);
   color: var(--figma-dark);
+}
+
+/* ------------------ RESET ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Cinzel", serif;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  padding-top: 70px;
+}
+
+#zp-main-content {
+  flex: 1;
+}
+
+/* ------------------ NAVIGATION ------------------ */
+#zp-desktop-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #444;
+}
+
+.zp-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+}
+
+/* Logo */
+.zp-logo a {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: black;
+  background: #999;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.zp-logo a:hover {
+  background: #bbb;
+}
+
+/* Nav Links */
+.zp-nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+}
+
+.zp-nav-links a:not(.zp-cart) {
+  background: #999;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.zp-nav-links a:not(.zp-cart):hover { background: #bbb; }
+
+.zp-nav-links .zp-cart {
+  background: none;
+  padding-right: 1.2rem;
+  display: flex;
+  transition: transform 0.3s ease;
+}
+.zp-nav-links .zp-cart:hover { transform: scale(1.1); }
+.zp-nav-links .zp-cart .zp-icon { width: 30px; height: 30px; stroke: #999; }
+
+/* Hamburger Menu */
+.zp-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+.zp-hamburger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile */
+@media screen and (max-width: 900px) {
+  .zp-hamburger { display: flex; }
+  .zp-nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    flex-direction: column;
+    background-color: #444;
+    padding-top: 5rem;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  .zp-nav-links.active { right: 0; }
+  .zp-nav-links a:not(.zp-cart) { font-size: 1.5rem; padding: 0.8rem 1.5rem; }
+}
+
+/* Hamburger Animation */
+.zp-hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.zp-hamburger.active span:nth-child(2) { opacity: 0; }
+.zp-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px,-6px); }
+
+/* ------------------ MAIN CONTENT ------------------ */
+.zp-spacer {
+  background: #f5f5f5;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ------------------ FOOTER ------------------ */
+#zp-site-footer {
+  background: #444;
+  color: #fff;
+  padding: 2rem 1.5rem 1rem;
+  margin-top: auto; 
+}
+
+.zp-footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
+
+.zp-footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  background: #999;
+  color: black;
+  padding: 1rem 2.5rem;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: 5rem;
+}
+.zp-footer-logo:hover { background: #bbb; }
+
+.zp-footer-middle-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 4rem;
+  row-gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  margin-right: 30rem;
+}
+.zp-footer-middle-links li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+.zp-footer-middle-links li a:hover { color: #fff; }
+
+.zp-footer-social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.zp-footer-social .zp-icon {
+  width: 28px;
+  height: 28px;
+  stroke: #ddd;
+  transition: stroke 0.3s ease, transform 0.3s ease;
+}
+.zp-footer-social a:hover .zp-icon {
+  stroke: #bbb;
+  transform: scale(1.1);
+}
+
+.zp-footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+  .zp-footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .zp-footer-middle-links {
+    grid-template-columns: 1fr;
+    row-gap: 0.6rem;
+    margin-right: 0;
+  }
+  .zp-footer-social {
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
 }
 
 /* Shop Page */
