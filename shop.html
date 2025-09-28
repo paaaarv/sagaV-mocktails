@@ -33,9 +33,9 @@
   <!-- Stylesheet Link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles/shop-styles.css" />
   <style>@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');</style>
   <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');</style>
+  <link rel="stylesheet" href="styles/shop-styles.css" />
 
 </head>
 
@@ -53,33 +53,10 @@
 
   <!-- Main content -->
   <main id="main">
-    <div id="shop-overlay"></div>
+    <div id="overlay" class="overlay-hide" hidden></div>
 
-    <h1 class="shop-heading">Products</h1>
-
-
-    <!-- MODAL -->
-
-  <div id="product-detail"> 
-    <article class="modal-card">
-      <i class="fa-solid fa-x modal-x" id="close-modal"></i>
-        <div class="modal-card-top">
-            <img class="modal-card-img" src="assets/the-oracle.jpg" alt="Mocktail 1" />
-          <div class="modal-product-detail">
-            <h3 id="product-name"></h3>
-            <p id="flavors" class="flavor-detail"> </p>
-            <p id="description" class="flavor-detail"> Description: </p>
-
-            <p class="modal-price"> </p>
-          </div>
-        </div>
-        <div class="modal-card-bottom">
-          <input class="product-qty" type="number" min="1" max="10" value="1"/> 
-          <a href="/checkout.html" class="modal-card-btn">ADD TO CART</a>
-        </div>
-      </div>
-    </article>
-  </div> 
+    <div class="shop-header"><h1 id="shop-heading">Products</h1></div>
+    
     
     <section id="products">
        <article class="card">

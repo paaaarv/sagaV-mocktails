@@ -3,13 +3,14 @@
     <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>[Brand Name] — Our Menu</title>
+  <title>Saga V — Checkout</title>
   <meta name="description" content="Explore our curated menu of alcohol-free mocktails, crafted with bold flavors and style" />
   <meta name="author" content="[GIT 450 WEB TEAM  Fall B 2025]" />
   <title>Alcohol-Free Mocktails</title>
   <meta name="description" content="Bold mocktails for every mood — zero alcohol, maximum flavor." />
   <!--Link to style file-->
     <link rel="stylesheet" href="checkout.css" />
+    <link rel="stylesheet" href="styles.css" />
 
 </head>
 
@@ -17,32 +18,36 @@
     <header id="navigation">
 
     </header>
-    <div class="back-to-cart">
+
+
+    <div class="back-to-cart mobile-hide">
         <?xml version="1.0" encoding="utf-8"?>
         <!-- License: MIT. Made by Shopify: https://github.com/Shopify/polaris -->
-        <svg width="30px" height="30px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17 9H5.414l3.293-3.293a.999.999 0 10-1.414-1.414l-5 5a.999.999 0 000 1.414l5 5a.997.997 0 001.414 0 .999.999 0 000-1.414L5.414 11H17a1 1 0 100-2z" fill="#0f1115"/></svg>
-        <a href="/zero-index-website/cart.html"> Back to Cart</a>
+        <svg width="30px" height="30px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17 9H5.414l3.293-3.293a.999.999 0 10-1.414-1.414l-5 5a.999.999 0 000 1.414l5 5a.997.997 0 001.414 0 .999.999 0 000-1.414L5.414 11H17a1 1 0 100-2z" fill="#CFB482"/></svg>
+        <a href="/zero-proof-website/cart.html"> Back to Cart</a>
     </div>
 <section class="checkout-page">
     <!--Checkout Forms-->
     <section class="checkout">
         <div id="shipping">
-            <h2>Shipping</h2>
+            <h2 id="shipping-label"><svg id="shipping-label" xmlns="http://www.w3.org/2000/svg" width="62" height="54" viewBox="0 0 62 54" fill="none">
+<path d="M51.6712 18H43.9212V9H7.75456C4.91289 9 2.58789 11.025 2.58789 13.5V38.25H7.75456C7.75456 41.985 11.2162 45 15.5046 45C19.7929 45 23.2546 41.985 23.2546 38.25H38.7546C38.7546 41.985 42.2162 45 46.5046 45C50.7929 45 54.2546 41.985 54.2546 38.25H59.4212V27L51.6712 18ZM50.3796 21.375L55.4429 27H43.9212V21.375H50.3796ZM15.5046 40.5C14.0837 40.5 12.9212 39.4875 12.9212 38.25C12.9212 37.0125 14.0837 36 15.5046 36C16.9254 36 18.0879 37.0125 18.0879 38.25C18.0879 39.4875 16.9254 40.5 15.5046 40.5ZM21.2396 33.75C19.8187 32.3775 17.8037 31.5 15.5046 31.5C13.2054 31.5 11.1904 32.3775 9.76956 33.75H7.75456V13.5H38.7546V33.75H21.2396ZM46.5046 40.5C45.0837 40.5 43.9212 39.4875 43.9212 38.25C43.9212 37.0125 45.0837 36 46.5046 36C47.9254 36 49.0879 37.0125 49.0879 38.25C49.0879 39.4875 47.9254 40.5 46.5046 40.5Z" fill="#CFB383"/>
+</svg>   Shipping</h2>
             <form id="shipping">
                 <label for="first-name" id="first-name">First Name</label>
-                <input type="text" name="first-name" id="first-name">
+                <input type="text" name="first-name" id="first-name" required>
                 <label for="last-name" id="last-name">Last Name</label>
-                <input type="text" name="last-name" id="last-name">
+                <input type="text" name="last-name" id="last-name" required>
                 <label for="my-inbox" id="my-inbox">Email</label>
-                <input type="email" name="my-inbox" id="my-inbox">
+                <input type="email" name="my-inbox" id="my-inbox" required>
                 <label for="my-phone" id="my-phone">Phone Number</label>
-                <input type="tel" name="my-phone" id="my-phone">
+                <input type="tel" name="my-phone" id="my-phone" required>
                 <label for="my-address" id="my-address">Address</label>
-                <input type="text" name="my-address" id="my-address">
-                <label for="my-city" id="my-city">City</label>
-                <input type="text" name="my-city" id="my-city">
-                <label for="my-state" id="my-state">State</label>
-                <select name="my-state" id="my-state" required aria-invalid="true">
+                <input type="text" name="my-address" id="my-address" required>
+                <label for="my-city" id="my-city" class="mobile-row">City</label>
+                <input type="text" name="my-city" id="my-city" class="mobile-row" required>
+                <label for="my-state" id="my-state" class="mobile-row">State</label>
+                <select name="my-state" id="my-state" required aria-invalid="true" class="mobile-row">
 					<option value="">Choose Your State</option>
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
@@ -96,21 +101,33 @@
 					<option value="WY">Wyoming</option>
 				</select>
                 <label for="my-zip" id="my-zip">Zip</label>
-                <input type="text" name="my-zip" id="my-zip">
+                <input type="text" name="my-zip" id="my-zip" required>
             </form>
+            <a href="#payment" onclick="return show('payment','shipping');" id="next-page" class="desktop-hide">Payment</a>
         </div>
         <div id="payment">
-            <h2>Payment</h2>
+            <h2 id="payment-label"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+<g clip-path="url(#clip0_942_564)">
+<path d="M2.00391 20H46.0039M6.00391 8H42.0039C44.213 8 46.0039 9.79086 46.0039 12V36C46.0039 38.2091 44.213 40 42.0039 40H6.00391C3.79477 40 2.00391 38.2091 2.00391 36V12C2.00391 9.79086 3.79477 8 6.00391 8Z" stroke="#CFB383" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_942_564">
+<rect width="48" height="48" fill="white" transform="translate(0.00390625)"/>
+</clipPath>
+</defs>
+</svg>   Payment</h2>
             <form id="payment">
                 <label for="card-name" id="card-name">Cardholder Name</label>
-                <input type="text" name="card-name" id="card-name">
-                <label for="card-customer" id="card-customer">Cardholder = Customer?</label>
-                <input type="button" name="card-customer" id="card-customer-yes" value="Yes">
-                <input type="button" name="card-customer" id="card-customer-no" value="No">
+                <input type="text" name="card-name" id="card-name" required>
+                <label for="same-shipping" id="same-shipping" class="desktop-hide">Same as Shipping</label>
+                <input type="checkbox" name="same-shipping" id="same-shipping" class="desktop-hide">
+                <label for="card-customer" id="card-customer" class="mobile-hide">Cardholder = Customer?</label>
+                <input type="button" name="card-customer" id="card-customer-yes" value="Yes" class="mobile-hide">
+                <input type="button" name="card-customer" id="card-customer-no" value="No" class="mobile-hide">
                 <label for="card-num" id="card-num">Card Number</label>
-                <input type="number" name="card-num" id="card-num">
+                <input type="number" name="card-num" id="card-num" required>
                 <label for="exp-date" id="exp-date">Expiration Date</label>
-                <select name="exp-date-month" id="exp-date-month"> 
+                <select name="exp-date-month" id="exp-date-month" required> 
                     <option value="01">01</option>
                     <option value="02">02</option>
                     <option value="03">03</option>
@@ -124,7 +141,7 @@
                     <option value="11">11</option>
                     <option value="12">12</option>
                 </select>
-                <select name="exp-date-year" id="exp-date-year"> 
+                <select name="exp-date-year" id="exp-date-year" required> 
                     <option value="2025">25</option>
                     <option value="2026">26</option>
                     <option value="2027">27</option>
@@ -139,29 +156,90 @@
                     <option value="2036">36</option>
                 </select>
                 <label for="card-cvc" id="card-cvc">CVC</label>
-                <input type="number" name="card-cvc" id="card-cvc">
-                <label for="bill-address" id="bill-address">Billing address = address?</label>
-                <input type="button" name="bill-address" id="bill-address-yes" value="Yes">
-                <input type="button" name="bill-address" id="bill-address-no" value="No">
+                <input type="number" name="card-cvc" id="card-cvc" required>
+                <label for="bill-address" id="bill-address" class="mobile-hide">Billing address = address?</label>
+                <input type="button" name="bill-address" id="bill-address-yes" value="Yes" class="mobile-hide">
+                <input type="button" name="bill-address" id="bill-address-no" value="No" class="mobile-hide">
+                <label for="same-address" id="same-address" class="desktop-hide">Use Shipping Address</label>
+                <input type="checkbox" name="same-address" id="same-address" class="desktop-hide">
             </form>
+            <a href="#shipping" onclick="return show('shipping','payment');" id="next-page" class="desktop-hide">Shipping</a>
         </div>
     </section>
 
     <!--Cart Summary-->
     <section class="cartsum">
-        <h2>Order Summary <span id="numOfItems">(0)</span></h2>
+        <div class="tab">
+        <input type="checkbox" name="accordion" id="accordion" class="desktop-hide">
+        <label id="grand-total">Total $<span>0</span></label>
+        <div id="tab-content">
+        <h2>Order Summary </h2>
+        <h2>Your Deck<span id="numOfItems">(0)</span></h2>
         <ul id="cart-items">
             <!--JavaScript to display cart items-->
         </ul>
         <p>Subtotal <span id="order-total">0</span></p>
         <p>Taxes & Fees $<span>0</span></p>
         <p>Delivery $<span>0</span></p>
-
-        <p id="grand-total">Total $<span>0</span></p>
+        </div>
+        </div>
     </section>
+    <a href="#" class="place-order">Place Order</a>
 </section>
-<footer id="footer">
-</footer> 
+
+
+<footer class="mobile-hide">
+    <h2>Stay in the Know</h2>
+    <input type="email" name="newsletter-inbox" id="newsletter-inbox">
+    <input type="submit" name="newsletter-submit" id="newsletter-submit">
+
+    <p>If you have any questions or require further assistance, please don’t hesitate to reach out to us via email at SagaVmocktails@gmail.com. We’re here for you!</p>
+
+    <!--Facebook-->
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M18.279 1.93994H15.3835C14.1036 1.93994 12.8761 2.45092 11.9711 3.36048C11.0661 4.27003 10.5576 5.50365 10.5576 6.78995V9.69995H7.66211V13.58H10.5576V21.34H14.4183V13.58H17.3139L18.279 9.69995H14.4183V6.78995C14.4183 6.53269 14.52 6.28597 14.701 6.10405C14.882 5.92214 15.1275 5.81995 15.3835 5.81995H18.279V1.93994Z" stroke="#CFB383" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+    <!--Instagram-->
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+<path d="M16.4719 6.30495H16.4816M6.3376 1.93994H15.9894C18.6546 1.93994 20.8152 4.11136 20.8152 6.78995V16.49C20.8152 19.1685 18.6546 21.34 15.9894 21.34H6.3376C3.67234 21.34 1.51172 19.1685 1.51172 16.49V6.78995C1.51172 4.11136 3.67234 1.93994 6.3376 1.93994ZM15.0242 11.0289C15.1433 11.8361 15.0061 12.6606 14.6321 13.385C14.2581 14.1094 13.6663 14.6968 12.941 15.0637C12.2156 15.4307 11.3936 15.5584 10.5919 15.4287C9.79015 15.2991 9.04951 14.9186 8.47531 14.3416C7.9011 13.7645 7.52257 13.0201 7.39356 12.2144C7.26455 11.4087 7.39163 10.5826 7.75672 9.85358C8.12181 9.1246 8.70632 8.52988 9.42711 8.15401C10.1479 7.77813 10.9683 7.64024 11.7715 7.75995C12.5909 7.88206 13.3495 8.26577 13.9352 8.85441C14.5209 9.44305 14.9027 10.2054 15.0242 11.0289Z" stroke="#CFB383" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+    <!--Youtube-->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<g clip-path="url(#clip0_1074_2024)">
+<path d="M22.015 6.22753C21.9004 5.76718 21.6669 5.34538 21.3381 5.00475C21.0094 4.66412 20.597 4.41672 20.1426 4.28753C18.4825 3.88013 11.8421 3.88013 11.8421 3.88013C11.8421 3.88013 5.20168 3.88013 3.54158 4.32633C3.08722 4.45552 2.67483 4.70292 2.34606 5.04355C2.0173 5.38418 1.78379 5.80598 1.66914 6.26633C1.36532 7.95952 1.2167 9.67716 1.22516 11.3976C1.21433 13.1311 1.36296 14.8618 1.66914 16.5677C1.79554 17.0138 2.03427 17.4196 2.36228 17.7458C2.69028 18.072 3.09646 18.3077 3.54158 18.4302C5.20168 18.8764 11.8421 18.8764 11.8421 18.8764C11.8421 18.8764 18.4825 18.8764 20.1426 18.4302C20.597 18.301 21.0094 18.0536 21.3381 17.7129C21.6669 17.3723 21.9004 16.9505 22.015 16.4901C22.3165 14.8097 22.4651 13.1052 22.459 11.3976C22.4699 9.6642 22.3212 7.93347 22.015 6.22753Z" stroke="#CFB383" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.67045 14.5695L15.2202 11.3976L9.67045 8.22573V14.5695Z" stroke="#CFB383" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1074_2024">
+<rect width="23.1642" height="23.28" fill="white" transform="translate(0.259766)"/>
+</clipPath>
+</defs>
+</svg>
+
+
+<!--Logo-->
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="139" viewBox="0 0 70 139" fill="none">
+<path d="M55.3959 87.9827H55.1697C54.0392 93.4249 49.6678 96.0763 46.0502 97.3322L50.1201 87.9129C52.6826 81.9823 54.7929 76.8889 55.622 75.2144C56.1495 74.3074 57.6569 72.4933 60.5209 72.5631V70.8188C58.1091 70.8885 55.6973 70.9583 53.2855 70.9583C50.8737 70.9583 47.859 70.9583 45.1457 70.8188V72.5631C49.5171 72.5631 50.6476 73.4701 50.6476 75.633C50.6476 77.796 49.4417 80.1682 48.3866 83.308C47.5575 85.5407 46.7285 87.6338 42.3571 98.1694C42.3571 98.1694 42.3571 98.1694 42.3571 98.2392C41.0758 101.309 39.5685 105.007 37.6089 109.682L27.9617 86.657C26.379 82.8196 23.2889 76.4005 23.2889 74.3074C23.2889 72.2142 23.515 72.9817 25.0977 72.7026C25.8514 72.5631 26.9066 72.5631 28.3386 72.4933V70.749C25.0977 70.749 21.7815 70.8885 18.4653 70.8885C15.1491 70.8885 12.059 70.8885 8.89348 70.749V72.4933C10.9284 72.4933 12.5112 72.7724 13.6417 73.4701C14.6215 74.1678 15.6766 75.5633 16.5811 77.8657C16.8825 78.6332 17.2594 79.61 18.616 82.68C10.627 79.7496 2.93937 72.1444 9.19496 60.5623L9.42106 60.3529C15.9781 63.2834 22.3091 65.5161 33.3882 65.8649L33.6897 89.727L36.7045 98.0997C36.8552 98.4485 37.6089 98.4485 37.7596 98.0997L40.5483 89.727L40.2468 65.8649C50.8737 65.3068 61.9529 62.0275 62.179 55.6084C62.179 54.2828 61.5761 53.0966 60.5963 52.2594C59.5411 56.5155 54.9436 59.725 50.1201 59.5854C50.1201 59.5854 50.1201 59.5854 50.0447 59.5854C50.0447 59.5854 49.9693 59.5854 49.8939 59.5854H49.7432C42.3571 60.0041 29.0922 56.5852 23.6657 51.0732H23.4396C13.491 54.9107 0 63.702 0 77.3773C0 91.0527 3.24085 91.1922 12.5112 96.146H12.7373C13.7171 91.3318 16.9579 87.9827 20.048 86.0291C20.651 87.4245 21.4047 89.0293 22.2337 90.9829C24.7962 96.8438 28.5647 105.635 34.2927 118.892H37.0059L45.5979 98.9369C54.7175 101.798 66.5504 113.659 59.4658 126.776L59.2396 126.985C52.0043 123.776 45.3718 121.613 32.2577 121.613C19.1436 121.613 5.42653 126.357 5.2758 133.614C5.2758 135.916 7.16001 137.94 9.64717 138.079C9.04422 135.288 10.2501 132.079 13.2649 130.823C20.1234 126.985 42.131 131.939 49.3664 138.079H49.5925C63.0081 129.497 69.5651 118.543 69.5651 108.147C69.5651 97.7508 64.7415 93.0063 55.4712 88.0525L55.3959 87.9827Z" fill="#CFB383"/>
+<path d="M42.4327 98.0996C42.4327 98.0996 42.4327 98.0996 42.4327 98.1698C42.2819 98.1698 42.1312 98.1698 41.9805 98.1698C42.1312 98.1698 42.2819 98.1698 42.508 98.1698L42.4327 98.0996Z" fill="#CFB383"/>
+<path d="M34.5195 52.7477L36.7806 0L39.0416 52.7477H34.5195Z" fill="#CFB383"/>
+<path d="M44.9199 47.5847L59.1646 32.5139L48.613 50.0267L44.9199 47.5847Z" fill="#CFB383"/>
+<path d="M40.5488 35.0953L51.7787 16.6057L44.6941 36.8396L40.5488 35.0953Z" fill="#CFB383"/>
+<path d="M26.9069 35.8629L19.8223 15.6987L31.0522 34.1883L26.9069 35.8629Z" fill="#CFB383"/>
+<path d="M24.9481 48.7706L14.3965 31.2578L28.6411 46.3286L24.9481 48.7706Z" fill="#CFB383"/>
+</svg>
+
+<a>FAQ</a>
+<a>About Us</a>
+<a>Contact Us</a>
+<a>Privacy Policy</a>
+<a>Terms of Service</a>
+<a>Home</a>
+<a>Blog</a>
+<a>Products</a>
+
+
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
