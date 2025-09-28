@@ -80,6 +80,8 @@ table {
 
 /* ========== GLOBAL (mobile) Base ========== */
 body {
+  max-width: 1500px; 
+  margin: auto;
   color: var(--bg);
   font-family: var(--font-sans);
   font-size: var(--font-size-0);
