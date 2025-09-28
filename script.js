@@ -145,7 +145,6 @@ const updateProductDetailCard = (product) => {
   $("#flavors").text("");
 
 
-  console.log("HERE IS PRODUCT", product);
   $("#product-name").text(product.name); 
   $(".modal-price").text(`$${product.price} / bottle (750mL)`); 
   $(".modal-card").attr("id", `modal-${product.id}`); 
