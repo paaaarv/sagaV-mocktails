@@ -1,4 +1,10 @@
-// Mobile menu toggle
+// create a cart
+let cart = [];
+if (localStorage.getItem("saga-v-cart")) {
+  cart = JSON.parse(localStorage.getItem("saga-v-cart"));
+}
+
+// Mobile me[nu toggle
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.getElementById("primary-nav");
 
@@ -59,92 +65,123 @@ function addItemToOrder(name, price, quantity) {
 
 const mocktailsArray = [
   {
+    id: 1,
     name: "The Sun",
     desc: "Golden peach, honey, and vanilla blossom with sparkling water",
-    price: 12.99,
+    flavor: ["Bright", "Uplifting", "Approachable"],
+    price: 52.99,
     img: "assets/the-sun.jpg",
   },
   {
+    id: 2,
     name: "The Siren",
     desc: "Sea salt, grapefruit, and rosemary",
-    price: 12.99,
+    flavor: ["Savory", "Intriguing", "Adventurous"],
+    price: 52.99,
     img: "assets/the-siren.jpg",
   },
   {
+    id: 3, 
     name: "The Fool",
     desc: "Yuzu, Lime, and Green Apple",
-    price: 12.99,
+    flavor: ["Tangy", "Playful", "Energizing"],
+    price: 52.99,
     img: "assets/the-fool.jpg",
   },
   {
+    id: 4,
     name: "The Magician",
     desc: "Blood orange, gentian root, and herbal botanicals",
-    price: 12.99,
+    flavor: ["Complex", "Sophisticated", "Contemplative"],
+    price: 52.99,
     img: "assets/the-magician.jpg",
   },
   {
+    id: 5,
     name: "The Oracle",
     desc: "Tomato, black tea, and shiitake with subtle spice",
-    price: 12.99,
+    flavor: ["Earthy", "Grounding", "Savory"],
+    price: 52.99,
     img: "assets/the-oracle.jpg",
   }
 ];
 
 // Modal View functionality
 
-const mocktail1Btn = document.getElementById("view-mocktail1");
-const mocktail2Btn = document.getElementById("view-mocktail2");
-const mocktail3Btn = document.getElementById("view-mocktail3");
-const mocktail4Btn = document.getElementById("view-mocktail4");
-const mocktail5Btn = document.getElementById("view-mocktail5");
+$(".view-product").on("click",function(e){
+  const cardId = parseInt(e.target.dataset.mocktail); 
+  const card = mocktailsArray.filter((x) => x.id === cardId)[0]; 
+  updateProductDetailCard(card); 
+  $("#product-detail").dialog("open");
 
-const btns = [
-  mocktail1Btn,
-  mocktail2Btn,
-  mocktail3Btn,
-  mocktail4Btn,
-  mocktail4Btn,
-  mocktail5Btn,
-];
+});
 
-const modal = document.createElement("div");
+$("#close-modal").on("click", function(){
+    $("#shop-overlay").fadeOut(1000);
+  $("#product-detail").dialog("close"); 
+});
 
-const createModal = (productNum) => {
-  modal.innerHTML = 
-  `<i class="fa-solid fa-x modal-x" id="close-modal"></i>
-  <article class="modal-card" id="modal-${productNum}">
-      <div class="modal-card-top">
-          <img class="modal-card-img" src=${mocktailsArray[productNum].img} alt="Mocktail ${productNum}" />
-        <div class="modal-product-detail">
-          <h3>${mocktailsArray[productNum].name}</h3>
-          <p class="modal-price">${mocktailsArray[productNum].price}</p>
-          <p>${mocktailsArray[productNum].desc}</p>
-        </div>
-      </div>
-      <div class="modal-card-bottom">
-        <input class="product-qty" type="number"/> 
-        <a href="/checkout.html" class="modal-card-btn">ADD TO CART</a>
-        </div>
-      </div>
-      
-    </article>`;
+$("#product-detail").dialog({
+      appendTo: 'body',
+      autoOpen: false, 
+      width: '75vw',
+      modal: true,
+      show: {
+        effect: "fade",
+        duration: 800
+      },
+      open: function(){
+        $("#shop-overlay").fadeIn(800);
+      },
+      close: function(){
+        $("#shop-overlay").fadeOut(800);
+      },
+      hide: {
+        effect: "fade",
+        duration: 1000
+      },
+    });
+
+
+const updateProductDetailCard = (product) => {
+  /*clear out content */ 
+  $("#product-name").text(""); 
+  $(".modal-price").text(""); 
+  $("#flavors").text("");
+  $(".product-qty").val(1); 
+
+
+  $("#product-name").text(product.name); 
+  $(".modal-price").text(`$${product.price} / bottle (750mL)`); 
+  $(".modal-card").attr("id", `modal-${product.id}`); 
+  let flavorsDiv = $("#flavors"); 
+  for (let i=0;i < product.flavor.length; i++){
+    flavorsDiv.append(
+      `<div class="badge badge-pill modal-card-btn flavor-tag"> 
+        ${product.flavor[i]}
+      </div>`
+    )
+  }
+  $("#description").text(product.desc); 
+  $("#product-button").attr("data-mocktail", product.id); 
 }
 
-const closeModal = () => {
-  overlay.classList.add("overlay-hide");
-  overlay.classList.remove("overlay-show");
-};
-
-const viewProductDetails = (e) => {
-  e.preventDefault();
-  const productNumber = e.target.dataset.mocktail
-  createModal(productNumber)
-  overlay.classList.remove("overlay-hide");
-  overlay.classList.add("overlay-show");
-  document.getElementById("overlay").appendChild(modal);
-  document.getElementById("close-modal").addEventListener("click", closeModal);
-};
-
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", viewProductDetails);
-}
+// shop button add to cart: 
+$(".shop-btn").on("click", function(e){
+  let product = {}; 
+  const productId = parseInt(e.target.dataset.mocktail); 
+  let existingProduct = cart.find(item => item.id === productId);
+  let productQty = parseInt($(".product-qty").val());
+  if (existingProduct){
+    if (productQty){
+      existingProduct.quantity+= productQty; 
+    }else{
+      existingProduct.quantity += 1; 
+    }
+  }else{
+    product.id = productId; 
+    product.quantity = 1; 
+    cart.push(product); 
+  }
+  console.log("CURRENT CART", cart);
+}); 
