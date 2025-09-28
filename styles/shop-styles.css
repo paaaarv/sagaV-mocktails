@@ -172,9 +172,10 @@ h1 {
   position: fixed;
   top: 0;
   right: 0;
-  background-image: url("/Content/shop-background.png"); 
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: rgba(26, 39, 53, 0.8); 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 500;
 }
 
 

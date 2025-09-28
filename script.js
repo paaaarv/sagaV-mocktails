@@ -127,14 +127,19 @@ $("#close-modal").on("click", function(){
 });
 
 $("#product-detail").dialog({
+      appendTo: 'body',
       autoOpen: false, 
       width: '75vw',
       modal: true,
       show: {
         effect: "fade",
-        duration: 1000
+        duration: 800
       },
       open: function(){
+        $("#shop-overlay").fadeIn(800);
+      },
+      close: function(){
+        $("#shop-overlay").fadeOut(800);
       },
       hide: {
         effect: "fade",
