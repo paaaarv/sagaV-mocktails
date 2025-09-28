@@ -1,8 +1,14 @@
-//fetch navigation bar: 
+//fetch navigation bar, newsletter and footer sections for all pages: 
 fetch('navigation.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('navigation').innerHTML = data;
+});
+
+fetch('newsletter.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('newsletter').innerHTML = data;
 });
 
 fetch('footer.html')
