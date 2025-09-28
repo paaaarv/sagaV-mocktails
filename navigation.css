@@ -53,8 +53,21 @@ nav {
 /* Icons container */
 .icons {
   display: flex;
-  gap: 1rem;
+  gap: 1rem; 
   margin-left: 5rem;
+  align-items: center;
+}
+
+.icons a {
+  display: inline-flex;
+}
+
+.icons button {
+  background: none;   
+  border: none;    
+  padding: 0;        
+  cursor: pointer;      
+  display: inline-flex;  
 }
 
 .icons svg {
@@ -100,6 +113,19 @@ nav {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.mobile-menu a svg {
+  width: 28px;      
+  height: 28px;
+  fill: #CFB482;    
+  vertical-align: middle; 
+  transition: transform 0.2s;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.mobile-menu a:hover svg {
+  transform: scale(1.2); 
+}
 /* ===================== CTA SECTION ===================== */
 .cta {
   background: #966941;
