@@ -313,88 +313,89 @@ body {
 /* ========== Mobile (iPhone 14/15) ========== */
 /* Confirmation Page */
 @media screen and (max-width: 430px) {
+  body{
+    background-image: url("Content/background-2.png") no-repeat center fixed !important;
+    background-size: cover;
+  }
+
+  .progress-tracker{
+    display: flex !important;
+  }
+
+  .progress-tracker p{
+    color: #CFB383 !important;
+    font-size: 20px !important;
+  }
+
+  .progress-tracker .circle{
+    background-color: #CFB383;
+    border: #CFB383;
+  }
+
   .left-right {
     display: block;
-    margin: 5px;
+    margin: 0;
+    padding: 10px;
   }
 
-  .left h1 {
-    display: none;
+  .left, .order-updates, .big-box, .contact {
+    width: 100% !important;
+    max-width: 100%;
+    height: auto;
+    padding: 15px;
   }
 
-  .order-header p strong{
-    font-size: 15px;
+  .order-header svg {
+    width: 80px;
+    height: auto;
+  }
+
+  .order-header strong {
+    font-size: 18px;
   }
 
   .order-updates h2 {
-    font-size: 22px;
+    font-size: 18px;
+  }
+
+  .order-updates p {
+    font-size: 14px;
+  }
+
+  .big-box {
+    display: block;
+    width: 100% !important;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    font-size: 14px;
+  }
+
+  .contact p {
+    font-size: 14px;
+  }
+
+  .left .btn {
+    width: 100% !important;
+    padding: 15px;
+    font-size: 18px;
+    margin: 20px 0;
   }
 
   .right {
     display: none;
   }
 
-  .right h2 {
-    font-size: 24px;
+  .site-header{
+    width: 700px;
   }
 
-  .contact {
-    grid-template-columns: 1fr 1fr;
-    font-size: 14px;
-    padding: 15px;
-  }
-
-  .left .btn {
-    width: 100%;
-    margin: 20px 0;
-    padding: 15px;
-  }
-
-  .big-box{
-    width: 786px;
-    height: 105px;
-    flex-shrink: 0;
-    border-radius: 13px;
-    border: 2px solid #CFB482;
-    background: rgba(156, 112, 76, 0.40);
-  }
-
-  .progress-tracker {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-  }
-
-  .progress-tracker .step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-  }
-
-  .progress-tracker .circle {
-    width: 25px;
-    height: 25px;
-    border: 2px solid var(--accent-strong);
-    border-radius: 50%;
-    background-color: white;
-  }
-
-  .progress-tracker .circle.active {
-    background-color: black;
-  }
-
-  .progress-tracker .line {
-    flex: 1;
-    height: 2px;
-    background-color: var(--accent-strong);
-    margin: 0;
-  }
-
-  .progress-tracker p {
-    margin-top: 5px;
-    font-size: 14px;
+  footer{
+    width: 700px;
+    margin-top: 400px;
   }
 }
 
@@ -550,8 +551,10 @@ small{
 
 .right .item {
   display: grid;
-  grid-template-columns: 80px 1fr 40px auto;
-  gap: 10px;
+  grid-template-columns: 113px 1fr auto; 
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
   border-bottom: 1px solid var(--text);
 }
 
