@@ -3,18 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Brand Name] — Confirmation</title>
+  <title>SAGA V — Confirmation</title>
+  <style>
+    /* Mobile override */
+    @media screen and (max-width: 430px) {
+      body {
+        background: url("Content/background-2.png") no-repeat center fixed !important;
+        background-size: cover !important;
+      }
+      .left{
+        background-color: #1A2735 !important;
+        border: none !important;
+      }
+    }
+  </style>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Molle&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Molle&family=Montserrat&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- Bootstrap Link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <!-- CSS Link -->
-   <link rel="stylesheet" href="confirmation.css">
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="styles/confirmation.css">
 </head>
-<body>
-  <a href="/zero-index-website/cart">&larr; Back to Cart</a>
+<body style="margin:0; padding:0; height:100vh; background: url('Content/background.jpeg') no-repeat center center fixed; background-size: cover;">
+  <header role="banner" class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="/">Saga V</a>
+      <!-- Mobile nav button // INSERT NAVIGATION HERE  -->
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
+      <span class="nav-toggle-box" aria-hidden="true">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+      </span>
+      <span class="nav-toggle-text">Menu</span>
+      </button>
+
+      <nav id="primary-nav" aria-label="Primary">
+        <a href="menu.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <!-- <a href="checkout.html">&larr; Back to Cart</a> -->
   <div class="left-right">
     <!-- LEFT COLUMN -->
     <div class="left">
-      <h1>Checkout</h1>
       <div class="progress-tracker">
         <div class="step">
           <div class="circle"></div>
@@ -32,8 +72,11 @@
         </div>
       </div>
       <div class="order-header">
-        <div style="width: 100px;height:100px;background-color: gray;display: inline-block;"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="169" height="173" viewBox="0 0 169 173" fill="none">
+          <path d="M154.471 80.0408V86.65C154.462 102.141 149.583 117.215 140.562 129.622C131.54 142.03 118.859 151.107 104.409 155.499C89.9601 159.891 74.5169 159.364 60.383 153.995C46.2492 148.627 34.1819 138.705 25.9809 125.709C17.7799 112.713 13.8847 97.3399 14.8761 81.8822C15.8675 66.4244 21.6924 51.7103 31.4822 39.9342C41.2719 28.1581 54.5019 19.951 69.1991 16.537C83.8962 13.123 99.2731 14.685 113.036 20.9899M154.471 29.1795L84.5979 101.089L63.6359 79.538" stroke="#CFB482" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         <div>
+          <h1>Order Placed</h1>
           <p><small>Order #123</small></p>
           <p><strong>Alyssa, your order has been placed!<br>Thank you!</strong></p>
         </div>
@@ -42,7 +85,7 @@
         <h2><strong>Order Updates</strong></h2>
         <p>You will receive order and shipping updates via email</p>
       </div>
-      <div style="width: 800px;height:200px;background-color: gray;display: inline-block;" class="big-box"></div>
+      <img src="Content/contentTeam_Deliverables_V2-3.png" style="width: 786px; height: 105px; flex-shrink: 0; border-radius: 13px; border: 2px solid #CFB482;" class="big-box" alt="hands holding a drink"></img>
       <div class="contact">
         <p>Contact</p>
         <p>alyssa@asu.edu</p>
@@ -53,45 +96,79 @@
       </div>
       <a href="menu.html" type="button" class="btn btn-dark">Continue Shopping</a>
     </div>
-
     <!-- RIGHT COLUMN -->
     <div class="right">
-      <div style="width: 40px;height:40px;background-color: gray;display: inline-block;"></div>
-      <h2><strong>Order Summary (3)</strong></h2>
+      <svg xmlns="http://www.w3.org/2000/svg" width="38" height="35" viewBox="0 0 38 35" fill="none">
+        <path d="M1.58789 1.54163H7.92122L12.1646 22.1845C12.3093 22.8943 12.7059 23.5319 13.2848 23.9857C13.8638 24.4394 14.5882 24.6805 15.3312 24.6666H30.7212C31.4643 24.6805 32.1887 24.4394 32.7676 23.9857C33.3465 23.5319 33.7431 22.8943 33.8879 22.1845L36.4212 9.24996H9.50456M15.8379 32.375C15.8379 33.2264 15.129 33.9166 14.2546 33.9166C13.3801 33.9166 12.6712 33.2264 12.6712 32.375C12.6712 31.5235 13.3801 30.8333 14.2546 30.8333C15.129 30.8333 15.8379 31.5235 15.8379 32.375ZM33.2546 32.375C33.2546 33.2264 32.5457 33.9166 31.6712 33.9166C30.7968 33.9166 30.0879 33.2264 30.0879 32.375C30.0879 31.5235 30.7968 30.8333 31.6712 30.8333C32.5457 30.8333 33.2546 31.5235 33.2546 32.375Z" stroke="#CFB482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h2><strong>Order Summary (2)</strong></h2>
       <div class="item">
-        <div style="width: 80px;height:80px;background-color: gray;display: inline-block;"></div>
-        <p><strong>Smooth Velvet</strong><br><small>Pack of 4</small></p>
-        <div style="width: 40px;height:40px;background-color: gray;display: inline-block;"></div>
-        <p>$$$</p>
+        <img src="Content/contentTeam_Deliverables_V2-5.png" alt="the pink sun mocktail" style="width: 113px; height: 90px; border-radius: 10px; border: 1px solid #CFB482;">
+        <p>
+          <strong>The Sun</strong>
+          <small>Bottle Size</small>
+        </p>
+        <p><strong>$</strong></p>
       </div>
       <div class="item">
-        <div style="width: 80px;height:80px;background-color: gray;display: inline-block;"></div>
-        <p><strong>Smooth Velvet</strong><br><small>Pack of 4</small></p>
-        <div style="width: 40px;height:40px;background-color: gray;display: inline-block;"></div>
-        <p>$$$</p>
-      </div>
-      <div class="item">
-        <div style="width: 80px;height:80px;background-color: gray;display: inline-block;"></div>
-        <p><strong>Smooth Velvet</strong><br><small>Pack of 4</small></p>
-        <div style="width: 40px;height:40px;background-color: gray;display: inline-block;"></div>
-        <p>$$$</p>
+        <img src="Content/contentTeam_Deliverables_V2-6.png" alt="the siren blue mocktail" style="width: 113px; height: 90px; border-radius: 10px; border: 1px solid #CFB482;">
+        <p>
+          <strong>The Fool</strong>
+          <small>Bottle Size</small>
+        </p>
+        <p><strong>$</strong></p>
       </div>
       <div class="totals">
-        <hr>
         <p>Subtotal</p>
-        <p>$$$</p>
+        <p>$</p>
         <p>Taxes and Fees</p>
-        <p>$$$</p>
+        <p>$</p>
         <p>Delivery Fee</p>
-        <p>$$$</p>
-        <hr>
+        <p>$</p>
       </div>
       <div class="total">
         <p>Total</p>
-        <p>$$$</p>
+        <p>$</p>
       </div>
     </div>
-
   </div>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="114" height="137" viewBox="0 0 114 137" fill="none">
+          <path d="M114.003 89.4255C114.003 105.642 103.367 122.658 81.5438 136.044H81.1922C69.127 126.287 32.0525 118.404 21.7455 125.175C20.8664 125.819 24.053 126.131 24.053 130.541C24.053 132.824 21.5916 136.298 16.4271 136.044C12.3834 135.83 9.26277 132.629 9.35067 129.039C9.57044 117.818 26.0309 110.383 53.15 110.383C74.4454 110.383 85.2579 113.681 96.9714 118.716L97.323 118.404C108.839 97.9726 89.6532 79.4539 74.841 75.0242L60.8858 106.09H56.5125C47.1724 85.5032 41.019 71.7653 36.8654 62.6133C35.4809 59.5886 34.3161 57.0323 33.3272 54.8858C28.3165 57.9495 22.9762 63.1987 21.4158 70.6726H21.0642C5.98826 62.9646 0.669922 52.8759 0.669922 41.3821C0.669922 20.1119 22.6685 6.41314 38.7993 0.422363H39.1729C50.6887 11.76 84.7524 17.4385 89.3675 11.2916C90.0707 10.355 87.0599 10.355 87.0599 5.94481C87.0599 3.6812 89.4554 0.285785 94.4441 0.441896C98.5977 0.55898 101.894 3.79827 101.784 7.4864C101.455 17.4971 83.4338 22.5122 66.1382 23.4293L66.6217 60.6424L62.0725 73.7363C61.8528 74.3217 60.6221 74.3217 60.4023 73.7558L55.5015 60.74L55.0181 23.5074C37.0632 22.961 26.8001 19.5265 16.0975 14.9212L15.7459 15.2334C5.50478 33.3229 18.0314 45.1679 31.0196 49.7146C28.8879 44.9727 28.2945 43.4897 27.7671 42.2408C26.3386 38.6892 24.6903 36.4841 23.0421 35.4304C21.262 34.3766 18.6688 33.9473 15.3503 33.9473V31.2154C20.5587 31.3325 25.7672 31.43 30.9537 31.43C36.4039 31.43 41.7222 31.2154 47.0406 31.2154V33.9473C44.7989 34.0644 43.0188 34.0644 41.8321 34.2791C39.2388 34.6889 38.8872 35.8402 38.8872 36.7964C38.8872 40.0357 43.8539 50.0268 46.4472 55.9981L62.1824 91.9233C65.3471 84.6641 67.8744 78.8099 69.9402 74.068C69.9621 74.0094 69.9841 73.9509 70.0061 73.9119C77.1705 57.4421 78.511 54.2614 79.8077 50.7488C81.5658 45.8118 83.4778 42.2408 83.4778 38.7868C83.4778 35.3328 81.5658 33.9473 74.4893 33.9473V31.2154C78.8627 31.3325 83.3459 31.43 87.7192 31.43C91.6311 31.43 95.5209 31.3325 99.4328 31.2154V33.9473C94.8177 33.8498 92.3343 36.5817 91.5212 38.0452C90.0927 40.6796 86.6644 48.6609 82.5328 57.891L75.9178 72.624C81.7856 70.7116 88.9719 66.5161 90.752 58.086H91.1256C106.202 65.7941 114.003 76.195 114.003 89.4255Z" fill="#CFB383"/>
+        </svg>
+      </div>
+
+      <div class="footer-links">
+        <ul>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+        </ul>
+        <ul>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/products.html">Products</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-social">
+          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="37" viewBox="0 0 23 37" fill="none">
+            <path d="M21.715 1.78198H16.115C13.6396 1.78198 11.2657 2.65816 9.51531 4.21777C7.76497 5.77738 6.78164 7.89267 6.78164 10.0983V15.0881H1.18164V21.7411H6.78164V35.0472H14.2483V21.7411H19.8483L21.715 15.0881H14.2483V10.0983C14.2483 9.65717 14.445 9.23411 14.795 8.92219C15.1451 8.61027 15.6199 8.43503 16.115 8.43503H21.715V1.78198Z" stroke="#CFB383" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="45" height="41" viewBox="0 0 45 41" fill="none">
+            <path d="M32.7146 11.2667H32.7332M13.1146 3.78198H31.7812C36.9359 3.78198 41.1146 7.50532 41.1146 12.0983V28.7309C41.1146 33.3239 36.9359 37.0472 31.7812 37.0472H13.1146C7.95993 37.0472 3.78125 33.3239 3.78125 28.7309V12.0983C3.78125 7.50532 7.95993 3.78198 13.1146 3.78198ZM29.9146 19.3667C30.145 20.751 29.8796 22.1647 29.1563 23.4068C28.4329 24.649 27.2885 25.6562 25.8856 26.2854C24.4828 26.9145 22.893 27.1335 21.3425 26.9112C19.7919 26.6889 18.3595 26.0366 17.2489 25.0471C16.1384 24.0575 15.4063 22.7812 15.1568 21.3996C14.9073 20.018 15.1531 18.6015 15.8592 17.3515C16.5653 16.1015 17.6957 15.0818 19.0898 14.4372C20.4838 13.7927 22.0704 13.5563 23.6239 13.7616C25.2086 13.9709 26.6756 14.6289 27.8084 15.6382C28.9412 16.6476 29.6796 17.9548 29.9146 19.3667Z" stroke="#CFB383" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="46" height="41" viewBox="0 0 46 41" fill="none">
+            <path d="M43.0548 11.1337C42.833 10.3444 42.3814 9.62112 41.7456 9.03704C41.1097 8.45296 40.3122 8.02873 39.4334 7.80721C36.2228 7.10864 23.3801 7.10864 23.3801 7.10864C23.3801 7.10864 10.5374 7.10864 7.32677 7.87374C6.44803 8.09526 5.65046 8.51949 5.01462 9.10357C4.37877 9.68765 3.92718 10.4109 3.70544 11.2003C3.11784 14.1036 2.83041 17.0488 2.84677 19.9989C2.82582 22.9712 3.11327 25.9389 3.70544 28.8641C3.94989 29.629 4.41161 30.3247 5.04597 30.8841C5.68034 31.4435 6.4659 31.8477 7.32677 32.0576C10.5374 32.8227 23.3801 32.8227 23.3801 32.8227C23.3801 32.8227 36.2228 32.8227 39.4334 32.0576C40.3122 31.8361 41.1097 31.4118 41.7456 30.8277C42.3814 30.2437 42.833 29.5204 43.0548 28.7311C43.6378 25.8496 43.9252 22.9268 43.9134 19.9989C43.9344 17.0266 43.6469 14.0589 43.0548 11.1337Z" stroke="#CFB383" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.1801 25.4378L29.9134 19.9989L19.1801 14.5601V25.4378Z" stroke="#CFB383" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
