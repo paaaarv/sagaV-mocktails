@@ -37,8 +37,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    max-width: 1400px; 
-    margin: auto; 
+  margin: auto; 
 }
 ol, ul {
 	list-style: none;
@@ -172,8 +171,6 @@ table {
   }
   /* Added styles for main just now */
   main {
-    width: 90%;
-    margin: auto;
     padding: 0;
   }
   
