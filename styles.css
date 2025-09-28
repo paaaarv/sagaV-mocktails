@@ -1314,7 +1314,51 @@ hr {
 
   }
 
+/* Adding and Subtracting in cart */
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+.qty-input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Custom look for qty input */
+.qty-input {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  background: var(--figma-dark);
+  border: 1px solid var(--figma-gold);
+  color: var(--figma-gold);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0;
+}
+.qty-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--figma-gold);
+  border: none;
+  color: var(--figma-dark);
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 1.25rem; /* makes + and – larger */
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.qty-btn:hover {
+  background: var(--figma-bronze);
+  color: var(--figma-dark);
+}
 
 /* ------------------ RESET ------------------ */
 * {
