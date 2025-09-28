@@ -310,11 +310,21 @@ table {
     position: absolute;
     top: 50%;
     height: 2px;
-    width: 50%;
+    width: 118px;
     z-index: 1;
     transform: translateY(-50%);
     background-color: #CFB383;
     
+  }
+
+  /* new CSS being added */
+
+  .milestone:nth-child(odd)::before {
+    left: calc(50% - 118px);
+  }
+
+  .milestone:nth-child(even)::before {
+    left: 50%;
   }
   
   /* Image styling */
@@ -323,6 +333,7 @@ table {
     height: 117px;
     object-fit: cover;
     border-radius: 50%;
+    margin-bottom: 0.75rem;
     
   }
   
@@ -347,6 +358,20 @@ table {
 
   .milestones-subhead {
     font-size: 2rem;
+  }
+
+  /* New CSS being added for milestones */
+
+  .milestone-content h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .milestone-content p {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 0.75rem;
   }
   
   /* Beginning of newsletter styles */
@@ -616,10 +641,20 @@ table {
       content: "";
       position: absolute;
       top: 50%;
-      height: 2px;
-      width: 50%;
+      height: 3px;
+      width: 185px;
       z-index: 1;
       transform: translateY(-50%);
+    }
+
+    /*New CSS being added here */
+
+    .milestone:nth-child(odd)::before {
+      left: calc(50% - 185px);
+    }
+
+    .milestone:nth-child(even)::before {
+      left: 50%;
     }
   
     .milestone-content h3 {
@@ -631,6 +666,19 @@ table {
       width: 180px;
       height: 180px;
       border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .milestone-content h3 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .milestone-content p {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 0.75rem;
     }
   
   
@@ -746,6 +794,45 @@ table {
  
     .milestones h2 {
      font-size: 40px;
+    }
+
+    .milestone::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 4px;
+      width: 506px;
+      background-color: #CFB383;
+      z-index: 1;
+    }
+
+    .milestone:nth-child(odd)::before {
+      left: calc(50% - 506px);
+    }
+
+    .milestone:nth-child(even)::before {
+      left: 50%;
+    }
+
+    .milestone-content h3 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .milestone-content p {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .milestone-image {
+      width: 117px;
+      height: 117px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: 1rem;
     }
 
     .newsletter h3 {
