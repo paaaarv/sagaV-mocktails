@@ -1,4 +1,10 @@
-// Mobile menu toggle
+// create a cart
+let cart = [];
+if (localStorage.getItem("saga-v-cart")) {
+  cart = JSON.parse(localStorage.getItem("saga-v-cart"));
+}
+
+// Mobile me[nu toggle
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.getElementById("primary-nav");
 
@@ -129,7 +135,6 @@ $("#product-detail").dialog({
         duration: 1000
       },
       open: function(){
-        $("#shop-overlay").fadeIn(1000);
       },
       hide: {
         effect: "fade",
@@ -143,6 +148,7 @@ const updateProductDetailCard = (product) => {
   $("#product-name").text(""); 
   $(".modal-price").text(""); 
   $("#flavors").text("");
+  $(".product-qty").val(1); 
 
 
   $("#product-name").text(product.name); 
@@ -157,5 +163,25 @@ const updateProductDetailCard = (product) => {
     )
   }
   $("#description").text(product.desc); 
+  $("#product-button").attr("data-mocktail", product.id); 
 }
 
+// shop button add to cart: 
+$(".shop-btn").on("click", function(e){
+  let product = {}; 
+  const productId = parseInt(e.target.dataset.mocktail); 
+  let existingProduct = cart.find(item => item.id === productId);
+  let productQty = parseInt($(".product-qty").val());
+  if (existingProduct){
+    if (productQty){
+      existingProduct.quantity+= productQty; 
+    }else{
+      existingProduct.quantity += 1; 
+    }
+  }else{
+    product.id = productId; 
+    product.quantity = 1; 
+    cart.push(product); 
+  }
+  console.log("CURRENT CART", cart);
+}); 

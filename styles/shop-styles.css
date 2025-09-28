@@ -172,36 +172,29 @@ h1 {
   position: fixed;
   top: 0;
   right: 0;
-  background-image: url("/Users/parvathikumar/Desktop/school/git450/zero-proof-website/zero-proof-website/Content/shop-background.png"); 
+  background-image: url("/Content/shop-background.png"); 
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.overlay-show {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.overlay-hide {
-  display: none;
-}
 
 #close-modal {
   font-weight: bold;
   font-size: 1.5rem;
   cursor: pointer;
-  color: white;
+  color: var(--btn-accent);
 }
 
 .modal-card {
+    position:sticky; 
     border-radius: 4px;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     text-align: left;
     width: 75vw;
-    z-index: 1000;
+    z-index:1000; 
+
 }
 
 .modal-card-top {
@@ -377,10 +370,6 @@ input {
 
 
 /* product detail styles */ 
-
-#product-detail{
-  z-index: 1000; 
-} 
 
 .ui-dialog-titlebar-close {
         display: none;
