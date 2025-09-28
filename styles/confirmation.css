@@ -635,6 +635,20 @@ strong{
   font-weight: 400;
 }
 
+.total p:first-of-type{
+  font-size: 32px;
+  color: var(--text);
+  font-family: Roboto;
+}
+
+.total p:last-of-type{
+  font-size: 25px;
+  font-family: var(--font-family);
+  color: var(--text);
+  font-weight: 400;
+}
+
+
 
 .left .btn{
   display: block;
