@@ -364,11 +364,14 @@ table {
 
   /* New CSS being added for milestones */
 
+<<<<<<< HEAD:styles/about-us-page-styles.css
+=======
   .milestone-content{ 
     z-index: 100; 
     margin-top: 32px; 
   }
 
+>>>>>>> main:styles/about-us.css
   .milestone-content h3 {
     font-size: 20px;
     text-align: center;
