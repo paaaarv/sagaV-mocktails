@@ -66,18 +66,19 @@ table {
   --line: #2a3245;
 }
 /* ========== Checkout Styles ========== */
+body{
+  background-image: url(/Content/background.jpeg);
+}
 header{
   background-color: var(--dpblue);
 }
 h2, p, label, li, option{
   color: var(--gold);
-  font-family: Roboto, serif;
 }
 h2{
   font-size: 1.5em;
   font-weight: 700;
   padding: 10px;
-  font-family: Metamorphous, sans-serif;
 }
 /*==== Nav ====*/
 nav{
@@ -374,7 +375,7 @@ input#bill-address-no{
 
 
 /* ========== Tablet ========== */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 650px){
   .mobile-hide{
     display: none;
   }
@@ -514,7 +515,7 @@ input#bill-address-no{
     border-radius: 12px;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 650px) {
   .desktop-hide{
     display: none;
   }
