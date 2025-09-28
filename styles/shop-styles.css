@@ -1,4 +1,51 @@
 /* Shop Page */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 :root {
   --main-bg-color: #1A2735;
@@ -31,8 +78,18 @@ main {
   background-color: var(--main-bg-color);
 }
 
-h1 {
+.shop-header {
+  width: 100%;
   text-align: center;
+  padding-top: 3rem;
+}
+
+#shop-heading {
+  text-align: center;
+  display: inline;
+  font-family: var(--ff-metamorphos);
+  color: #CFB383;
+  font-size: 2.5rem;
 }
 
 #products {
@@ -42,17 +99,11 @@ h1 {
   padding: 1.5rem;
 }
 
-.shop-heading {
-  font-weight: bold;
-  margin: 1.5rem;
-  font-size: 24px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 .card {
   border-radius: 4px;
   box-shadow: none;
   padding: 1rem;
+  border: 3px solid #CFB383;
 }
 
 .card:first-of-type {
@@ -86,13 +137,13 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     padding: 0;
-    height: 100%;
+    gap: 3rem;
+    padding: 1rem;
 }
 
 .card button {
   padding: 0.75rem 1rem;
   margin: 0;
-  border: none;
   width: 50%;
   text-decoration: none;
   text-align: center;
@@ -100,7 +151,7 @@ h1 {
 }
 
 .card-top {
-  border-bottom: 1px solid black;
+  border-bottom: 3px solid #CFB383;
 }
 
 .card-controls {
@@ -125,6 +176,7 @@ h1 {
   font-weight: bold;
   cursor: pointer;
   color: black;
+  border: 1px solid #CFB383;
 }
 
 .card:first-of-type button {
