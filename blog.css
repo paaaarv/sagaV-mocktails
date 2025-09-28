@@ -1,0 +1,623 @@
+/* ========== COLOR AND FONT VARIABLES ========== */
+:root {
+    /* Brand Colors based on the image */
+    --color-dark-blue: #1A2735;
+    --color-gold: #CFB482;
+    --color-brown: #9C704C;
+    --color-light-gray: #f9f9f9;
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* Spacing and Font Scale (adjust these to match your design system) */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-4: 1rem;
+    --space-6: 4rem;
+    --font-size-3: 3rem;
+
+    /* Font Family */
+    /* Assuming a sans-serif for body and a serif/Garamond for headings based on your link */
+    --font-family-serif: 'Cormorant Garamond', serif;
+    --font-family-sans: sans-serif;
+
+    --accent-strong: var(--color-dark-blue);
+}
+
+/* ========== GLOBAL/UTILITY STYLES ========== */
+body {
+    font-family: var(--font-family-sans);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--color-white); /* Default background */
+}
+
+/* Container for content width (adjust max-width as needed) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* SR-only for accessibility (e.g., skip link) */
+.sr-only, .skip-link {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Fix for the unused buttons in your HTML */
+.scroll-btn {
+    display: none;
+}
+
+/* ========== HEADER & NAVIGATION ========== */
+
+.site-header {
+    background-color: var(--color-gold); /* Top bar color */
+    padding: 0.5rem 0;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem; /* Add padding to sides of header content */
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: ;
+    color: var(--color-dark-blue);
+    text-decoration: none;
+    font-family: var(--font-family-serif); /* Use the brand name font */
+}
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'Metamorphous';
+  src: url('fonts/Metamorphous-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+h1, h2, h3 {
+  font-family: 'Metamorphous', serif;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Desktop Nav (to match the button-like links in the image) */
+#primary-nav {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#primary-nav a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px; /* Slight rounding for button look */
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    
+    /* Default link style (e.g., Products, Blog) */
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+}
+
+/* Style for the "Food" link (assuming it's the highlighted one in the image) */
+/* You may need to add a specific class to the "Food" link in your HTML for this */
+#primary-nav a:last-child { /* Targets the last link, which is 'Checkout' in your HTML. Adjust this selector if 'Food' is a different link */
+    background-color: var(--color-gold);
+    color: var(--color-dark-blue);
+    border: 1px solid var(--color-dark-blue); /* Optional: to make it stand out */
+}
+
+/* Hide mobile menu button on desktop */
+.nav-toggle {
+    display: none;
+}
+
+
+
+/* ========== HEADER & NAVIGATION (Revised) ========== */
+
+.site-header {
+    /* Header background is DARK BLUE in the image */
+    background-color: var(--color-dark-blue); 
+    /* Reduced top/bottom padding to match image's compact header */
+    padding: 0.25rem 0; 
+}
+
+.header-row {
+    /* Use the container class to center the content */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Add padding to sides for content alignment */
+    padding: 0 1rem; 
+}
+
+.brand {
+    font-size: 1.8rem; /* Slightly larger brand text */
+    font-weight: normal; 
+    /* Brand text is GOLD in the image */
+    color: var(--color-gold); 
+    text-decoration: none;
+    font-family: 'Metamorphous', serif; 
+}
+
+.brandLogo {
+    height: auto; /* Adjust height as needed to fit the header */
+    width: 100%;
+    color: #CFB482;
+}
+
+.brandLogo path {
+  fill: #CFB482; /* Your gold tone */
+}
+
+/* Desktop Nav */
+#primary-nav {
+    display: flex;
+    gap: 1.5rem; /* Increased gap for better separation */
+    align-items: center;
+}
+
+#primary-nav a {
+    text-decoration: none;
+    /* No background or border-radius on the links in the image */
+    padding: 0;
+    border-radius: 0; 
+    font-weight: 400; /* Regular weight */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    
+    /* Default link style is GOLD */
+    background-color: transparent;
+    color: var(--color-gold); 
+}
+
+/* Remove the redundant 'button' styling and stick to simple links */
+#primary-nav a:hover { 
+    color: var(--color-white); /* White on hover for contrast */
+}
+
+/* Hide mobile menu button on desktop */
+.nav-toggle {
+    display: none;
+}
+
+/* ========== BLOG/RECIPES CONTENT (Provided CSS) ========== */
+
+
+
+/* .heroic {
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+}
+
+.heroic img {
+  width: 100%;
+  height: 425px;
+  left: 0;
+  top: 161px;
+  object-fit: cover;
+  border-bottom: 4px solid var(--primary);
+}
+
+.heroic h1 {
+    font-family: Metamorphous, serif;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  color: var(--color-gold);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-family: 'Metamorphous';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 60px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+top: 150px;
+} */
+
+/* ========== HERO SECTION (Revised) ========== */
+
+.heroic {
+    position: relative;
+    text-align: center;
+    /* The main content area has no solid background color */
+    background-color: transparent; 
+    
+}
+
+/* Assuming the hero image is a full-width background */
+.heroic img {
+    width: 100%;
+    height: 400px; 
+    object-fit: cover;
+    border-bottom: none; 
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.heroic h1 {
+    font-family: 'Metamorphous', serif;
+    position: absolute;
+    /* Center the title more accurately over the image */
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    /* Adjust font size to be larger like the image */
+    font-size: 4rem; 
+    /* Set text color to GOLD */
+    color: var(--color-gold); 
+    /* Remove padding/background to show image under text */
+    padding: 0; 
+    text-transform: capitalize; 
+    /* Ensures no line break for 'Recipes' if space allows */
+    white-space: nowrap; 
+}
+
+
+
+.mix-it-up {
+    padding: var(--space-6) 0;
+    text-align: center;
+}
+
+.pargin{
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: left; /* Text alignment adjustment for the paragraphs */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Fix the mixU class in HTML for h2 and p */
+.mixUp{
+    margin: 0;
+    padding: 0;
+    color: #CFB482;
+    font-size: 1.15em;
+}
+.mix-it-up h2 {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+.mix-it-up > p:first-of-type {
+    margin-bottom: 2rem;
+    /* color: #666;*/
+}
+
+.mix-it-up {
+  padding: 2rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.mix-it-up h2,
+.mix-it-up p.mixU {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.pargin {
+  max-width: 800px;
+  margin: 1rem auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/*first card section code version1*/
+.scroll-wrapper {
+    overflow-x: hidden;
+    padding: 2rem 0; /* Adjusted padding for full width cards */
+    max-width: 100vw;
+    background-color: var(--color-light-gray); /* Light gray background for card area */
+}
+
+.card-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 1rem 2rem; /* Added horizontal padding to card row for visibility */
+    -webkit-overflow-scrolling: touch;
+    width: calc(100% - 4rem); /* To account for padding */
+    margin: 0 auto;
+}
+
+.card-row::-webkit-scrollbar {
+    display: none;
+}
+.card-row {
+    scrollbar-width: none;
+}
+
+.recipe-card {
+    flex: 0 0 320px;
+    height: 460px;
+    background-color: var(--color-dark-blue);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    scroll-snap-align: start;
+    color: #CFB482;
+}
+
+.image-placeholder {
+    flex: 0 0 60%;
+    margin: .5rem;
+    border: none;
+    border-radius: 8px;
+    /*This creates the light checkered pattern */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.image-placeholder {
+  flex: 0 0 60%;
+  margin: 0.5rem;
+  
+  border-radius: 8px;
+  overflow: hidden;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+.recipe-card h3 {
+    font-size: 1.25rem;
+    margin: 1rem 1rem 0.5rem;
+    color: #CFB482;
+    text-align: left;
+}
+
+.recipe-card p {
+    margin: 0 1rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #CFB482;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.recipe-card button {
+    margin: 0 1rem 1rem;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-gold);
+    color: var(--color-dark-blue);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-card button:hover {
+    background-color: #e0b020; /* Slightly darker gold on hover */
+}
+
+
+
+/* Navigation below the cards */
+.carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Arrows */
+.nav-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #eee;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    color: var(--color-dark-blue); /* Arrow icon color */
+    font-family: serif; /* Better appearance for the arrow characters */
+}
+
+.nav-arrow:hover {
+    background-color: #ccc;
+}
+
+/* Dots */
+.nav-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--color-dark-blue); /* Active dot is dark */
+}
+
+/* NOTE: The image only shows the arrows and dots *once* below the cards.
+         Your HTML has a redundant '.pagination' div and another set of arrows/dots 
+         in '.carousel-nav'. The CSS assumes '.carousel-nav' is the correct one. 
+         I've removed the redundant arrow styling. 
+*/
+
+/* ========== NEWSLETTER SIGNUP (Provided CSS) ========== */
+
+.now-you-know {
+    background-color: var(--color-brown);
+    color: var(--color-black);
+    padding: 3rem 2rem;
+    text-align: center;
+    font-family: var(--font-family-serif);
+    
+}
+
+.now-you-know h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+    letter-spacing: 0.5px;
+}
+
+.email-signup {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+/* Fix the typo in the HTML form class: action="/submit-email" method="post"*/
+/* The selector below targets the input and button within the form */
+.now-you-know form { 
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.now-you-know form input[type="email"] {
+    padding: .75rem 1rem;
+    width: 100%;
+    border: 1px solid #555;
+    border-radius: 6px;
+    color: var(--color-black);
+    font-size: 1rem;
+    font-family: inherit;
+    flex-grow: 1; /* Allows input to take up available space */
+}
+
+.now-you-know form input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.now-you-know form button {
+    background-color: var(--color-dark-blue);
+    color: #CFB482;
+    border: none;
+    padding: .75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.now-you-know form button:hover {
+    background-color: gray;
+}
+
+
+/* ========== FOOTER ========== */
+
+.site-footer {
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    padding: 3rem 2rem;
+    font-size: 0.9rem;
+    font-family: var(--font-family-serif);
+}
+
+.site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.site-footer p {
+    /* Styles for the copyright text */
+    margin: 0 0 1rem 0;
+}
+
+.site-footer h2 {
+    /* Hiding the h2 but keeping it for screen readers */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+#social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+#social svg {
+    /* Styling the SVG icons */
+    width: 24px;
+    height: 24px;
+    stroke: var(--color-white); /* Set icon color to white */
+}

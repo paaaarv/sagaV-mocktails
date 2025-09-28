@@ -246,31 +246,6 @@ time, mark, audio, video {
 .newsletter button:hover { background: #555; }
 
 
-/* Custom Fonts */
-@font-face {
-  font-family: 'Metamorphous';
-  src: url('fonts/Metamorphous-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('fonts/Roboto-Regular.ttf') format('truetype');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('fonts/Roboto-Bold.ttf') format('truetype');
-  font-weight: 700;
-}
-
-h1, h2, h3 {
-  font-family: 'Metamorphous', serif;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
 
 /* ========== END OF PART 1 THE CODE ABOVE WAS ADDED ========== ========== THE CODE ABOVE WAS ADDED ========== */
 
