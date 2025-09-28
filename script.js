@@ -1,3 +1,18 @@
+//fetch navigation bar: 
+fetch('navigation.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navigation').innerHTML = data;
+});
+
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+});
+
+
+
 // Mobile menu toggle
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.getElementById("primary-nav");
