@@ -163,3 +163,66 @@ dots.forEach((dot, index) => {
     // Trigger carousel slide change here
   });
 });
+
+function initCarousel() {
+document.addEventListener("DOMContentLoaded", () => {
+  const cardRow = document.getElementById("cardRow");
+  const scrollLeftBtn = document.querySelector(".scroll-btn.left");
+  const navLeft = document.querySelector(".nav-arrow.left");
+  const navRight = document.querySelector(".nav-arrow.right");
+  const dots = document.querySelectorAll(".pagination .dot");
+
+  const cardWidth = document.querySelector(".recipe-card").offsetWidth;
+  const gap = 16; // adjust if you have margin between cards
+  const scrollAmount = cardWidth + gap;
+
+  let currentIndex = 0;
+  const maxIndex = dots.length - 1;
+
+  function updateScroll() {
+    cardRow.scrollTo({
+      left: currentIndex * scrollAmount,
+      behavior: "smooth"
+    });
+    updateDots();
+  }
+
+  function updateDots() {
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentIndex);
+    });
+  }
+
+  navLeft.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateScroll();
+    }
+  });
+
+  navRight.addEventListener("click", () => {
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      updateScroll();
+    }
+  });
+
+  scrollLeftBtn.addEventListener("click", () => {
+    cardRow.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+
+  // Optional: dot click behavior
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      currentIndex = i;
+      updateScroll();
+    });
+  });
+
+  // Optional: responsive recalculation
+  window.addEventListener("resize", () => {
+    updateScroll();
+  });
+});
+}
+document.addEventListener("DOMContentLoaded", initCarousel);
