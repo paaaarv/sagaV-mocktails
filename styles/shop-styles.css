@@ -423,6 +423,9 @@ input {
 
 
 /* product detail styles */ 
+#product-detail{
+  display: none; 
+}
 
 .ui-dialog-titlebar-close {
         display: none;
