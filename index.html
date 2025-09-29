@@ -7,7 +7,7 @@
   <meta name="author" content="[GIT 450 WEB TEAM  Fall B 2025]" />
   <title> ZeroProof — Alcohol-Free Mocktails</title>
   <meta name="description" content="Bold mocktails for every mood — zero alcohol, maximum flavor." />
-
+  <meta http-equiv="Cache-control" content="public, max-age=3600">
   <!-- Open Graph -->
   <meta property="og:title" content="[Brand Name] — Alcohol-Free Mocktails" />
   <meta property="og:description" content="Sophisticated, alcohol-free mocktails crafted for taste, ritual, and style." />
@@ -32,6 +32,7 @@
   <!-- JS/CSS Links -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="./styles/home.css" /> 
+  <link rel="stylesheet" href="./navigation.css"/> 
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
@@ -41,30 +42,10 @@
 
 
     <!-- ========== Header & Nav ========== -->
-    <header role="banner" class="site-header">
-        <div class="container header-row">
-            <a class="brand" href="/">Saga V</a>
-
-            <!-- Mobile nav button // INSERT NAVIGATION HERE  -->
-            <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
-            <span class="nav-toggle-box" aria-hidden="true">
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-            </span>
-            <span class="nav-toggle-text">Menu</span>
-            </button>
-
-            <nav id="primary-nav" aria-label="Primary">
-            <a href="/" aria-current="page">Home</a>
-            <a href="/menu.html">Our Menu</a>
-            <a href="/team.html">Our Team</a>
-            <a href="/blog.html">Blog</a>
-            <a href="/checkout.html">Checkout</a>
-            </nav>
-        </div>
-    </header>
-
+    <header id="navigation" class="site-header">
+  
+   </header>
+    
 
 
 
@@ -75,7 +56,8 @@
     <section class="hero">
         <div class="heading"> 
           <h1>Welcome to the world of Saga V</h1>
-          <p class="hero-sub">Reimagining how people gather through story-driven mocktails that bring ritual, artistry and unforgettable flavor.</p>
+          <p class="hero-sub">Reimagining how people gather through story-driven <br>
+             mocktails that bring ritual, artistry and unforgettable flavor.</p>
           <!--leads to product page-->
           <button id="product-page-button" class="btn btn-primary">Discover Menu</button> 
         </div> 
@@ -100,7 +82,7 @@
       </div>
       <div class="card-body">
         <h3>The Siren</h3>
-        <a href="/zero-proof-website/checkout.html" class="button">Buy Now</a>
+        <a href="/shop.html" class="button">Buy Now</a>
       </div>
     </article>
 
@@ -111,14 +93,14 @@
       </div>
       <div class="card-body">
         <h3>The Magician</h3>
-        <a href="/zero-proof-website/checkout.html" class="button">Buy Now</a>
+        <a href="/shop.html" class="button">Buy Now</a>
       </div>
     </article>
   </div>
 
   <!-- View All Button -->
   <div class="view-all-wrapper">
-    <button id="view-all" class="button">View All</button>
+    <a href="/shop.html" id="view-all" class="button">View All </a>
   </div>
 </section>
 
@@ -126,12 +108,12 @@
     <section id="ingredients">
         <h3> Six Unique Flavor Profiles </h3> 
         <div id="ingredients-container"> 
-            <div class="circle-photo"> <img src="https://placehold.co/200x200?text=img" alt="img"> </div> 
-            <div class="circle-photo"> <img src="https://placehold.co/200x200?text=img" alt="img"> </div> 
-            <div class="circle-photo"> <img src="https://placehold.co/200x200?text=img" alt="img"> </div> 
-            <div class="circle-photo"> <img src="https://placehold.co/200x200?text=img" alt="img"> </div> 
-            <div class="circle-photo"> <img src="https://placehold.co/200x200?text=img" alt="img"> </div> 
-            <div class="circle-photo"> <img src="https://placehold.co/200x200?text=img" alt="img"> </div> 
+            <div class="circle-photo"> <img src="assets/the-fool.jpg" alt="img"> </div> 
+            <div class="circle-photo"> <img src="assets/the-magician.jpg" alt="img"> </div> 
+            <div class="circle-photo"> <img src="assets/the-oracle.jpg" alt="img"> </div> 
+            <div class="circle-photo"> <img src="assets/the-siren.jpg" alt="img"> </div> 
+            <div class="circle-photo"> <img src="assets/the-sun.jpg" alt="img"> </div> 
+            <div class="circle-photo"> <img src="Content/ContentTeam_Mocktail_V1-9.jpg" alt="img"> </div> 
         </div> 
     </section> 
 
@@ -139,13 +121,18 @@
     <section id="amazon-promo">
   <div class="promo-left">
     <h3>Saga V: Now on Amazon</h3>
-    <p>Saga V has partnered with Amazon to share the magic with even more people ready to go on a journey</p>
+    <p>Saga V has partnered with Amazon to share the magic with even more people ready to go on a journey.</p>
     <a href="https://amazon.com" target="_blank" class="button">Shop on Amazon</a>
   </div>
+
   <div class="promo-right">
+    <div class="overlay">
+      <h3>All Drinks <br> Available Now</h3>
+    </div>
     <img src="Content/ContentTeam_Mocktail_V1-4.jpg" alt="Saga V Drinks on Amazon">
   </div>
 </section>
+
     <!-- blog highlight section -->
      <section id="blog-highlight"> 
       <h3> Blog Highlight </h3> 
@@ -215,56 +202,30 @@
   <img src="Content/Moodboard banner.png" alt="Tarot Moodboard Banner" class="tarot-banner">
 </section>
 
-<!--Catchphrase section-->
+</section>
 
-      </section>
-      <section id="catchphrase"> 
-        <h4> Inspired by tarot archetypes and crafted like a luxury spirit, our identity blends artistry, mystery and inclusivity.</h4> 
-        <h2> Saga V </h2> 
-      </section> 
-      <section class="newsletter">
-          <h4>Join Our Email List</h4>
-          <form class="email-signup">
-          <input type="email" id="email" name="email" placeholder="you@email.com" required>
-          <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-      </section>
+<!-- Catchphrase & Newsletter Section -->
+<section id="last-section">
+
+  <!-- Catchphrase -->
+  <section id="catchphrase"> 
+    <h4>
+      Inspired by tarot archetypes and crafted like a luxury spirit, our
+      identity blends artistry, mystery and inclusivity.
+    </h4> 
+    <h2>Saga V</h2> 
+  </section> 
+
+  <!-- Newsletter -->
+  <section id="newsletter">
+  </section>
+
+</section>
 
   </main>
 
   <!-- Footer ADD FOOTER HERE  -->
-  <footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-left">
-      <p>&copy; 2025 Saga V Mocktails — Non-Alcoholic Beverages</p>
-      <p>If you have any questions or require further assistance, please don’t hesitate to reach out to us at <a href="mailto:sagvmocktails@gmail.com">sagvmocktails@gmail.com</a></p>
-    </div>
-
-    <div class="footer-links">
-      <ul>
-        <li><a href="/faq.html">FAQ</a></li>
-        <li><a href="/contact.html">Contact Us</a></li>
-        <li><a href="/privacy.html">Privacy Policy</a></li>
-        <li><a href="/terms.html">Terms of Service</a></li>
-      </ul>
-      <ul>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/products.html">Products</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-right">
-      <div class="footer-logo">
-        <img src="https://placehold.co/80x80?text=Logo" alt="Saga V Logo">
-      </div>
-      <div class="footer-social">
-        <a href="#"><img src="https://placehold.co/24x24?text=IG" alt="Instagram"></a>
-        <a href="#"><img src="https://placehold.co/24x24?text=FB" alt="Facebook"></a>
-        <a href="#"><img src="https://placehold.co/24x24?text=TW" alt="Twitter"></a>
-      </div>
-    </div>
-  </div>
+  <footer id="footer">
   </footer>
   <!-- script tags -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>

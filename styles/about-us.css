@@ -1,0 +1,872 @@
+/*Imported Fonts */
+/* Imported Metamophous and Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* ========== CSS Reset (modern, minimal) ========== */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  margin: auto; 
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ========== ABOUT US SECTION (Sebastian’s Task) ========= */
+.header-nav {
+    background-color: #1A2835;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-zero {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  /* Hamburger menu isnt showing */
+  .menu-icon {
+    cursor: pointer;
+    color: #000;
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+   /* Styles for the SVG icons for the navigation area */
+  .cart-icon,
+  .search-icon,
+  .user-icon {
+    position: absolute;
+    top: 1rem;
+    z-index: 101;
+  }
+
+  .cart-icon {
+    right: 1rem;
+  }
+
+  .user-icon {
+    right: 3rem;
+  }
+  
+  .search-icon {
+    right: 5rem;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1A2835;
+    border: 2px solid #1A2835;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: none;
+    z-index: 100;
+    width: 250px;
+    text-align: center;
+    /* Added a display none here to experiment */
+
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-menu li {
+    margin-bottom: 1rem;
+  }
+
+  
+  .nav-menu li a {
+    color: #CFB383;
+    text-decoration: none;
+  }
+  
+  .menu-toggle:checked ~ .nav-menu {
+    display: block;
+  }
+  
+  
+  header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: var(--bg);
+    width: 111px;
+    height: 35px;
+    flex-shrink: 0;
+    padding: 3px;
+    
+  }
+
+   h1 {
+    font-family: "Metamorphous";
+    text-align: center;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: normal;
+    color: #CFB383;
+
+  }
+  /* Added styles for main just now */
+  main {
+    padding: 0;
+  }
+  
+  /* The background could be bigger */
+  .hero {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('../Content/About-Us-SagaV.jpg') lightgray 50% / cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 480px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    display: flex;
+  }
+  /* Beginning of h2 */
+  .story {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .story-header {
+    margin-bottom: 1rem;
+  }
+  
+  .story-image-container img {
+     max-width: 100%;
+     height: auto;
+     margin: 1rem 0;
+  }
+  
+  .story-text {
+    text-align: center;
+    
+  }
+  /* Added story text p spacing because my paragraphs were too close together. */
+  .story-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-family: "Roboto";
+    font-size: 16px;
+  }
+  
+  .story .story-header h2 {
+    color: #000;
+    font-size: 2rem;
+    font-family: "Metamorphous";
+  }
+  
+  .story-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .intro  {
+    font-size: 32px;
+    margin-top: 0.5rem;
+    font-family: "Roboto";
+  }
+  /* Beginning of the milestone section */
+  
+  .milestones {
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #000;
+    font-weight: normal;
+    font-weight: bold;
+    
+    
+    
+  }
+
+  /* I added new styles to the mobile screen for the milestone subheading, it currently is too close to the heading for the milestone. */
+
+  .milestones-subhead {
+    margin-top: 1rem;
+    font-weight: normal;
+    font-family: "Roboto";
+    font-size: 32px;
+  }
+    
+
+  .milestones h2 {
+    font-family: "Metamorphous";
+    font-size: 40px;
+  }
+  
+  .timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  /* This is the vertical stick */
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #000;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+  
+  .milestone {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 3rem 0;
+    width: 100%;
+    z-index: 1;
+    
+  }
+  
+  .milestone::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: #CFB383;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .milestone::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 118px;
+    z-index: 1;
+    transform: translateY(-50%);
+    background-color: #CFB383;
+    
+  }
+
+  /* new CSS being added */
+
+  .milestone:nth-child(odd)::before {
+    left: calc(50% - 118px);
+  }
+
+  .milestone:nth-child(even)::before {
+    left: 50%;
+  }
+  
+  /* Image styling */
+  .milestone-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+    
+  }
+  
+  /* Content of title and year */
+  .milestone-content {
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 250px;
+  }
+  
+  /* Images being placed in their respected spots. Both 1 and 3 are on the left side.*/ 
+  .milestone:nth-child(1),
+  .milestone:nth-child(3) {
+    align-self: flex-start;
+    text-align: left;
+  }
+  /* Image on the right side */
+  .milestone:nth-child(2) {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .milestones-subhead {
+    font-size: 2rem;
+  }
+
+  /* New CSS being added for milestones */
+
+<<<<<<< HEAD:styles/about-us-page-styles.css
+=======
+  .milestone-content{ 
+    z-index: 100; 
+    margin-top: 32px; 
+  }
+
+>>>>>>> main:styles/about-us.css
+  .milestone-content h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .milestone-content p {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Beginning of newsletter styles */
+  .newsletter {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #9C704D;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .newsletter h3 {
+    font-family: "Metamorphous";
+    font-size: 40px;
+  }
+  .newsletter form {
+    margin-top: 1rem;
+  }
+  .newsletter label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #000;
+  }
+  #email {
+    padding: 0.5rem;
+    width: 250px;
+    border: 1px solid;
+    border-radius: 9px;
+    margin-right: 0.5rem;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    /* The button in the figma file is black and it blends in with the body background color. I chose a light gray for now. */
+    background-color: #000;
+    color: #9C704D;
+  }
+  
+  /* beginning styles of footer */
+  .footer {
+    background-color: #1A2835;
+    padding: 2rem;
+    
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    
+  }
+   /* Added styles for the footer contact */
+  .footer-contact {
+    text-align: center;
+    font-size: 0.95rem;
+    order: 1;
+    color: #fff;
+  }
+
+  /* Added styles for logo footer */
+  .footer-logo {
+    position: relative;
+    order: 4;
+    top: -4rem;
+    margin-top: -4rem;
+    
+  }
+
+  .footer-legal {
+    order: 5;
+    align-self: flex-end;
+    color: #fff;
+    
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    text-align: right;
+    padding-left: 1rem;
+    order: 3;
+    
+  }
+  
+  .link-column {
+    align-items: flex-end;
+    gap: 0.75rem;
+    flex-direction: column;
+    display: flex;
+    
+  }
+  
+  .link-column a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    
+  }
+  
+  .link-column a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    order: 2;
+  }
+  
+  .footer-social {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footer-social svg {
+    width: 23px;
+    height: 23px;
+    transition: fill 0.3s ease;
+    color: #CFB383;
+  }
+
+  /* ========== Tablet ========== */
+/* ========= ABOUT US TABLET MEDIA QUERY ====== */
+/* Look at mobile styles for the about section I need to recode the about us section. */
+/* I had to use the important to get rid of the dropdown menu that was from the hamburger menu, it was still showing on the tablet screen and this was the only way I knew how to get rid of it. */
+@media screen and (min-width: 768px) {
+
+    /* Styles for the header */
+    .nav-menu {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        height: auto !important;
+        width: auto !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        order: unset;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        
+
+    }
+  
+    /* Styles for the navigation */
+    /* Note: I had to use transparent background color as the navigation links had a background color of the dropdown menu from the hamburger menu from the mobile screen. This is a temporary fix. */
+   
+    .nav-menu ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 0.5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-menu ul li a {
+        text-shadow: none !important;
+        box-shadow: none !important;
+        color: #CFB482 !important;
+        display: inline-block !important;
+        padding: 0;
+    }
+
+    .menu-toggle,
+    .menu-icon {
+        display: none;
+    }
+
+    .header-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        position: relative;
+
+    }
+
+    .logo-zero {
+        position: absolute;
+        left: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        order: unset;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 96px;
+    }
+  
+  
+    /* Styles for "Our Story" section */
+    .story {
+      padding: 3rem 1rem;
+      text-align: center;
+  
+    }
+  
+    .story-header {
+      text-align: center;
+      margin-bottom: 2rem;
+  
+    }
+  
+    .story-header h2 {
+      font-size: 40px;
+      margin-bottom: 0.5rem;
+    }
+  
+    .intro {
+      margin: 0 auto;
+      line-height: 1.6;
+      font-size: 32px;
+      font-family: "Roboto";
+    }
+  
+    .story-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      gap: 4rem;
+    }
+  
+    .story-text {
+      grid-column: 1;
+      max-width: none;
+      
+  
+    }
+  
+    .story-image-container {
+      grid-column: 2;
+      justify-self: center;
+    }
+
+    /*Added this new style for the tablet section to target the paragraphs*/
+
+    .story text p {
+      font-family: "Roboto";
+      font-size: 16px;
+    }
+    
+    /* Styling for the milestone section */
+  
+    .milestones h2 {
+      font-size: 40px;
+      font-weight: bold;
+      font-family: "Metamorphous";
+  
+    }
+     /* This section is for the horizontal stick thats suppose to connect to the circle placeholder images. This is as far as I have gotten but I can't seem to get it right. I can also copy and paste this code to the mobile phone section as well. */
+    
+    
+     .milestone::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 3px;
+      width: 185px;
+      z-index: 1;
+      transform: translateY(-50%);
+    }
+
+    /*New CSS being added here */
+
+    .milestone:nth-child(odd)::before {
+      left: calc(50% - 185px);
+    }
+
+    .milestone:nth-child(even)::before {
+      left: 50%;
+    }
+  
+    .milestone-content h3 {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .milestone-image {
+      object-fit: cover;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .milestone-content h3 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .milestone-content p {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+  
+  
+    /* Styling for the newsletter section */
+    .newsletter h3 {
+      font-size: 40px;
+    }
+
+    .newsletter {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+  
+    /* Styling of footer for tablet */
+    .footer-container {
+        display: grid;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 2rem;
+        gap: 2rem 4rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto min-content;
+        grid-template-areas:
+        "contact_social links logo"
+        "legal legal legal";
+    }
+
+    .footer-logo {
+        grid-area: logo;
+        align-self: flex-start;
+        justify-self: flex-end;
+        position: static;
+        margin-top: 0;
+        top: auto;
+        order: unset;
+    }
+
+    .footer-contact {
+        grid-area: contact_social;
+        align-self: flex-start;
+        text-align: left;
+        order: unset;
+    }
+
+    .footer-links {
+        grid-area: links;
+        display: flex;
+        justify-content: flex-start;
+        text-align: left;
+        order: unset;
+    }
+
+    .footer-social-wrapper {
+        grid-area: contact_social;
+        align-self: flex-end;
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+        margin-top: auto;
+        order: unset;
+    }
+
+    .footer-legal {
+        grid-area: legal;
+        text-align: left;
+        align-self: flex-start;
+        order: unset;
+        margin-top: 2rem;
+        
+    }
+
+    .link-column {
+        align-items: flex-start;
+    }
+  }
+
+  /* ========== Desktop ========== */
+@media screen and (min-width: 1280px) {
+    .nav-menu ul li a {
+        font-size: 1.5rem;
+    }
+
+    .cart-icon,
+    .search-icon,
+    .user-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    h1 {
+     font-size: 128px;
+    }
+    .story-text {
+     margin-top: 3rem;
+     margin-left: 3rem;
+     
+     
+    }
+
+    .story-text p {
+      font-size: 16px;
+      font-family: "Roboto";
+    }
+
+    .intro {
+      font-size: 32px;
+      font-family: "Roboto";
+    }
+
+    /* New CSS I added for the desktop for the three paragraph tags. */
+    
+
+    /* New CSS I added */
+ 
+    .milestones h2 {
+     font-size: 40px;
+    }
+
+    .milestone::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 4px;
+      width: 506px;
+      background-color: #CFB383;
+      z-index: 1;
+    }
+
+    .milestone:nth-child(odd)::before {
+      left: calc(50% - 506px);
+    }
+
+    .milestone:nth-child(even)::before {
+      left: 50%;
+    }
+
+    .milestone-content h3 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .milestone-content p {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .milestone-image {
+      width: 117px;
+      height: 117px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: 1rem;
+    }
+
+    .newsletter h3 {
+        font-size: 40px;
+    }
+
+    .newsletter {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+ 
+    .footer-links {
+      display: flex;
+      gap: 4rem;
+      justify-content: flex-end;
+      margin-top: 2rem;
+      
+    }
+
+    .footer-social svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .link-column {
+        gap: 0.3rem;
+    }
+ }

@@ -1,255 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>[Brand Name] — Alcohol-Free Mocktails</title>
-    <meta
-      name="description"
-      content="Sophisticated, alcohol-free mocktails crafted for taste, ritual, and style."
-    />
+    <meta name="description"
+          content="Sophisticated, alcohol-free mocktails crafted for taste, ritual, and style." />
     <meta name="author" content="[GIT 450 WEB TEAM  Fall B 2025]" />
     <title>ZeroProof — Alcohol-Free Mocktails</title>
-    <meta
-      name="description"
-      content="Bold mocktails for every mood — zero alcohol, maximum flavor."
-    />
-
+    <meta name="description"
+          content="Bold mocktails for every mood — zero alcohol, maximum flavor." />
+      <meta http-equiv="Cache-control" content="public, max-age=3600">
     <!-- Open Graph -->
     <meta property="og:title" content="[Brand Name] — Alcohol-Free Mocktails" />
-    <meta
-      property="og:description"
-      content="Sophisticated, alcohol-free mocktails crafted for taste, ritual, and style."
-    />
+    <meta property="og:description"
+          content="Sophisticated, alcohol-free mocktails crafted for taste, ritual, and style." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mocktail-domain.com" />
     <!-- Meta OG & Twitter tags (for social sharing) -->
     <meta property="og:title" content="ZeroProof — Alcohol-Free Mocktails" />
-    <meta
-      property="og:description"
-      content="Bold mocktails for every mood — zero alcohol, maximum flavor."
-    />
-    <meta
-      property="og:image"
-      content="https://mocktail-domain.com/assets/og-image.jpg"
-    />
+    <meta property="og:description"
+          content="Bold mocktails for every mood — zero alcohol, maximum flavor." />
+    <meta property="og:image"
+          content="https://mocktail-domain.com/assets/og-image.jpg" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="[Brand Name] — Alcohol-Free Mocktails"
-    />
-    <meta
-      name="twitter:description"
-      content="Sophisticated, alcohol-free mocktails crafted for taste, ritual, and style."
-    />
-    <meta
-      name="twitter:image"
-      content="https://mocktail-domain.com/assets/og-image.jpg"
-    />
+    <meta name="twitter:title"
+          content="[Brand Name] — Alcohol-Free Mocktails" />
+    <meta name="twitter:description"
+          content="Sophisticated, alcohol-free mocktails crafted for taste, ritual, and style." />
+    <meta name="twitter:image"
+          content="https://mocktail-domain.com/assets/og-image.jpg" />
 
     <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- Stylesheet Link -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+    <link rel="stylesheet" href="styles/cart.css" />
+    <link rel="stylesheet" href="./navigation.css"/> 
 
-  <body>
+    <!--font for cart -->
+    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
     <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- ========== Header & Nav ========== -->
-    <header role="banner" class="site-header">
-      <div class="container header-row">
-        <a class="brand" href="/zero-index-website">[Brand Name]</a>
-
-        <!-- Mobile nav button -->
-        <button
-          class="nav-toggle"
-          aria-controls="primary-nav"
-          aria-expanded="false"
-          aria-label="Toggle menu"
-        >
-          <span class="nav-toggle-box" aria-hidden="true">
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-          </span>
-          <span class="nav-toggle-text">Menu</span>
-        </button>
-
-        <nav id="primary-nav" aria-label="Primary">
-          <a href="/" aria-current="page">Home</a>
-          <a href="/menu.html">Our Menu</a>
-          <a href="/team.html">Our Team</a>
-          <a href="/blog.html">Blog</a>
-          <a href="/checkout.html">Checkout</a>
-        </nav>
-      </div>
+    <header id="navigation">>
+   
     </header>
 
     <!-- Main content -->
-    <main id="cart-page-main">
-        <div id="your-cart">
-        <h1 id="cart-heading">Your Cart</h1>
-          <div class="cart-item">
-            <div class="cart-left">
-              <img alt="" class="cart-img" src="https://images.unsplash.com/photo-1701541065297-06a8f455c721?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-              <div class="cart-details">
-                <h3>Smooth Velvet</h3>
-                <p>Pack of 4</p>
-                <label for="itemQty"></label>
-                <input id="itemQty" type="number" />
-              </div>
-            </div>
-            <div class="cart-right">
-              <i class="fa-solid fa-trash"></i>
-              <p>$$$</p>  
-            </div>
-          </div>
-          <hr />
-          <div class="cart-item">
-            <div class="cart-left">
-              <img alt="" src="https://images.unsplash.com/photo-1701541065297-06a8f455c721?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="cart-img"/>
-              <div class="cart-details">
-                <h3>Smooth Velvet</h3>
-                <p>Pack of 4</p>
-                <label for="itemQty2"></label>
-                <input id="itemQty2" type="number" />
-              </div>
-            </div>
-            <div class="cart-right">
-              <i class="fa-solid fa-trash"></i>
-              <p>$$$</p>  
-            </div>
-          </div>
-          <hr />
-          <div class="cart-item">
-            <div class="cart-left">
-              <img alt="" class="cart-img" src="https://images.unsplash.com/photo-1701541065297-06a8f455c721?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-              <div class="cart-details">
-                <h3>Smooth Velvet</h3>
-                <p>Pack of 4</p>
-                <label for="itemQty3"></label>
-                <input id="itemQty3" type="number" />
-              </div>
-            </div>
-            <div class="cart-right">
-              <i class="fa-solid fa-trash"></i>
-              <p>$$$</p>  
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="order-summary">
-        <h2 id="cart-heading">Order Summary</h2>
-        <div id="summary-container">
-          <section id="detail">
-            <p>Subtotal:</p>
-            <p>Taxes & Fees:</p>
-            <p>Delivery Fee:</p>
-          </section>
+    <main id="cart-page-main" class="deck">
+        <div class="cart-inner">
+            <!-- Cart List -->
+            <section id="your-cart">
+                <h1 class="deck-title">🛒 Your Deck <span>(3)</span></h1>
 
-          <hr />
-          <section id="grand-total">
-            <h4>Total:</h4>
-            <button>Checkout</button>
-          </section>
+                <!-- Item 1 -->
+                <div class="cart-item">
+                    <img src="Content/ContentTeam_Mocktails_v1-15.png" class="cart-img" alt="The Sun" />
+                    <div class="cart-info">
+                        <h3>The Sun</h3>
+                        <p>Bottle size</p>
+                        <div class="qty">
+                            <button class="qty-btn">−</button>
+                            <input type="number" class="qty-input" value="1" min="1" />
+                            <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="cart-meta">
+                        <button class="trash" aria-label="Remove The Sun">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <p>$</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="cart-item">
+                    <img src="Content/ContentTeam_Mocktail_V1-1.jpg" class="cart-img" alt="The Siren" />
+                    <div class="cart-info">
+                        <h3>The Siren</h3>
+                        <p>Bottle size</p>
+                        <div class="qty">
+                            <button class="qty-btn">−</button>
+                            <input type="number" class="qty-input" value="2" min="1" />
+                            <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="cart-meta">
+                        <button class="trash" aria-label="Remove The Siren">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <p>$</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="cart-item">
+                    <img src="Content/ContentTeam_Mocktail_V1-7.jpg" class="cart-img" alt="The Sun" />
+                    <div class="cart-info">
+                        <h3>The Fool</h3>
+                        <p>Bottle size</p>
+                        <div class="qty">
+                            <button class="qty-btn">−</button>
+                            <input type="number" class="qty-input" value="1" min="1" />
+                            <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="cart-meta">
+                        <button class="trash" aria-label="Remove The Sun">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <p>$</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="cart-item">
+                    <img src="Content/ContentTeam_Mocktail_V1-9.jpg" class="cart-img" alt="The Sun" />
+                    <div class="cart-info">
+                        <h3>The Magician</h3>
+                        <p>Bottle size</p>
+                        <div class="qty">
+                            <button class="qty-btn">−</button>
+                            <input type="number" class="qty-input" value="1" min="1" />
+                            <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="cart-meta">
+                        <button class="trash" aria-label="Remove The Sun">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <p>$</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="cart-item">
+                    <img src="Content/ContentTeam_Mocktail_V1-2.jpg" class="cart-img" alt="The Sun" />
+                    <div class="cart-info">
+                        <h3>The Oracle</h3>
+                        <p>Bottle size</p>
+                        <div class="qty">
+                            <button class="qty-btn">−</button>
+                            <input type="number" class="qty-input" value="1" min="1" />
+                            <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="cart-meta">
+                        <button class="trash" aria-label="Remove The Sun">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <p>$</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Order Summary -->
+            <aside id="order-summary">
+                <h2 class="deck-title">Order Summary</h2>
+                <div class="summary-row"><span>Subtotal</span><span>$</span></div>
+                <div class="summary-row"><span>Taxes &amp; Fees</span><span>$</span></div>
+                <div class="summary-row"><span>Delivery Fee</span><span>$</span></div>
+                <hr />
+                <div class="total-row">
+                    <label>Total</label>
+                    <input type="text" value="$" readonly class="total-input" />
+                </div>
+                <button class="checkout-btn">Checkout</button>
+            </aside>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-      <div class="container">
-        <p>
-          © <time datetime="2025">2025</time> GIT 450 WEB TEAM FALL B. All
-          rights reserved.
-        </p>
+    <footer id="footer" class="site-footer">
 
-        <h2>Social Media Links</h2>
-        <ul id="social">
-          <li>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              aria-label="Instagram"
-            >
-              <!-- add an SVG for Instagram from https://tablericons.com/ -->
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#007aff"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
-                />
-                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                <path d="M16.5 7.5l0 .01" />
-              </svg>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-              <!-- add an SVG for Twitter from https://tablericons.com/ -->
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#007aff"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"
-                />
-              </svg>
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              aria-label="Facebook"
-            >
-              <!-- add an SVG for Facebook from https://tablericons.com/ -->
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#007aff"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
-                />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
+  
     </footer>
 
     <script src="https://kit.fontawesome.com/982a1daf20.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
-  </body>
+</body>
 </html>

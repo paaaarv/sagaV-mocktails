@@ -3,7 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Brand Name] — Confirmation</title>
+  <meta http-equiv="Cache-control" content="public, max-age=3600">
+  <title>SAGA V — Confirmation</title>
+  <style>
+    /* Mobile override */
+    @media screen and (max-width: 430px) {
+      body {
+        background: url("Content/background-2.png") no-repeat center fixed !important;
+        background-size: cover !important;
+      }
+      .left{
+        background-color: #1A2735 !important;
+        border: none !important;
+      }
+    }
+  </style>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,29 +30,13 @@
   <!-- CSS Link -->
    <link rel="stylesheet" href="styles.css">
    <link rel="stylesheet" href="styles/confirmation.css">
+   <link rel="stylesheet" href="./navigation.css"/> 
 </head>
 <body style="margin:0; padding:0; height:100vh; background: url('Content/background.jpeg') no-repeat center center fixed; background-size: cover;">
-  <header role="banner" class="site-header">
-    <div class="container header-row">
-      <a class="brand" href="/">Saga V</a>
-      <!-- Mobile nav button // INSERT NAVIGATION HERE  -->
-      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
-      <span class="nav-toggle-box" aria-hidden="true">
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-      </span>
-      <span class="nav-toggle-text">Menu</span>
-      </button>
-
-      <nav id="primary-nav" aria-label="Primary">
-        <a href="menu.html">Products</a>
-        <a href="blog.html">Blog</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
+  <header id="navigation">
+   
   </header>
-  <!-- <a href="/zero-index-website/cart">&larr; Back to Cart</a> -->
+  <!-- <a href="checkout.html">&larr; Back to Cart</a> -->
   <div class="left-right">
     <!-- LEFT COLUMN -->
     <div class="left">
@@ -72,7 +70,7 @@
         <h2><strong>Order Updates</strong></h2>
         <p>You will receive order and shipping updates via email</p>
       </div>
-      <div style="width: 786px; height: 105px; flex-shrink: 0; border-radius: 13px; border: 2px solid #CFB482; background: rgba(156, 112, 76, 0.40);" class="big-box"></div>
+      <img src="Content/contentTeam_Deliverables_V2-3.png" style="width: 786px; height: 105px; flex-shrink: 0; border-radius: 13px; border: 2px solid #CFB482;" class="big-box" alt="hands holding a drink"></img>
       <div class="contact">
         <p>Contact</p>
         <p>alyssa@asu.edu</p>
@@ -83,21 +81,26 @@
       </div>
       <a href="menu.html" type="button" class="btn btn-dark">Continue Shopping</a>
     </div>
-
     <!-- RIGHT COLUMN -->
     <div class="right">
       <svg xmlns="http://www.w3.org/2000/svg" width="38" height="35" viewBox="0 0 38 35" fill="none">
-      <path d="M1.58789 1.54163H7.92122L12.1646 22.1845C12.3093 22.8943 12.7059 23.5319 13.2848 23.9857C13.8638 24.4394 14.5882 24.6805 15.3312 24.6666H30.7212C31.4643 24.6805 32.1887 24.4394 32.7676 23.9857C33.3465 23.5319 33.7431 22.8943 33.8879 22.1845L36.4212 9.24996H9.50456M15.8379 32.375C15.8379 33.2264 15.129 33.9166 14.2546 33.9166C13.3801 33.9166 12.6712 33.2264 12.6712 32.375C12.6712 31.5235 13.3801 30.8333 14.2546 30.8333C15.129 30.8333 15.8379 31.5235 15.8379 32.375ZM33.2546 32.375C33.2546 33.2264 32.5457 33.9166 31.6712 33.9166C30.7968 33.9166 30.0879 33.2264 30.0879 32.375C30.0879 31.5235 30.7968 30.8333 31.6712 30.8333C32.5457 30.8333 33.2546 31.5235 33.2546 32.375Z" stroke="#CFB482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1.58789 1.54163H7.92122L12.1646 22.1845C12.3093 22.8943 12.7059 23.5319 13.2848 23.9857C13.8638 24.4394 14.5882 24.6805 15.3312 24.6666H30.7212C31.4643 24.6805 32.1887 24.4394 32.7676 23.9857C33.3465 23.5319 33.7431 22.8943 33.8879 22.1845L36.4212 9.24996H9.50456M15.8379 32.375C15.8379 33.2264 15.129 33.9166 14.2546 33.9166C13.3801 33.9166 12.6712 33.2264 12.6712 32.375C12.6712 31.5235 13.3801 30.8333 14.2546 30.8333C15.129 30.8333 15.8379 31.5235 15.8379 32.375ZM33.2546 32.375C33.2546 33.2264 32.5457 33.9166 31.6712 33.9166C30.7968 33.9166 30.0879 33.2264 30.0879 32.375C30.0879 31.5235 30.7968 30.8333 31.6712 30.8333C32.5457 30.8333 33.2546 31.5235 33.2546 32.375Z" stroke="#CFB482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <h2><strong>Order Summary (2)</strong></h2>
       <div class="item">
-        <div style="width: 97px; height: 118px; border-radius: 10px; border: 1px solid #CFB482; background: rgba(156, 112, 76, 0.23);"></div>
-        <p><strong>The Sun</strong><br><small>Bottle Size</small></p>
+        <img src="Content/contentTeam_Deliverables_V2-5.png" alt="the pink sun mocktail" style="width: 113px; height: 90px; border-radius: 10px; border: 1px solid #CFB482;">
+        <p>
+          <strong>The Sun</strong>
+          <small>Bottle Size</small>
+        </p>
         <p><strong>$</strong></p>
       </div>
       <div class="item">
-        <div style="width: 97px; height: 118px; border-radius: 10px; border: 1px solid #CFB482; background: rgba(156, 112, 76, 0.23);"></div>
-        <p><strong>The Fool</strong><br><small>Bottle Size</small></p>
+        <img src="Content/contentTeam_Deliverables_V2-6.png" alt="the siren blue mocktail" style="width: 113px; height: 90px; border-radius: 10px; border: 1px solid #CFB482;">
+        <p>
+          <strong>The Fool</strong>
+          <small>Bottle Size</small>
+        </p>
         <p><strong>$</strong></p>
       </div>
       <div class="totals">
@@ -114,7 +117,11 @@
       </div>
     </div>
   </div>
-  <footer>
-  </footer>
+  <footer id="footer">
+        
+   </footer>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

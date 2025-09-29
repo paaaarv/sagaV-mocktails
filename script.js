@@ -1,4 +1,32 @@
+//fetch navigation bar, newsletter and footer sections for all pages: 
+fetch('navigation.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navigation').innerHTML = data;
+});
+
+fetch('newsletter.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('newsletter').innerHTML = data;
+});
+
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+});
+
+
+
 // Mobile menu toggle
+// create a cart
+let cart = [];
+if (localStorage.getItem("saga-v-cart")) {
+  cart = JSON.parse(localStorage.getItem("saga-v-cart"));
+}
+
+// Mobile me[nu toggle
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.getElementById("primary-nav");
 
@@ -14,28 +42,25 @@ const prefersReduced = window.matchMedia(
 ).matches;
 // if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { /* no-op */}
 
-//Order Summary
+//Order Summary 
 // Sample order data
 const orderItems = [
-  { name: "Product A", price: 12.99, quantity: 1 },
-  { name: "Product B", price: 5.5, quantity: 2 },
-  { name: "Product C", price: 20.0, quantity: 1 },
+  { name: 'The Sun', price: 10, quantity: 1 },
+  { name: 'The Fool', price: 10, quantity: 1},
 ];
 
 function renderOrderSummary() {
-  const itemList = document.getElementById("cart-items");
-  const orderTotalSpan = document.getElementById("order-total");
+  const itemList = document.getElementById('cart-items');
+  const orderTotalSpan = document.getElementById('order-total');
   let total = 0;
 
   // Clear existing items
-  itemList.innerHTML = "";
+  itemList.innerHTML = '';
 
   // Add each item to the list
-  orderItems.forEach((item) => {
-    const listItem = document.createElement("li");
-    listItem.textContent = `${item.name} (x${item.quantity}) - $${(
-      item.price * item.quantity
-    ).toFixed(2)}`;
+  orderItems.forEach(item => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${item.name} Bottle Size - $${(item.price * item.quantity).toFixed(2)}`;
     itemList.appendChild(listItem);
     total += item.price * item.quantity;
   });
@@ -45,52 +70,60 @@ function renderOrderSummary() {
 }
 
 // Call the function to render the summary when the page loads
-document.addEventListener("DOMContentLoaded", renderOrderSummary);
+document.addEventListener('DOMContentLoaded', renderOrderSummary);
 
 // Example of adding a new item (could be triggered by user action)
 function addItemToOrder(name, price, quantity) {
   orderItems.push({ name, price, quantity });
-  renderOrderSummary();
-}
+  renderOrderSummary();}
 
-function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
-}
+  function show(shown, hidden){
+    document.getElementById(shown).style.display='block';
+    document.getElementById(hidden).style.display='none';
+    return false;
+  }
 
 // Mocktail product details
 
 const mocktailsArray = [
   {
+    id: 1,
     name: "The Sun",
     desc: "Golden peach, honey, and vanilla blossom with sparkling water",
-    price: 12.99,
+    flavor: ["Bright", "Uplifting", "Approachable"],
+    price: 52.99,
     img: "assets/the-sun.jpg",
   },
   {
+    id: 2,
     name: "The Siren",
     desc: "Sea salt, grapefruit, and rosemary",
-    price: 12.99,
+    flavor: ["Savory", "Intriguing", "Adventurous"],
+    price: 52.99,
     img: "assets/the-siren.jpg",
   },
   {
+    id: 3, 
     name: "The Fool",
     desc: "Yuzu, Lime, and Green Apple",
-    price: 12.99,
+    flavor: ["Tangy", "Playful", "Energizing"],
+    price: 52.99,
     img: "assets/the-fool.jpg",
   },
   {
+    id: 4,
     name: "The Magician",
     desc: "Blood orange, gentian root, and herbal botanicals",
-    price: 12.99,
+    flavor: ["Complex", "Sophisticated", "Contemplative"],
+    price: 52.99,
     img: "assets/the-magician.jpg",
   },
   {
+    id: 5,
     name: "The Oracle",
     desc: "Tomato, black tea, and shiitake with subtle spice",
-    price: 12.99,
+    flavor: ["Earthy", "Grounding", "Savory"],
+    price: 52.99,
     img: "assets/the-oracle.jpg",
   }
 ];
@@ -153,76 +186,3 @@ const viewProductDetails = (e) => {
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", viewProductDetails);
 }
-
-
-const dots = document.querySelectorAll('.dot');
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    document.querySelector('.dot.active').classList.remove('active');
-    dot.classList.add('active');
-    // Trigger carousel slide change here
-  });
-});
-
-function initCarousel() {
-document.addEventListener("DOMContentLoaded", () => {
-  const cardRow = document.getElementById("cardRow");
-  const scrollLeftBtn = document.querySelector(".scroll-btn.left");
-  const navLeft = document.querySelector(".nav-arrow.left");
-  const navRight = document.querySelector(".nav-arrow.right");
-  const dots = document.querySelectorAll(".pagination .dot");
-
-  const cardWidth = document.querySelector(".recipe-card").offsetWidth;
-  const gap = 16; // adjust if you have margin between cards
-  const scrollAmount = cardWidth + gap;
-
-  let currentIndex = 0;
-  const maxIndex = dots.length - 1;
-
-  function updateScroll() {
-    cardRow.scrollTo({
-      left: currentIndex * scrollAmount,
-      behavior: "smooth"
-    });
-    updateDots();
-  }
-
-  function updateDots() {
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === currentIndex);
-    });
-  }
-
-  navLeft.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateScroll();
-    }
-  });
-
-  navRight.addEventListener("click", () => {
-    if (currentIndex < maxIndex) {
-      currentIndex++;
-      updateScroll();
-    }
-  });
-
-  scrollLeftBtn.addEventListener("click", () => {
-    cardRow.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-  });
-
-  // Optional: dot click behavior
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      currentIndex = i;
-      updateScroll();
-    });
-  });
-
-  // Optional: responsive recalculation
-  window.addEventListener("resize", () => {
-    updateScroll();
-  });
-});
-}
-document.addEventListener("DOMContentLoaded", initCarousel);
