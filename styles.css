@@ -279,7 +279,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background: var(--panel);
+  background: #b08b67;
   color: var(--accent-strong);
   gap: var(--space-4);
 }
@@ -317,7 +317,6 @@ body {
 
 #amazon-promo .promo-right img {
   max-width: 100%;
-  border-radius: var(--r);
 }
 
 /* Value Proposition Section */
@@ -911,11 +910,6 @@ hr {
 }
 
 /* ========== AMAZON PROMO SECTION ========== */
-#amazon-promo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 400px;
-}
 
 /* Left side (brown background with text) */
 #amazon-promo .promo-left {
@@ -950,7 +944,8 @@ hr {
 
 #amazon-promo .promo-right {
   position: relative;
-  overflow: hidden;
+  width:100%;
+  height: 100%; 
 }
 
 #amazon-promo .promo-right img {
@@ -978,9 +973,9 @@ hr {
 
 #amazon-promo .promo-right .overlay h3 {
   color: #fff;
-  font-size: xx-large;
+  font-size: 2em;
   text-align: left;
-  padding-right: 5rem;
+  padding-right: 4rem;
 }
 
 /* ========== BLOG HIGHLIGHT SECTION ========== */
