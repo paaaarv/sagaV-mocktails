@@ -1,3 +1,49 @@
+// Mocktail products array 
+
+const mocktailsArray = [
+  {
+    id: 1,
+    name: "The Sun",
+    desc: "Golden peach, honey, and vanilla blossom with sparkling water",
+    flavor: ["Bright", "Uplifting", "Approachable"],
+    price: 52.99,
+    img: "assets/sun-bottle.jpg",
+  },
+  {
+    id: 2,
+    name: "The Siren",
+    desc: "Sea salt, grapefruit, and rosemary",
+    flavor: ["Savory", "Intriguing", "Adventurous"],
+    price: 52.99,
+    img: "assets/siren-bottle.jpg",
+  },
+  {
+    id: 3, 
+    name: "The Fool",
+    desc: "Yuzu, Lime, and Green Apple",
+    flavor: ["Tangy", "Playful", "Energizing"],
+    price: 52.99,
+    img: "assets/fool-bottle.jpg",
+  },
+  {
+    id: 4,
+    name: "The Magician",
+    desc: "Blood orange, gentian root, and herbal botanicals",
+    flavor: ["Complex", "Sophisticated", "Contemplative"],
+    price: 52.99,
+    img: "assets/magician-bottle.jpg",
+  },
+  {
+    id: 5,
+    name: "The Oracle",
+    desc: "Tomato, black tea, and shiitake with subtle spice",
+    flavor: ["Earthy", "Grounding", "Savory"],
+    price: 52.99,
+    img: "assets/oracle-bottle.jpg",
+  }
+];
+
+
 //fetch navigation bar, newsletter and footer sections for all pages: 
 // fetch('navigation.html')
 //     .then(response => response.text())
@@ -18,6 +64,22 @@ fetch('footer.html')
 });
 
 
+// product grid home page 
+const createProductGrid = () => {
+  for (let i=1; i <=2; i++){
+    $("#product-grid").append(`
+       <article class="card">
+        <div class="card-media">
+          <img src=${mocktailsArray[i].img} alt= ${mocktailsArray[i].name} />
+        </div>
+        <div class="card-body">
+          <h3>${mocktailsArray[i].name}</h3>
+          <a href="/shop.html" class="button">Buy Now</a>
+        </div>
+    </article>`
+    )
+  }
+}
 
 // Mobile menu toggle
 // create a cart
@@ -70,7 +132,11 @@ function renderOrderSummary() {
 }
 
 // Call the function to render the summary when the page loads
-document.addEventListener('DOMContentLoaded', renderOrderSummary);
+document.addEventListener('DOMContentLoaded', function(){
+  if($("#product-grid")){
+    createProductGrid()
+  }
+})
 
 // Example of adding a new item (could be triggered by user action)
 function addItemToOrder(name, price, quantity) {
@@ -83,50 +149,7 @@ function addItemToOrder(name, price, quantity) {
     return false;
   }
 
-// Mocktail product details
 
-const mocktailsArray = [
-  {
-    id: 1,
-    name: "The Sun",
-    desc: "Golden peach, honey, and vanilla blossom with sparkling water",
-    flavor: ["Bright", "Uplifting", "Approachable"],
-    price: 52.99,
-    img: "assets/the-sun.jpg",
-  },
-  {
-    id: 2,
-    name: "The Siren",
-    desc: "Sea salt, grapefruit, and rosemary",
-    flavor: ["Savory", "Intriguing", "Adventurous"],
-    price: 52.99,
-    img: "assets/the-siren.jpg",
-  },
-  {
-    id: 3, 
-    name: "The Fool",
-    desc: "Yuzu, Lime, and Green Apple",
-    flavor: ["Tangy", "Playful", "Energizing"],
-    price: 52.99,
-    img: "assets/the-fool.jpg",
-  },
-  {
-    id: 4,
-    name: "The Magician",
-    desc: "Blood orange, gentian root, and herbal botanicals",
-    flavor: ["Complex", "Sophisticated", "Contemplative"],
-    price: 52.99,
-    img: "assets/the-magician.jpg",
-  },
-  {
-    id: 5,
-    name: "The Oracle",
-    desc: "Tomato, black tea, and shiitake with subtle spice",
-    flavor: ["Earthy", "Grounding", "Savory"],
-    price: 52.99,
-    img: "assets/the-oracle.jpg",
-  }
-];
 
 // Modal View functionality
 
