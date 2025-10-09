@@ -81,17 +81,21 @@ h4{
 
 #ingredients-container{
     display: flex; 
+    flex-wrap: wrap;
     justify-content: space-evenly; 
     margin: 50px 0;
 }
-
+.circle-photo{
+    text-align: center;
+    font-family: 'Metamorphous', serif;
+} 
 
 .circle-photo img{
-    width: 10vw;
-    height: 10vw;
+    max-width: 6em;
+    max-height: 6em;
+    margin: 20px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 40px; 
 }
 
 #carousel{
