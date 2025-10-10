@@ -191,11 +191,13 @@ table {
   /* Beginning of h2 */
   .story {
     padding: 2rem 1rem;
-    text-align: center;
+    width: 80%; 
+    margin: 0 auto; 
   }
   
   .story-header {
     margin-bottom: 1rem;
+    text-align: center;
   }
   
   .story-image-container img {
@@ -204,10 +206,7 @@ table {
      margin: 1rem 0;
   }
   
-  .story-text {
-    text-align: center;
-    
-  }
+
   /* Added story text p spacing because my paragraphs were too close together. */
   .story-text p {
     margin-bottom: 1.5rem;
@@ -265,7 +264,8 @@ table {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    width: 80%;
+    margin: 2rem auto;
   }
   
   /* This is the vertical stick */
@@ -309,8 +309,7 @@ table {
     position: absolute;
     top: 50%;
     height: 2px;
-    width: 118px;
-    z-index: 1;
+    width: 150px;
     transform: translateY(-50%);
     background-color: #CFB383;
     
@@ -319,7 +318,7 @@ table {
   /* new CSS being added */
 
   .milestone:nth-child(odd)::before {
-    left: calc(50% - 118px);
+    left: calc(50% - 150px);
   }
 
   .milestone:nth-child(even)::before {
@@ -341,6 +340,7 @@ table {
     padding: 1rem;
     border-radius: 8px;
     max-width: 250px;
+    z-index:20;
   }
   
   /* Images being placed in their respected spots. Both 1 and 3 are on the left side.*/ 
@@ -587,7 +587,6 @@ table {
     /* Styles for "Our Story" section */
     .story {
       padding: 3rem 1rem;
-      text-align: center;
   
     }
   
@@ -651,7 +650,7 @@ table {
       position: absolute;
       top: 50%;
       height: 3px;
-      width: 185px;
+      width: 260px;
       z-index: 1;
       transform: translateY(-50%);
     }
@@ -659,7 +658,7 @@ table {
     /*New CSS being added here */
 
     .milestone:nth-child(odd)::before {
-      left: calc(50% - 185px);
+      left: calc(50% - 260px);
     }
 
     .milestone:nth-child(even)::before {
@@ -811,13 +810,13 @@ table {
       top: 50%;
       transform: translateY(-50%);
       height: 4px;
-      width: 506px;
+      width: 450px;
       background-color: #CFB383;
       z-index: 1;
     }
 
     .milestone:nth-child(odd)::before {
-      left: calc(50% - 506px);
+      left: calc(50% - 450px);
     }
 
     .milestone:nth-child(even)::before {
@@ -832,7 +831,6 @@ table {
 
     .milestone-content p {
       font-size: 20px;
-      text-align: center;
       margin-bottom: 0.75rem;
     }
 
