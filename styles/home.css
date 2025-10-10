@@ -136,13 +136,6 @@ h4{
 }
 
 
-.newsletter p{
-    margin-bottom: 40px; 
-}
-.newsletter{
-    margin: 50px;
-}
-
 @media screen and (max-width: 650px){
 
     #circle-header-img{

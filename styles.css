@@ -209,7 +209,10 @@ time, mark, audio, video {
     background-color: #E2DFD3;
 }
 /* Newsletter signup */
+
+
 .newsletter {
+  margin: 50px; 
   padding: var(--space-6) 5%;
   text-align: center;
 }
@@ -988,12 +991,7 @@ hr {
 
 /* ========== BLOG ========== */
 
-.mix-it-up {
-  padding: var(--space-6) 0;
-  background: linear-gradient(180deg, #1b2030 0%, #0f1115 100%);
-}
 .scroll-wrapper {
-  display: flex;
   align-items: center;
   overflow: hidden;
   gap: 0.5rem;
