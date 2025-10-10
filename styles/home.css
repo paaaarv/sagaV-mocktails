@@ -122,9 +122,18 @@ h4{
     width: 100%;
     object-fit: contain;
 }
-#catchphrase{
-    text-align: center;
-    margin: 50px 0 100px; 
+/* catchphrase section */
+#catchphrase {
+  text-align: center;
+  padding: var(--space-6) 5%;
+  margin: 3em auto; 
+  width: 80%; 
+  background: #fff;
+}
+#catchphrase h2 {
+    margin: 50px auto;
+  font-size: var(--font-size-3);
+  color: #6a4c3d;
 }
 
 

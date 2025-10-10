@@ -206,17 +206,6 @@ time, mark, audio, video {
   border-radius: var(--r);
 }
 
-/* catchphrase section */
-#catchphrase {
-  text-align: center;
-  padding: var(--space-6) 5%;
-  background: #fff;
-}
-#catchphrase h2 {
-  font-size: var(--font-size-2);
-  color: #6a4c3d;
-}
-
 /* Newsletter signup */
 .newsletter {
   background: #e3d5c9;
