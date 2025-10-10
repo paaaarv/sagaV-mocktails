@@ -125,10 +125,9 @@ h4{
 /* catchphrase section */
 #catchphrase {
   text-align: center;
-  padding: var(--space-6) 5%;
-  margin: 3em auto; 
-  width: 80%; 
-  background: #fff;
+  padding: 6em 50px 1em;
+  margin: 0 auto 1em ; 
+  width: 70%; 
 }
 #catchphrase h2 {
     margin: 50px auto;

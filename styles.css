@@ -205,10 +205,11 @@ time, mark, audio, video {
   margin-top: var(--space-4);
   border-radius: var(--r);
 }
-
+#last-section{
+    background-color: #E2DFD3;
+}
 /* Newsletter signup */
 .newsletter {
-  background: #e3d5c9;
   padding: var(--space-6) 5%;
   text-align: center;
 }
