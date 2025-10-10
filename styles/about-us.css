@@ -190,6 +190,7 @@ table {
   }
   /* Beginning of h2 */
   .story {
+    max-width: 1280px; 
     padding: 2rem 1rem;
     width: 80%; 
     margin: 0 auto; 
@@ -217,13 +218,13 @@ table {
   
   .story .story-header h2 {
     color: #000;
-    font-size: 2rem;
     font-family: "Metamorphous";
   }
   
   .story-content {
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
   }
 
   .intro  {
@@ -234,6 +235,8 @@ table {
   /* Beginning of the milestone section */
   
   .milestones {
+    max-width: 1280px;
+    margin: 0 auto;
     padding: 2rem 1rem;
     text-align: center;
     color: #000;
@@ -361,14 +364,12 @@ table {
 
   /* New CSS being added for milestones */
 
-<<<<<<< HEAD:styles/about-us-page-styles.css
-=======
+
   .milestone-content{ 
     z-index: 100; 
     margin-top: 32px; 
   }
 
->>>>>>> main:styles/about-us.css
   .milestone-content h3 {
     font-size: 20px;
     text-align: center;
@@ -592,13 +593,13 @@ table {
   
     .story-header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin: 2rem auto;
   
     }
   
     .story-header h2 {
       font-size: 40px;
-      margin-bottom: 0.5rem;
+      margin: 1rem;
     }
   
     .intro {
@@ -611,7 +612,6 @@ table {
     .story-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: start;
       gap: 4rem;
     }
   
@@ -763,7 +763,7 @@ table {
   }
 
   /* ========== Desktop ========== */
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1158px) {
     .nav-menu ul li a {
         font-size: 1.5rem;
     }
@@ -810,13 +810,13 @@ table {
       top: 50%;
       transform: translateY(-50%);
       height: 4px;
-      width: 450px;
+      width: 400px;
       background-color: #CFB383;
       z-index: 1;
     }
 
     .milestone:nth-child(odd)::before {
-      left: calc(50% - 450px);
+      left: calc(50% - 400px);
     }
 
     .milestone:nth-child(even)::before {
@@ -835,8 +835,6 @@ table {
     }
 
     .milestone-image {
-      width: 117px;
-      height: 117px;
       object-fit: cover;
       border-radius: 50%;
       margin-top: 1rem;
