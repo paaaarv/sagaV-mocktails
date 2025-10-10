@@ -321,7 +321,7 @@ body {
 
 /* Value Proposition Section */
 #value-props {
-  background: #fdfcf7;
+  background: #9C704D;
   padding: var(--space-6) 5%;
 }
 
@@ -336,7 +336,7 @@ body {
 }
 
 .value-item img {
-  background: #0f1115; 
+  background: #E2DFD3; 
   border-radius: 50%;
   padding: 1rem;
   width: 80px;
@@ -346,6 +346,7 @@ body {
 }
 
 .value-item p {
+  color: #E2DFD3;
   font-size: var(--font-size-0);
   font-weight: 600;
 }
