@@ -200,8 +200,7 @@ main {
 
 .card-btn:hover{
   transition: .5s;
-  background-color: var(--btn-accent);
-  color: white;
+  color: var(--btn-accent);
 }
 
 @media (max-width: 768px) {

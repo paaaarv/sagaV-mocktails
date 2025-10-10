@@ -136,6 +136,9 @@ document.addEventListener('DOMContentLoaded', function(){
   if($("#product-grid")){
     createProductGrid()
   }
+  if ($("#products")){
+    displayProductGrid();
+  }
 })
 
 // Example of adding a new item (could be triggered by user action)
@@ -149,7 +152,30 @@ function addItemToOrder(name, price, quantity) {
     return false;
   }
 
+  // product grid list shop page 
+  const displayProductGrid = () => { 
+    for(let i=0; i < mocktailsArray.length; i++){
+      let product = mocktailsArray[i]; 
 
+      $("#products").append(`
+        <article class="card">
+            <div class="card-top">
+              <img class="card-img" src=${product.img} alt=${product.name} />
+            </div>
+            <div class="card-body">
+              <span class="card-detail">
+                <h3> ${product.name} </h3>
+                <p> $${product.price} </p>
+              </span>
+              <div class="card-controls">
+                <button class="shop-btn card-btn" data-mocktail=${product.id} >Buy Now</button>
+                <button id="view-mocktail${product.id}" class="card-btn view-product" data-mocktail=${product.id} >View Product</button>
+              </div>
+            </div>
+          </article>`
+        )
+      }
+    }
 
 // Modal View functionality
 
