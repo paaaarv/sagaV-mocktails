@@ -93,11 +93,6 @@ if (toggle && nav) {
     toggle.setAttribute("aria-expanded", String(isOpen));
   });
 }
-// Respect reduced motion (no animations here yet, but this is where we gate them)
-const prefersReduced = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
-).matches;
-// if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { /* no-op */}
 
 //Order Summary 
 // Sample order data
@@ -115,12 +110,14 @@ function renderOrderSummary() {
   itemList.innerHTML = '';
 
   // Add each item to the list
-  orderItems.forEach(item => {
-    const listItem = document.createElement('li');
-    listItem.textContent = `${item.name} Bottle Size - $${(item.price * item.quantity).toFixed(2)}`;
-    itemList.appendChild(listItem);
-    total += item.price * item.quantity;
-  });
+  if (cart){
+    cart.forEach(item => {
+      const listItem = document.createElement('li');
+      listItem.textContent = `${item.id} Bottle Size - $${(item.price * item.quantity).toFixed(2)}`;
+      itemList.appendChild(listItem);
+      total += item.price * item.quantity;
+    });
+  }
 
   // Update the total
   orderTotalSpan.textContent = `$${total.toFixed(2)}`;
@@ -226,7 +223,8 @@ $("#close-modal").on("click", function(){
 
 
 // shop button add to cart: 
-$(".shop-btn").on("click", function(e){
+$("body").on("click", ".shop-btn", function(e){
+  console.log("CLICKED");
   let product = {}; 
   const productId = parseInt(e.target.dataset.mocktail); 
   let existingProduct = cart.find(item => item.id === productId);
