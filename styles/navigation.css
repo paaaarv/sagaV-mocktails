@@ -15,11 +15,11 @@ body {
 /* ===================== NAVBAR ===================== */
 header {
   background: #1A2735;
-  padding: 1.5rem 5rem;
+  padding: 1rem 2rem;
 }
 
 .logo svg {
-  height: 62px;
+  height: 2em;
   width: auto;
 }
 
@@ -31,15 +31,17 @@ nav {
 
 /* Nav links */
 .nav-links {
+  width: 75%; 
   display: flex;
+  justify-content: space-evenly; 
   gap: 2.5rem;
   list-style: none;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 .nav-links a {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2em;
   line-height: 100%;
   color: #CFB482;
   text-decoration: none;
@@ -189,12 +191,13 @@ footer {
   background: #1A2735;
   color: #fff;
   font-family: 'Roboto', sans-serif;
-  padding: 2rem 4rem;
   position: relative;
 }
 
 /* Footer container: logo left, links center, social icons right */
 .footer-container {
+  width: 50%; 
+  padding: 20px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -207,10 +210,11 @@ footer {
   width: auto;
 }
 
+
+
 /* Footer links */
 .footer-links {
   display: flex;
-  gap: 15rem;
   flex: 1;
   justify-content: center;
 }
@@ -219,7 +223,6 @@ footer {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   text-align: left;
 }
 
@@ -238,15 +241,14 @@ footer {
 
 /* Social icons */
 .social-icons {
-  display: flex;
-  gap: 2rem;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  display: inline-block;
+  margin-top: 1.5em; 
 }
+.social-icons a{ 
+  width: 50px; 
+} 
 
-.social-icons svg {
-  width: 44px;
-  height: 44px;
+.social-icons svg, .social-icons img{
   cursor: pointer;
   transition: transform 0.2s, stroke 0.2s;
   stroke: #CFB383;
@@ -261,23 +263,24 @@ footer {
 
 /* Footer message */
 .footer-message {
-  width: 100%;
-  margin-top: 2.5rem;
-  color: #fff;
+  margin: auto 1em;
   font-size: 1rem;
   line-height: 1.5rem;
   font-family: 'Roboto', sans-serif;
-  text-align: center;
 }
 
 .footer-message a {
   color: #CFB383;
   text-decoration: underline;
+  margin: 0;
 }
 
 .footer-message a:hover {
   color: #fff;
 }
+.footer-message p{
+  color: #fff; 
+} 
 
 /* Footer bottom message */
 .footer-bottom {
@@ -296,7 +299,7 @@ footer {
 }
 
 /* ===================== RESPONSIVE NAV ===================== */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   header .nav-container {
     display: flex;
     align-items: center;

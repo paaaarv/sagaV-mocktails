@@ -44,12 +44,7 @@ const mocktailsArray = [
 ];
 
 
-//fetch navigation bar, newsletter and footer sections for all pages: 
-// fetch('navigation.html')
-//     .then(response => response.text())
-//     .then(data => {
-//       document.getElementById('navigation').innerHTML = data;
-// });
+// fetch newsletter and footer sections' 
 
 fetch('newsletter.html')
     .then(response => response.text())
@@ -179,7 +174,7 @@ function addItemToOrder(name, price, quantity) {
 
 // Modal View functionality
 
-$(".view-product").on("click",function(e){
+$("#products").on("click", '.view-product', function(e){
   const cardId = parseInt(e.target.dataset.mocktail); 
   const card = mocktailsArray.filter((x) => x.id === cardId)[0]; 
   updateProductDetailCard(card); 
@@ -187,30 +182,17 @@ $(".view-product").on("click",function(e){
 
 });
 
-$("#close-modal").on("click", function(){
-    $("#shop-overlay").fadeOut(1000);
-  $("#product-detail").dialog("close"); 
-});
-
 $("#product-detail").dialog({
       appendTo: 'body',
       autoOpen: false, 
       width: '75vw',
       modal: true,
-      show: {
-        effect: "fade",
-        duration: 800
-      },
       open: function(){
         $("#shop-overlay").fadeIn(800);
       },
       close: function(){
         $("#shop-overlay").fadeOut(800);
-      },
-      hide: {
-        effect: "fade",
-        duration: 1000
-      },
+      }
     });
 
 
@@ -236,6 +218,12 @@ const updateProductDetailCard = (product) => {
   $("#description").text(product.desc); 
   $("#product-button").attr("data-mocktail", product.id); 
 }
+
+$("#close-modal").on("click", function(){
+
+  $("#product-detail").dialog("close"); 
+});
+
 
 // shop button add to cart: 
 $(".shop-btn").on("click", function(e){
