@@ -20,34 +20,36 @@ const showCart = () => {
         let mocktail = mocktailsArray.find(drink => drink.id == product.id); 
         cartQuantity += product.quantity; 
         subtotal += parseFloat(product.quantity * mocktail.price); 
-
-        $("#cart-items").append(`
-            <div>
-                <div class="cart-item">
-                    <img src=${mocktail.img} class="cart-img" alt= "${mocktail.name}"/>
-                    <div class="cart-info">
-                        <h3>${mocktail.name}</h3>
-                        <div class="qty">
-                            <button class="qty-btn">−</button>
-                            <input type="number" class="qty-input" value= ${product.quantity}  min="1" />
-                            <button class="qty-btn">+</button>
+        if ($("#cart-items")){
+            $("#cart-items").append(`
+                <div>
+                    <div class="cart-item">
+                        <img src=${mocktail.img} class="cart-img" alt= "${mocktail.name}"/>
+                        <div class="cart-info">
+                            <h3>${mocktail.name}</h3>
+                            <div class="qty">
+                                <button class="qty-btn">−</button>
+                                <input type="number" class="qty-input" value= ${product.quantity}  min="1" />
+                                <button class="qty-btn">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-meta">
+                            <button class="trash" aria-label="Remove ${mocktail.name}">
+                                <i class="fa-regular fa-trash-can trash-can" style="color: #cfb482;"></i>
+                            </button>
+                            <p>$${mocktail.price} </p>
                         </div>
                     </div>
-                    <div class="cart-meta">
-                        <button class="trash" aria-label="Remove ${mocktail.name}">
-                            <i class="fa-regular fa-trash-can trash-can" style="color: #cfb482;"></i>
-                        </button>
-                        <p>$${mocktail.price} </p>
-                    </div>
-                </div>
-                <hr>
-            </div>`
-        )
+                    <hr>
+                </div>`
+            )
+        }
     }
 }
 
 
 const showOrderSummary = () => { 
+    if ($("#summary-container").length){
     $("#summary-container").append(`<div>
             <div class="summary-row"><h4>Subtotal: </h4><span>$${subtotal}</span></div>
                 <div class="summary-row"><h4>Taxes &amp; Fees: </h4><span>$${fees}</span></div>
@@ -58,7 +60,29 @@ const showOrderSummary = () => {
                 </div>
                 <button class="checkout-btn">Checkout</button>
             </div>`
+
         )
+    }else{
+        $("#checkout-summary-container").append(
+            `<div>
+                <div class="tab">
+                    <input type="checkbox" name="accordion" id="accordion" class="desktop-hide">
+                    <div id="tab-content">
+                        <h2>Order Summary </h2>
+                        <h3>Your Deck<span id="numOfItems">(0)</span></h3>
+                    </div>
+                    <div class="summary-row"><h4>Subtotal: </h4><span>$${subtotal}</span></div>
+                        <div class="summary-row"><h4>Taxes &amp; Fees: </h4><span>$${fees}</span></div>
+                        <div class="summary-row"><h4>Shipping Fee: </h4><span>$${delivery}</span></div>
+                        <hr />
+                        <div class="summary-row">
+                            <h4>Total: </h4><span>$${total}</span> 
+                        </div>
+                        <button class="checkout-btn">Place Order</button>
+                </div>
+            </div>`
+        )
+    }
 }
 
 

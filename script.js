@@ -95,34 +95,6 @@ if (toggle && nav) {
   });
 }
 
-//Order Summary 
-// Sample order data
-const orderItems = [
-  { name: 'The Sun', price: 10, quantity: 1 },
-  { name: 'The Fool', price: 10, quantity: 1},
-];
-
-function renderOrderSummary() {
-  const itemList = document.getElementById('cart-items');
-  const orderTotalSpan = document.getElementById('order-total');
-  let total = 0;
-
-  // Clear existing items
-  itemList.innerHTML = '';
-
-  // Add each item to the list
-  if (cart){
-    cart.forEach(item => {
-      const listItem = document.createElement('li');
-      listItem.textContent = `${item.id} Bottle Size - $${(item.price * item.quantity).toFixed(2)}`;
-      itemList.appendChild(listItem);
-      total += item.price * item.quantity;
-    });
-  }
-
-  // Update the total
-  orderTotalSpan.textContent = `$${total.toFixed(2)}`;
-}
 
 // Call the function to render the summary when the page loads
 document.addEventListener('DOMContentLoaded', function(){
