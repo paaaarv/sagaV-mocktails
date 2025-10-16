@@ -1,6 +1,16 @@
 let shoppingCart = JSON.parse(localStorage.getItem('saga-v-cart')) || []; 
 let cartQuantity = 0; 
-
+let subtotal = 0; 
+let delivery = 5.99; 
+let fees = 0; 
+let total = 0; 
+//calculate totals 
+const calculateTotals = () => {
+    // dynamic cart quantity 
+    $("#cart-quantity").text(cartQuantity); 
+    fees = parseFloat((subtotal * 0.075).toFixed(2));
+    total = (subtotal + fees + delivery).toFixed(2);
+}
 
 
 //add items dynamically to page from cart 
@@ -9,6 +19,7 @@ const showCart = () => {
         let product = shoppingCart[i]; 
         let mocktail = mocktailsArray.find(drink => drink.id == product.id); 
         cartQuantity += product.quantity; 
+        subtotal += parseFloat(product.quantity * mocktail.price); 
 
         $("#cart-items").append(`
             <div>
@@ -37,7 +48,17 @@ const showCart = () => {
 
 
 const showOrderSummary = () => { 
-
+    $("#summary-container").append(`<div>
+            <div class="summary-row"><span>Subtotal: </span><span>$${subtotal}</span></div>
+                <div class="summary-row"><span>Taxes &amp; Fees: </span><span>$${fees}</span></div>
+                <div class="summary-row"><span>Shipping Fee: </span><span>$${delivery}</span></div>
+                <hr />
+                <div class="total-row">
+                   <span>Total: </span><span>$${total}</span> 
+                </div>
+                <button class="checkout-btn">Checkout</button>
+            </div>`
+        )
 }
 
 
@@ -45,5 +66,5 @@ const showOrderSummary = () => {
 // add document loaded event listener 
 
 showCart();
-// dynamic cart quantity 
-$("#cart-quantity").text(cartQuantity); 
+calculateTotals(); 
+showOrderSummary();
