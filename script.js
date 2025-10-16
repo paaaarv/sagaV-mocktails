@@ -1,3 +1,10 @@
+// create a cart
+let cart = [];
+if (localStorage.getItem("saga-v-cart")) {
+  cart = JSON.parse(localStorage.getItem("saga-v-cart"));
+}
+
+
 // Mocktail products array 
 
 const mocktailsArray = [
@@ -45,13 +52,13 @@ const mocktailsArray = [
 
 
 // fetch newsletter and footer sections' 
-
-fetch('newsletter.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('newsletter').innerHTML = data;
-});
-
+if (document.getElementById("newsletter")){
+  fetch('newsletter.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('newsletter').innerHTML = data;
+  });
+}
 fetch('footer.html')
     .then(response => response.text())
     .then(data => {
@@ -76,12 +83,6 @@ const createProductGrid = () => {
   }
 }
 
-// Mobile menu toggle
-// create a cart
-let cart = [];
-if (localStorage.getItem("saga-v-cart")) {
-  cart = JSON.parse(localStorage.getItem("saga-v-cart"));
-}
 
 // Mobile me[nu toggle
 const toggle = document.querySelector(".nav-toggle");
@@ -133,16 +134,6 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 })
 
-// Example of adding a new item (could be triggered by user action)
-function addItemToOrder(name, price, quantity) {
-  orderItems.push({ name, price, quantity });
-  renderOrderSummary();}
-
-  function show(shown, hidden){
-    document.getElementById(shown).style.display='block';
-    document.getElementById(hidden).style.display='none';
-    return false;
-  }
 
   // product grid list shop page 
   const displayProductGrid = () => { 
@@ -224,10 +215,10 @@ $("#close-modal").on("click", function(){
 
 // shop button add to cart: 
 $("body").on("click", ".shop-btn", function(e){
-  console.log("CLICKED");
   let product = {}; 
   const productId = parseInt(e.target.dataset.mocktail); 
   let existingProduct = cart.find(item => item.id === productId);
+
   let productQty = parseInt($(".product-qty").val());
   if (existingProduct){
     if (productQty){
@@ -241,4 +232,5 @@ $("body").on("click", ".shop-btn", function(e){
     cart.push(product); 
   }
   console.log("CURRENT CART", cart);
+  window.localStorage.setItem("saga-v-cart", JSON.stringify(cart)); 
 }); 

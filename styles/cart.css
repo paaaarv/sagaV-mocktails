@@ -27,7 +27,7 @@
     display: flex;
     gap: 1rem;
     justify-content: space-around;
-    margin: 1rem;
+    
 }
 
 #cart-heading {
@@ -36,12 +36,6 @@
     color: black;
 }
 
-h3,
-p,
-i,
-h4 {
-    color: black;
-}
 
 hr {
     width: 100%;
@@ -68,8 +62,15 @@ hr {
 
 .cart-item {
     display: flex;
-    justify-content: space-between;
     padding-top: 1rem;
+}
+
+.cart-meta{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 1px;
 }
 
 .cart-left {
@@ -90,8 +91,8 @@ hr {
 }
 
 .cart-img {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
 }
 
 #grand-total {
@@ -153,21 +154,25 @@ hr {
 /* Items */
 .cart-item {
     display: flex;
-    align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
 .cart-img {
-    width: 80px;
-    height: 80px;
     object-fit: cover;
     border-radius: 12px;
 }
+.cart-info{
+    display: flex; 
+    flex-direction: column;
+    flex: 2;
+    justify-content: space-between; 
+    margin: 10px
+}
 
 .cart-info h3 {
-    margin: 0;
-    font-size: 1rem;
+    margin: 10px 0;
+    font-size: 1.5rem;
     color: var(--figma-gold);
 }
 
@@ -230,7 +235,7 @@ hr {
 /* body for cart main */
 /* Full-bleed PNG background for cart */
 #cart-page-main {
-    --cart-bg: url('Content/background.jpeg'); /* <-- background Jpeg path */
+    --cart-bg: url('../Content/background.jpeg'); /* <-- background Jpeg path */
     /* dark tint over the art to keep text legible */
     background-image: linear-gradient(rgba(28,26,39,.78), rgba(28,26,39,.78)), var(--cart-bg);
     background-position: center;
@@ -249,17 +254,24 @@ hr {
 
 /* === Cart two-column layout (force) === */
 .cart-inner {
+    width: 75%; 
+    margin: auto;
     display: flex;
-    flex-wrap: nowrap; /* stay side-by-side */
+    flex-wrap: nowrap; 
     align-items: flex-start;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     margin: 20px;
 }
 
 #your-cart {
     flex: 0 64%;
     min-width: 0;
+}
+
+.trash{
+    background-color: transparent; 
+    border: none; 
 }
 
 #order-summary {
