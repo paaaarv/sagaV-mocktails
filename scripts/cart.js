@@ -7,7 +7,7 @@ let total = 0;
 //calculate totals 
 const calculateTotals = () => {
     // dynamic cart quantity 
-    $("#cart-quantity").text(cartQuantity); 
+    $("#cart-quantity").text(`(${cartQuantity})`); 
     fees = parseFloat((subtotal * 0.075).toFixed(2));
     total = (subtotal + fees + delivery).toFixed(2);
 }
@@ -49,12 +49,12 @@ const showCart = () => {
 
 const showOrderSummary = () => { 
     $("#summary-container").append(`<div>
-            <div class="summary-row"><span>Subtotal: </span><span>$${subtotal}</span></div>
-                <div class="summary-row"><span>Taxes &amp; Fees: </span><span>$${fees}</span></div>
-                <div class="summary-row"><span>Shipping Fee: </span><span>$${delivery}</span></div>
+            <div class="summary-row"><h4>Subtotal: </h4><span>$${subtotal}</span></div>
+                <div class="summary-row"><h4>Taxes &amp; Fees: </h4><span>$${fees}</span></div>
+                <div class="summary-row"><h4>Shipping Fee: </h4><span>$${delivery}</span></div>
                 <hr />
-                <div class="total-row">
-                   <span>Total: </span><span>$${total}</span> 
+                <div class="summary-row">
+                   <h4>Total: </h4><span>$${total}</span> 
                 </div>
                 <button class="checkout-btn">Checkout</button>
             </div>`
