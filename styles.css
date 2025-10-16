@@ -1464,12 +1464,6 @@ input#bill-address-no {
 }
 
 /* ========== CART PAGE ========== */
-#cart-page-main {
-  display: flex;
-  gap: 1rem;
-  justify-content: space-around;
-  margin: 1rem;
-}
 
 #cart-heading {
   font-weight: bold;
