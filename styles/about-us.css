@@ -162,11 +162,12 @@ table {
 
    h1 {
     font-family: "Metamorphous";
+    font-size: 4rem;
     text-align: center;
-    font-size: 64px;
     font-weight: 400;
     line-height: normal;
     color: #CFB383;
+    font-weight: bold;
 
   }
   /* Added styles for main just now */
@@ -180,7 +181,7 @@ table {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 480px;
+    height: 400px;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -580,9 +581,6 @@ table {
         margin: 0;
     }
 
-    h1 {
-        font-size: 96px;
-    }
   
   
     /* Styles for "Our Story" section */
@@ -775,9 +773,6 @@ table {
         height: 30px;
     }
 
-    h1 {
-     font-size: 128px;
-    }
     .story-text {
      margin-top: 3rem;
      margin-left: 3rem;
