@@ -69,7 +69,7 @@ const showOrderSummary = () => {
                     <input type="checkbox" name="accordion" id="accordion" class="desktop-hide">
                     <div id="tab-content">
                         <h2>Order Summary </h2>
-                        <h3>Your Deck<span id="numOfItems">(0)</span></h3>
+                        <h3>Your Deck <span id="numOfItems">(${cartQuantity})</span></h3>
                     </div>
                     <div class="summary-row"><h4>Subtotal: </h4><span>$${subtotal}</span></div>
                         <div class="summary-row"><h4>Taxes &amp; Fees: </h4><span>$${fees}</span></div>
