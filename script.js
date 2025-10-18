@@ -8,6 +8,11 @@ hamburger.addEventListener('click', () => {
   $("#cart-navigation").text("Shopping Cart");
 });
 
+$(window).resize(function(){
+  if($(window).width >= 768){
+    $(hamburger).removeClass('active');
+  }
+})
 
 
 // create a cart
