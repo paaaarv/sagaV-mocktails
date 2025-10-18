@@ -181,14 +181,20 @@ footer {
 
 /* Footer container: logo left, links center, social icons right */
 .footer-container {
-  width: 50%; 
-  padding: 20px; 
+  padding: 50px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.footer-left{
+  width: 50%;
 }
 
+.footer-logo{
+  margin: 10px;
+}
 /* Footer logo */
 .footer-logo svg {
   height: 250px;
@@ -280,7 +286,7 @@ footer {
   color: #CFB383;
   font-size: 0.9rem;
   font-family: 'Roboto', sans-serif;
-  margin: 0;
+  margin: 10px;
 }
 
 /* ===================== RESPONSIVE NAV ===================== */
@@ -384,9 +390,9 @@ footer {
   .footer-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+    align-items: start;
     box-sizing: border-box;
+    padding: 20px;
   }
 
   .footer-message {
@@ -409,13 +415,13 @@ footer {
     width: 24px;
     height: 24px;
   }
-
+  .footer-left{
+    width: 100%;
+  }
   .footer-links {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 1rem;
-    margin-left: 15rem;
-    margin-top: -3rem;
     width: auto;
     justify-items: start;
   }
@@ -425,6 +431,9 @@ footer {
     padding: 0;
     list-style: none;
   }
+  .footer-links ul li{
+    margin-bottom: 0;
+  } 
 
   .footer-links a {
     font-size: 1rem;
@@ -433,12 +442,6 @@ footer {
     word-break: break-word;
   }
 
-  .footer-logo {
-    margin-top: -5rem;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-  }
 
   .footer-logo svg {
     max-width: 200px;
