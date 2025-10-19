@@ -38,6 +38,9 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
   margin: auto; 
+  max-width: 1400px; 
+  min-width: 320px; 
+
 }
 ol, ul {
 	list-style: none;
@@ -191,7 +194,6 @@ table {
   }
   /* Beginning of h2 */
   .story {
-    max-width: 1280px; 
     padding: 2rem 1rem;
     width: 80%; 
     margin: 0 auto; 
@@ -220,6 +222,7 @@ table {
   .story .story-header h2 {
     color: #000;
     font-family: "Metamorphous";
+    font-size: 1.75em;
   }
   
   .story-content {
@@ -229,14 +232,13 @@ table {
   }
 
   .intro  {
-    font-size: 32px;
+    font-size: 1.25em;
     margin-top: 0.5rem;
     font-family: "Roboto";
   }
   /* Beginning of the milestone section */
   
   .milestones {
-    max-width: 1280px;
     margin: 0 auto;
     padding: 2rem 1rem;
     text-align: center;
@@ -260,7 +262,7 @@ table {
 
   .milestones h2 {
     font-family: "Metamorphous";
-    font-size: 40px;
+    font-size: 1.75em;
   }
   
   .timeline {
@@ -383,206 +385,12 @@ table {
     margin-bottom: 0.75rem;
   }
   
-  /* Beginning of newsletter styles */
-  .newsletter {
-    text-align: center;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    background-color: #9C704D;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-
-  .newsletter h3 {
-    font-family: "Metamorphous";
-    font-size: 40px;
-  }
-  .newsletter form {
-    margin-top: 1rem;
-  }
-  .newsletter label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #000;
-  }
-  #email {
-    padding: 0.5rem;
-    width: 250px;
-    border: 1px solid;
-    border-radius: 9px;
-    margin-right: 0.5rem;
-  }
-  button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    /* The button in the figma file is black and it blends in with the body background color. I chose a light gray for now. */
-    background-color: #000;
-    color: #9C704D;
-  }
-  
-  /* beginning styles of footer */
-  .footer {
-    background-color: #1A2835;
-    padding: 2rem;
-    
-  }
-  
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 1rem;
-    
-  }
-   /* Added styles for the footer contact */
-  .footer-contact {
-    text-align: center;
-    font-size: 0.95rem;
-    order: 1;
-    color: #fff;
-  }
-
-  /* Added styles for logo footer */
-  .footer-logo {
-    position: relative;
-    order: 4;
-    top: -4rem;
-    margin-top: -4rem;
-    
-  }
-
-  .footer-legal {
-    order: 5;
-    align-self: flex-end;
-    color: #fff;
-    
-  }
-  
-  .footer-links {
-    display: flex;
-    gap: 2rem;
-    justify-content: flex-end;
-    text-align: right;
-    padding-left: 1rem;
-    order: 3;
-    
-  }
-  
-  .link-column {
-    align-items: flex-end;
-    gap: 0.75rem;
-    flex-direction: column;
-    display: flex;
-    
-  }
-  
-  .link-column a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    
-  }
-  
-  .link-column a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-social-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    order: 2;
-  }
-  
-  .footer-social {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .footer-social svg {
-    width: 23px;
-    height: 23px;
-    transition: fill 0.3s ease;
-    color: #CFB383;
-  }
-
   /* ========== Tablet ========== */
 /* ========= ABOUT US TABLET MEDIA QUERY ====== */
-/* Look at mobile styles for the about section I need to recode the about us section. */
-/* I had to use the important to get rid of the dropdown menu that was from the hamburger menu, it was still showing on the tablet screen and this was the only way I knew how to get rid of it. */
+
+
 @media screen and (min-width: 768px) {
 
-    /* Styles for the header */
-    .nav-menu {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        position: static !important;
-        top: auto !important;
-        left: auto !important;
-        height: auto !important;
-        width: auto !important;
-        background-color: transparent !important;
-        box-shadow: none !important;
-        order: unset;
-        margin: 0 auto;
-        margin-left: auto;
-        margin-right: auto;
-        
-
-    }
-  
-    /* Styles for the navigation */
-    /* Note: I had to use transparent background color as the navigation links had a background color of the dropdown menu from the hamburger menu from the mobile screen. This is a temporary fix. */
-   
-    .nav-menu ul {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        gap: 0.5rem;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .nav-menu ul li a {
-        text-shadow: none !important;
-        box-shadow: none !important;
-        color: #CFB482 !important;
-        display: inline-block !important;
-        padding: 0;
-    }
-
-    .menu-toggle,
-    .menu-icon {
-        display: none;
-    }
-
-    .header-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        position: relative;
-
-    }
-
-    .logo-zero {
-        position: absolute;
-        left: 2rem;
-        top: 50%;
-        transform: translateY(-50%);
-        order: unset;
-        margin: 0;
-    }
-
-  
-  
     /* Styles for "Our Story" section */
     .story {
       padding: 3rem 1rem;
@@ -594,55 +402,8 @@ table {
       margin: 2rem auto;
   
     }
-  
-    .story-header h2 {
-      font-size: 40px;
-      margin: 1rem;
-    }
-  
-    .intro {
-      margin: 0 auto;
-      line-height: 1.6;
-      font-size: 32px;
-      font-family: "Roboto";
-    }
-  
-    .story-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-    }
-  
-    .story-text {
-      grid-column: 1;
-      max-width: none;
-      
-  
-    }
-  
-    .story-image-container {
-      grid-column: 2;
-      justify-self: center;
-    }
 
-    /*Added this new style for the tablet section to target the paragraphs*/
 
-    .story text p {
-      font-family: "Roboto";
-      font-size: 16px;
-    }
-    
-    /* Styling for the milestone section */
-  
-    .milestones h2 {
-      font-size: 40px;
-      font-weight: bold;
-      font-family: "Metamorphous";
-  
-    }
-     /* This section is for the horizontal stick thats suppose to connect to the circle placeholder images. This is as far as I have gotten but I can't seem to get it right. I can also copy and paste this code to the mobile phone section as well. */
-    
-    
      .milestone::before {
       content: "";
       position: absolute;
@@ -687,117 +448,34 @@ table {
       margin-bottom: 0.75rem;
     }
   
-  
-    /* Styling for the newsletter section */
-    .newsletter h3 {
-      font-size: 40px;
-    }
-
-    .newsletter {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
-  
-    /* Styling of footer for tablet */
-    .footer-container {
-        display: grid;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 2rem 2rem;
-        gap: 2rem 4rem;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto min-content;
-        grid-template-areas:
-        "contact_social links logo"
-        "legal legal legal";
-    }
-
-    .footer-logo {
-        grid-area: logo;
-        align-self: flex-start;
-        justify-self: flex-end;
-        position: static;
-        margin-top: 0;
-        top: auto;
-        order: unset;
-    }
-
-    .footer-contact {
-        grid-area: contact_social;
-        align-self: flex-start;
-        text-align: left;
-        order: unset;
-    }
-
-    .footer-links {
-        grid-area: links;
-        display: flex;
-        justify-content: flex-start;
-        text-align: left;
-        order: unset;
-    }
-
-    .footer-social-wrapper {
-        grid-area: contact_social;
-        align-self: flex-end;
-        justify-content: flex-start;
-        margin-bottom: 0.5rem;
-        margin-top: auto;
-        order: unset;
-    }
-
-    .footer-legal {
-        grid-area: legal;
-        text-align: left;
-        align-self: flex-start;
-        order: unset;
-        margin-top: 2rem;
-        
-    }
-
-    .link-column {
-        align-items: flex-start;
-    }
-  }
-
+}
   /* ========== Desktop ========== */
-@media screen and (min-width: 1158px) {
-    .nav-menu ul li a {
-        font-size: 1.5rem;
-    }
+@media screen and (min-width: 992px) {
 
-    .cart-icon,
-    .search-icon,
-    .user-icon {
-        width: 30px;
-        height: 30px;
+    .story-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
     }
-
+  
     .story-text {
-     margin-top: 3rem;
-     margin-left: 3rem;
-     
-     
+      grid-column: 1;
+      max-width: none;
+      
+  
     }
+  
+    .story-image-container {
+      grid-column: 2;
+      justify-self: center;
+    }
+
 
     .story-text p {
       font-size: 16px;
       font-family: "Roboto";
     }
 
-    .intro {
-      font-size: 32px;
-      font-family: "Roboto";
-    }
-
-    /* New CSS I added for the desktop for the three paragraph tags. */
-    
-
-    /* New CSS I added */
- 
-    .milestones h2 {
-     font-size: 40px;
-    }
 
     .milestone::before {
       content: "";
@@ -805,13 +483,13 @@ table {
       top: 50%;
       transform: translateY(-50%);
       height: 4px;
-      width: 400px;
+      width: 375px;
       background-color: #CFB383;
       z-index: 1;
     }
 
     .milestone:nth-child(odd)::before {
-      left: calc(50% - 400px);
+      left: calc(50% - 375px);
     }
 
     .milestone:nth-child(even)::before {
@@ -835,29 +513,5 @@ table {
       margin-top: 1rem;
     }
 
-    .newsletter h3 {
-        font-size: 40px;
-    }
 
-    .newsletter {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
- 
-    .footer-links {
-      display: flex;
-      gap: 4rem;
-      justify-content: flex-end;
-      margin-top: 2rem;
-      
-    }
-
-    .footer-social svg {
-        width: 40px;
-        height: 40px;
-    }
-
-    .link-column {
-        gap: 0.3rem;
-    }
  }

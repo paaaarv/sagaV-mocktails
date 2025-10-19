@@ -19,7 +19,7 @@ header {
 }
 
 .logo svg {
-  height: 2em;
+  height: 32px;
   width: auto;
 }
 
@@ -93,8 +93,8 @@ nav {
 }
 
 .mobile-menu a {
-  display: block;
   padding: 1rem;
+  font-size: 16px;
   color: #CFB482;
   font-weight: bold;
   text-decoration: none;
