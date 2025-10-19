@@ -26,15 +26,18 @@
 /* ========== GLOBAL/UTILITY STYLES ========== */
 body {
     font-family: var(--font-family-sans);
-    margin: 0;
+    max-width: 1400px; 
+    margin: 0 auto;
     padding: 0;
     line-height: 1.6;
-    background-color: var(--color-white); /* Default background */
+    background-color: var(--color-white);
+    min-width: 350px;  /* Default background */
 }
 
 /* Container for content width (adjust max-width as needed) */
 .container {
     max-width: 1200px;
+    min-width: 350px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -332,7 +335,11 @@ body {
     background-color: #ccc;
 }
 
-
+#carousel-buttons{
+    display: flex;
+    justify-content: space-around; 
+    margin: 20px 50px 50px; 
+}
 
 
 
