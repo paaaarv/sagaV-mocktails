@@ -68,21 +68,6 @@ const mocktailsArray = [
 ];
 
 
-// fetch newsletter and footer sections' 
-if (document.getElementById("newsletter")){
-  fetch('newsletter.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('newsletter').innerHTML = data;
-  });
-}
-fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-});
-
-
 // product grid home page 
 const createProductGrid = () => {
   for (let i=1; i <=2; i++){

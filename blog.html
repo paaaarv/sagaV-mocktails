@@ -31,9 +31,10 @@
 
 
   <!-- Stylesheet Link -->
-  <link rel="stylesheet" href="styles.css" />
-     <link rel="stylesheet" href="./styles/blog.css" />
-  <link rel="stylesheet" href="./styles/navigation.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/blog.css" />
+    <link rel="stylesheet" href="./styles/navigation.css" />
 </head>
 
 <body>
@@ -77,38 +78,9 @@
         </nav>
     </header>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" aria-label="Mobile navigation">
-    <a href="menu.html">Products</a>
-    <a href="team.html">About</a>
-    <a href="blog.html">Blog</a>
-    <a href="cart.html">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M7 4h-2l-1 2h2l3 7h8l3-7h2l-1-2h-2l-1 2h-8l-1-2z"/>
-            <circle cx="9" cy="20" r="2"/>
-            <circle cx="17" cy="20" r="2"/>
-      </svg>
-    </a>
-  </div>
-
-
-
-
   <!-- Main content -->
   <main id="main">
 
-    <!-- Hero section -->
-   <!-- <section class="hero">
-      <div class="container">
-        <h1>The Best Mocktails on the Block</h1>
-        <p class="hero-sub">Mocktails crafted with premium ingredients. 100% alcohol-free. 100% flavor-forward.</p>
-        <div class="cta-row">
-          <a href="/menu.html" class="button">Explore Menu</a>
-          <a href="/checkout.html" class="button button-ghost">Buy Now</a>
-        </div>
-      </div>
-    </section>
-  -->
     <!-- Product section -->
      <section class="heroic">
       <img src="Content\ContentTeam_Mocktail_V1-5.jpg">
@@ -119,148 +91,72 @@
         </div>
      </section>
 
-     <section class="mix-it-up">
-  <h2 class="mixU">Mix the Magic</h2>
-  <p class="mixUp">Craft Your Saga</p>
-  <p class="pargin">Step into the ritual of flavor. Here, you’ll find imaginative, alcohol-free recipes that awaken the bold spirit of our signature mixes. Whether you’re hosting a gathering or savoring a quiet moment of your own, each recipe becomes a story- an exploration of taste, play, and possibility. With all five elements- sweet, sour, salty, bitter, and umami- woven into the journey, these creations are anything but ordinary. Choose your glass, follow your curiosity, and let each sip unfold a chapter of your saga.</p>
+    <section class="mix-it-up">
+      <h2 class="mixU">Mix the Magic</h2>
+      <p class="mixUp">Craft Your Saga</p>
+      <p class="pargin">Step into the ritual of flavor. Here, you’ll find imaginative, alcohol-free recipes that awaken the bold spirit of our signature mixes. Whether you’re hosting a gathering or savoring a quiet moment of your own, each recipe becomes a story- an exploration of taste, play, and possibility. With all five elements- sweet, sour, salty, bitter, and umami- woven into the journey, these creations are anything but ordinary. Choose your glass, follow your curiosity, and let each sip unfold a chapter of your saga.</p>
+    </section>
 
-  <div class="scroll-wrapper">
-    <button class="scroll-btn left" aria-label="Scroll left">&lt;</button>
-
-    <div class="card-row" id="cardRow">
-      <!-- Repeat cards -->
-      <article class="recipe-card">
-        
-        <div class="image-placeholder">
-          <img src="assets\the-fool.jpg" alt="">
-        </div>
-        <h3>The Fool's Paradise</h3>
-        <p>A playful take on the Appletini, brimming with whimsy.</p>
-        <button>Learn More</button>
-      </article>
-      <article class="recipe-card">
-        <div class="image-placeholder">
-          <img src="assets\the-magician.jpg" alt="">
-        </div>
-        <h3>The Magician's Beard</h3>
-        <p>A bold, Negroni-inspired potion of depth and charm.</p>
-        <button>Learn More</button>
-      </article>
-      <article class="recipe-card">
-        <div class="image-placeholder">
-          <img src="assets\the-oracle.jpg" alt="">
-        </div>
-        <h3>Eye of the Oracle</h3>
-        <p>A visionary spin on the Bloody Mary, rich with insight.</p>
-        <button>Learn More</button>
-      </article>
-      <article class="recipe-card">
-        <div class="image-placeholder">
-          <img src="assets\the-siren.jpg" alt="">
-        </div>
-        <h3>The Sun-llini</h3>
-        <p>A radiant, peach-kissed twist on the Bellini.
-</p>
-        <button>Learn More</button>
-      </article>
-      <article class="recipe-card">
-        <div class="image-placeholder">
-          <img src="assets\the-sun.jpg" alt="">
-        </div>
-        <h3>The Siren Sunrise</h3>
-        <p>A savory reimagining of the Paloma, full of allure.</p>
-        <button>Learn More</button>
-       </article>
-      <!-- Add more cards as needed -->
-    </div>
-    <div class="carousel-nav">
-  <button onclick="initCarousel()" class="nav-arrow left" aria-label="Previous slide">&#8592;</button>
-  <div class="nav-dots">
-    <span class="dot"></span>
-    <span class="dot active"></span>
-    <span class="dot"></span>
-  </div>
-  <button onclick="initCarousel()" class="nav-arrow right" aria-label="Next slide">&#8594;</button>
-</div>
-    <!-- <button class="scroll-btn right" aria-label="Scroll right">&gt;</button> -->
-  </div>
-
-  <div class="pagination">
-    <span class="dot active"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-</section>
+            <div id="carousel-container">
+                <div id="inner-carousel-container">
+                  <article class="recipe-card">
+                    <div class="image-placeholder">
+                      <img src="assets/the-fool.jpg" alt="">
+                    </div>
+                    <h3>The Fool's Paradise</h3>
+                    <p>A playful take on the Appletini, brimming with whimsy.</p>
+                    <button>Learn More</button>
+                  </article>
+                  <article class="recipe-card">
+                    <div class="image-placeholder">
+                      <img src="assets/the-magician.jpg" alt="">
+                    </div>
+                    <h3>The Magician's Beard</h3>
+                    <p>A bold, Negroni-inspired potion of depth and charm."</p>
+                    <button>Learn More</button>
+                  </article>
+                  <article class="recipe-card">
+                    <div class="image-placeholder">
+                      <img src="assets/the-oracle.jpg" alt="">
+                    </div>
+                    <h3>The Eye of the Oracle</h3>
+                    <p>A visionary spin on the Bloody Mary, rich with insight.</p>
+                    <button>Learn More</button>
+                  </article>
+                  <article class="recipe-card">
+                    <div class="image-placeholder">
+                      <img src="assets/the-sun.jpg" alt="">
+                    </div>
+                    <h3>The Sunllini</h3>
+                    <p>A radiant, peach-kissed twist on the Bellini.</p>
+                    <button>Learn More</button>
+                  </article>
+                  <article class="recipe-card">
+                    <div class="image-placeholder">
+                      <img src="assets/the-siren.jpg" alt="">
+                    </div>
+                    <h3>The Siren's Sunrise</h3>
+                    <p>A savory reimagining of the Paloma, full of allure.</p>
+                    <button>Learn More</button>
+                  </article>
+                </div>
+                <button id="prev-btn"  class="nav-arrow left" aria-label="Previous slide">&#8592;</button>
+                <button id="next-btn" class="nav-arrow right" aria-label="Next slide">&#8594;</button>
+            </div>
+        <!-- <button class="scroll-btn right" aria-label="Scroll right">&gt;</button> -->
+  </main>
 
 <!-- Newsletter Signup -->
- <section id="newsletter">
-   
- </section>
-</main>
 
-  <footer id="footer">
-    
-  </footer>
 
-  <script src="script.js" defer></script>
-  <script>
-function initCarousel() {
-  const cardRow = document.getElementById("cardRow");
-  const cards = document.querySelectorAll(".recipe-card");
-  const navLeft = document.querySelector(".nav-arrow.left");
-  const navRight = document.querySelector(".nav-arrow.right");
-  const dots = document.querySelectorAll(".pagination .dot");
 
-  const cardWidth = cards[0].offsetWidth;
-  const gap = 16; // adjust if needed
-  const scrollAmount = cardWidth + gap;
 
-  let currentIndex = 0;
-  const maxIndex = cards.length - 1;
 
-  function updateScroll() {
-    cardRow.scrollTo({
-      left: currentIndex * scrollAmount,
-      behavior: "smooth"
-    });
-    updateDots();
-  }
-
-  function updateDots() {
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === currentIndex);
-    });
-  }
-
-  navLeft.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateScroll();
-    }
-  });
-
-  navRight.addEventListener("click", () => {
-    if (currentIndex < maxIndex) {
-      currentIndex++;
-      updateScroll();
-    }
-  });
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      currentIndex = i;
-      updateScroll();
-    });
-  });
-
-  // Optional: initialize scroll position
-  updateScroll();
-}
-
-// Run it once DOM is ready
-document.addEventListener("DOMContentLoaded", initCarousel);
-</script>
-
-  </main>
+  <script src="https://kit.fontawesome.com/982a1daf20.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="/scripts/blog.js"></script>
+  <script src="script.js"></script>
   </body>
   </html>
