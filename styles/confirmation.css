@@ -85,8 +85,9 @@ table {
 
 /* ========== GLOBAL (mobile) Base ========== */
 body {
-  background-size: cover;
-  height: 100vh;
+  margin: auto; 
+  max-width: 1400px; 
+  min-width: 350px;
   color: var(--text);
   font-family: var(--font-sans);
   font-size: var(--font-size-0);
@@ -113,17 +114,24 @@ body {
 /* Buttons */
 .button {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
+  justify-self: flex-end; 
+  margin: 20px;
+  white-space: nowrap;
   gap: 0.5rem;
   padding: 0.75rem 1rem;
-  border-radius: 999px;
+  border-radius: 20px;
   border: 1px solid var(--line);
-  background: var(--elev);
-  color: var(--accent-strong);
+  background-color: #9C704C;
   text-decoration: none;
+  font-family:"Metamorphous", serif; 
   font-weight: 600;
+  font-size: 1.25em;
   box-shadow: var(--shadow);
+}
+
+.button a{
+  color: #172754
 }
 .button:hover { filter: brightness(1.05); }
 .button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
@@ -249,91 +257,6 @@ body {
 }
 
 /* ========== Mobile (iPhone 14/15) ========== */
-/* Confirmation Page */
-@media screen and (max-width: 430px) {
-  body{
-    background-image: url("Content/background-2.png") no-repeat center fixed !important;
-    background-size: cover;
-  }
-
-  .progress-tracker{
-    display: flex !important;
-  }
-
-  .progress-tracker p{
-    color: #CFB383 !important;
-    font-size: 20px !important;
-  }
-
-  .progress-tracker .circle{
-    background-color: #CFB383;
-    border: #CFB383;
-  }
-
-  .left-right {
-    display: block;
-    margin: 0;
-    padding: 10px;
-  }
-
-  .left, .order-updates, .big-box, .contact {
-    width: 100% !important;
-    max-width: 100%;
-    height: auto;
-    padding: 15px;
-  }
-
-  .order-header svg {
-    width: 80px;
-    height: auto;
-  }
-
-
-  .order-updates h2 {
-    font-size: 20px;
-  }
-
-  .order-updates p {
-    font-size: 14px;
-  }
-
-  .big-box {
-    display: block;
-    width: 100% !important;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  .contact {
-    grid-template-columns: 1fr;
-    font-size: 14px;
-  }
-
-  .contact p {
-    font-size: 14px;
-  }
-
-
-  .left .btn {
-    width: 100% !important;
-    padding: 15px;
-    font-size: 18px;
-    margin: 20px 0;
-  }
-
-  .right {
-    display: none;
-  }
-
-  .site-header{
-    width: 700px;
-  }
-
-  footer{
-    width: 700px;
-    margin-top: 400px;
-  }
-}
 
 /* ========== Media Queries ========== */
 
@@ -390,7 +313,7 @@ small{
 
 .left-right h1{
   font-weight: bold;
-  font-size: 2em;
+  font-size: 28px;
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
@@ -399,7 +322,7 @@ small{
 
 .order-updates{
   border: 2px solid #CFB482;
-  margin: 20px auto;
+  margin: 10px auto;
   padding: 20px;
   border-radius: 13px;
 }
@@ -424,18 +347,16 @@ small{
 }
 
 #confirmation-img{
-  height: 5rem; 
+  height: auto; 
+  width: 100%; 
   flex-shrink: 0; 
   border-radius: 13px; 
   border: 2px solid #CFB482;
 }
 .contact{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
+  margin: 10px auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  row-gap: 10px;
   flex-shrink: 0;
   border-radius: 13px;
   border: 2px solid #CFB482;
@@ -447,6 +368,9 @@ small{
   font-style: normal;
   font-weight: 400;
   line-height: 140.625%;
+  font-size: 14px;
+  border-bottom: 2px solid var(--text);
+  padding: 20px;
 
 }
 
@@ -454,7 +378,7 @@ small{
 
 .right h2{
   font-weight: bold;
-  font-size: 25px;
+  font-size: 24px;
   font-family: Metamorphous;
   font-style: normal;
   font-weight: 400;
@@ -529,6 +453,7 @@ strong{
 .total{
   border: 1px solid var(--text) !important;
   padding: 10px;
+  margin-top: 4em;
   display: flex; 
   justify-content: space-between;
   align-content: center;
@@ -576,6 +501,7 @@ strong{
   display: flex; 
   flex-wrap: nowrap; 
   margin-bottom: 10px;
+  align-items: center;
 }
 .order-header{
   display: flex;
@@ -601,15 +527,11 @@ strong{
 }
 
 .contact p:nth-of-type(even) {
-  border-bottom: 2px solid var(--text);
-  padding-bottom: 8px;
   grid-column: 2;
 }
 
 .contact p:nth-of-type(odd) {
   font-size: 16px; 
-  border-bottom: 2px solid var(--text);
-  padding-bottom: 8px;
   grid-column: 1;
 }
 
@@ -620,4 +542,71 @@ strong{
 
 .progress-tracker{
   display: none;
+}
+
+
+
+/* Confirmation Page */
+@media screen and (max-width: 768px) {
+  body{
+    background-image: url("Content/background-2.png") no-repeat center fixed !important;
+    background-size: cover;
+  }
+
+  .left-right {
+    grid-template-columns: 1fr;
+  }
+  .right{
+    display: none; 
+  }
+  .left, .order-updates, .big-box, .contact {
+    width: 100% !important;
+    max-width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .order-header svg {
+    width: 80px;
+    height: auto;
+  }
+
+
+  .order-updates h2 {
+    font-size: 20px;
+  }
+
+  .order-updates p {
+    font-size: 14px;
+  }
+
+  .big-box {
+    display: block;
+    width: 100% !important;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    font-size: 14px;
+  }
+
+
+
+  .left .btn {
+    width: 100% !important;
+    padding: 15px;
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  .site-header{
+    width: 700px;
+  }
+
+  footer{
+    width: 700px;
+    margin-top: 400px;
+  }
 }
