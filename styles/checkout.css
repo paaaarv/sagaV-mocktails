@@ -31,6 +31,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  margin: auto; 
+  max-width: 1400px; 
+  min-width: 350px;
 }
 ol, ul {
 	list-style: none;
@@ -102,20 +105,29 @@ nav a{
   color: var(--gold);
 }
 /*==== Back to Cart ====*/
+.back-to-cart {
+    margin: 30px 0 0 30px;
+    display: flex; 
+    width: 150px; 
+    align-items: center; 
+    font-size: 14px;
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    background-color: var(--bronze); 
+    padding: 10px;
+    white-space:nowrap;
+}
 .back-to-cart a{
   text-decoration: none;
-  color: var(--gold);
-    font-size: 1.25em;
-    position: relative;
-    right: 0px;
-    bottom: 8px;
+  color: var(--bg);
+  font-family: "Metamorphous", serif; 
+  font-weight: bold;
+  margin-left: 5px;
 }
-
 .checkout-page{
   display: flex;
   flex-direction: row;
   padding: 2em;
-  width: 85%; 
   margin: auto; 
 }
 
@@ -417,7 +429,7 @@ input#bill-address-no{
 
 
 /* ========== Tablet ========== */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 992px){
   .mobile-hide{
     display: none;
   }
