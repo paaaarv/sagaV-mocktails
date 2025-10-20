@@ -13,6 +13,7 @@
 
 #order-summary {
     flex: 0 0 32%;
+    height: auto;
 }
 
 
@@ -49,14 +50,10 @@ hr {
 }
 
 #your-cart {
-    width: 65%;
+    width: 75%;
     padding-bottom: 100px;
 }
 
-#order-summary {
-    width: 35%;
-    height: 50%;
-}
 
 .cart-item {
     display: flex;
@@ -124,10 +121,9 @@ hr {
 #order-summary {
     background: var(--figma-dark);
     border: 1px solid var(--figma-gold);
-    padding: 2rem 2rem 5rem;
+    padding: 2em;
     border-radius: 16px;
     color: var(--figma-gold);
-    flex: 1 1 45%;
 }
 
 /* Title */
@@ -261,10 +257,7 @@ hr {
     font-size: 25px; 
 }
 
-#order-summary {
-    flex: 0 32%;
-    min-width: 0;
-}
+
 
 #order-summary h4, .summary-row h4{
     font-size: 1.1em; 
