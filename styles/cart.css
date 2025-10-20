@@ -205,7 +205,6 @@ hr {
     margin-top: 1.5rem;
     padding: 0.75rem 1rem;
     background: var(--figma-bronze); /* #9C704C */
-    color: var(--figma-dark); /* #252230 */
     border: 1px solid var(--figma-gold);
     border-radius: 12px;
     font-family: 'Metamorphous', serif;
@@ -216,6 +215,9 @@ hr {
     transition: background 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     line-height: 1; 
+}
+.checkout-btn a{
+    color: var(--figma-dark); 
 }
 
     .checkout-btn:hover {

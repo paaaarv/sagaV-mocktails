@@ -58,7 +58,9 @@ const showOrderSummary = () => {
                 <div class="summary-row">
                    <h4>Total: </h4><span>$${total}</span> 
                 </div>
-                <button class="checkout-btn">Checkout</button>
+                <div class="checkout-btn">
+                <a href="/checkout.html">Checkout</a>
+                </div>
             </div>`
 
         )
@@ -78,7 +80,9 @@ const showOrderSummary = () => {
                         <div class="summary-row">
                             <h4>Total: </h4><span>$${total}</span> 
                         </div>
-                        <button class="checkout-btn">Place Order</button>
+                        <div class="checkout-btn">
+                        <a href="/confirmation.html">Place Order</a>
+                        </div>
                 </div>
             </div>`
         )

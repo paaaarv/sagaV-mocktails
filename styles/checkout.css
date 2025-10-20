@@ -117,7 +117,12 @@ nav a{
     padding: 10px;
     white-space:nowrap;
 }
+  .back-to-cart:hover {
+        background: var(--gold); 
+        color: var(--bg);
+  }
 .back-to-cart a{
+  width: 100%;
   text-decoration: none;
   color: var(--bg);
   font-family: "Metamorphous", serif; 
