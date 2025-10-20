@@ -2,9 +2,9 @@ h4{
     text-transform: uppercase; 
 }
 .hero{
-    height: 80vh; 
+    min-height: 80vh; 
     display: flex; 
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 .heading{
     width: 50%;
@@ -15,13 +15,21 @@ h4{
 #product-page-button{
     width: 40%; 
     border: 1px solid black; 
-    border-radius: 30px; 
-    background-color: grey; 
+    border-radius: 25px; 
+    background-color: #1b2030;
+    color: #cfb482;   
     padding: 10px;
+    cursor: pointer;
+    font-weight: bold; 
+    box-shadow: 0 4px 6px rgba(42, 39, 53, 0.5);
 }
 #header-img-container{
     position: relative; 
     width: 30%;
+}
+#product-page-button:hover {
+  background-color: #cfb482;
+  color: #1b2030; 
 }
 
 #circle-header-img, #polygon-header-img{
@@ -77,6 +85,7 @@ h4{
 }
 #ingredients h3{
     text-transform: uppercase;
+    font-size: 1.25em; 
 }
 
 #ingredients-container{
@@ -102,10 +111,34 @@ h4{
   grid-template-columns: 4fr 5fr;
 }
 
+/* Blog Section */
+#blog-highlight {
+    padding: 25px 0;
+    text-align: center;
+    background-color: #FEF3C7;
+}
+#blog-highlight h3 { 
+    padding: 20px; 
+    font-size: 1.75em; 
+    margin-bottom: 0;
+
+}
+#blog-highlight h4{
+    font-size: 1.5em; 
+    font-family: "Metamorphous", serif;
+}
+
+#blog-highlight .carousel img {
+  border-radius: var(--r);
+  max-height: 250px;
+  object-fit: cover;
+  margin: 10px;
+}
+
 #carousel{
-    background-color: grey; 
     width: 100%; 
     text-align: center;
+    padding: 100px;
 }
 #photo-container{
     margin: 20px auto;
@@ -127,16 +160,33 @@ h4{
   text-align: center;
   padding: 6em 50px 1em;
   margin: 0 auto 1em ; 
-  width: 70%; 
+  width: 90%; 
 }
 #catchphrase h2 {
     margin: 50px auto;
-  font-size: var(--font-size-3);
-  color: #6a4c3d;
+    font-size: 2em;
+    color: #6a4c3d;
+}
+#catchphrase p{
+    font-weight: bold;
+    font-size: 1.25em;
 }
 
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 700px){
+    .heading{
+        font-size: 1em; 
+        width: auto; 
+        margin: 0 2em;
+        justify-content: center; 
+    }
+    .heading p{
+        font-size: 1em; 
+        margin-bottom: 2em; 
+    }
+    #product-page-button{
+        width: 70%;
+    }
 
     #circle-header-img{
     right: 15%; 

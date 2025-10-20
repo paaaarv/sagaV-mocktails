@@ -177,18 +177,6 @@ time, mark, audio, video {
 #summary-about, #cart-div { flex: 1; }
 #cart-div img { max-width: 300px; border-radius: 50%; }
 
-/* Blog Section */
-#blog-highlight {
-  padding: var(--space-6) 5%;
-  text-align: center;
-}
-#blog-highlight h3 { margin-bottom: var(--space-4); }
-#blog-highlight .carousel img {
-  border-radius: var(--r);
-  max-height: 400px;
-  object-fit: cover;
-}
-
 /* Extra icon grid and fullscreen image */
 #photo-container {
   display: grid;
@@ -347,7 +335,6 @@ body {
 /* Tarot Card Section */
 #tarot-cards {
   background: black; 
-  padding: var(--space-6) 5%;
   text-align: center;
 }
 
@@ -487,8 +474,13 @@ table {
 }
 
 /* ========== GLOBAL (mobile) Base ========== */
+html{
+  background-color: #FEF3C7;
+}
+
 body {
-  max-width: 1500px; 
+  max-width: 1400px; 
+  min-width: 350px;
   margin: auto;
   color: var(--bg);
   font-family: var(--font-sans);
@@ -727,30 +719,17 @@ hr {
   color: #000;
 }
 .hero h1 {
-  font-size: var(--font-size-2.75);
+  font-size: 2em;
   margin-bottom: var(--space-2);
 }
 
 .hero-sub {
   font-size: var(--font-size-1);
   color: var(--muted);
+  font-weight: bold;
   margin-bottom: var(--space-4);
 }
 
-#product-page-button {
-  background: #1b2030;   
-  color: #cfb482;       
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-#product-page-button:hover {
-  background: #111;
-}
 
 /* Hero image container */
 #header-img-container {
@@ -951,7 +930,7 @@ hr {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  max-width: 60%;
   height: 100%;
   padding: 1em;
   background: #1a2735; /* dark blue overlay */
