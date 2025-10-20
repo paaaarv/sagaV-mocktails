@@ -125,8 +125,8 @@ document.addEventListener('DOMContentLoaded', function(){
                 <p> $${product.price} </p>
               </span>
               <div class="card-controls">
-                <button class="shop-btn card-btn" data-mocktail=${product.id} >Buy Now</button>
-                <button id="view-mocktail${product.id}" class="card-btn view-product" data-mocktail=${product.id} >View Product</button>
+                <button class="shop-btn card-btn" data-mocktail=${product.id} >Add to Cart</button>
+                <button id="view-mocktail${product.id}" class="card-btn view-product" data-mocktail=${product.id} >View More</button>
               </div>
             </div>
           </article>`

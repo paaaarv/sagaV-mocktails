@@ -1076,11 +1076,6 @@ hr {
   height: auto;
   width: 100%;
 }
-
-.card-top {
-  border-bottom: 1px solid black;
-}
-
 .card-btn {
   background-color: white;
   color: black;

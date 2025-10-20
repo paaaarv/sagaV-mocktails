@@ -26,6 +26,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  margin: auto; 
+  max-width: 1400px;
 }
 
 ol, ul {
@@ -88,7 +90,7 @@ main {
   display: inline;
   font-family: var(--ff-metamorphos);
   color: #CFB383;
-  font-size: 4rem;
+  font-size: 3em;
 }
 
 #products {
@@ -125,9 +127,13 @@ main {
   background-color: var(--oracle);
 }
 
+.card-top{
+  text-align: center;
+}
+
 .card-img {
-  height: auto;
-  width: 100%;
+  height: auto; 
+  width: 90%; 
 }
 
 .card-body {
@@ -136,38 +142,40 @@ main {
     flex-direction: column;
     justify-content: space-between;
     padding: 0;
-    gap: 3rem;
+    gap: 2em;
     padding: 1rem;
+    white-space: nowrap;
 }
 
 .card button {
-  padding: 0.75rem 1rem;
   margin: 0;
-  width: 50%;
   text-decoration: none;
   text-align: center;
   display: inline-block;
+  font-size: 14px
 }
 
-.card-top {
-  border-bottom: 3px solid #CFB383;
-}
+
 
 .card-controls {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5em;
 }
 
 .card-detail {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: baseline; 
     margin-top: 1rem;
     font-weight: bold;
 }
 
+.card-detail p{
+  font-size: 1.25em; 
+}
 
 .card-btn {
   border-radius: 8px;
@@ -176,6 +184,8 @@ main {
   cursor: pointer;
   color: black;
   border: 1px solid #CFB383;
+  width: 60%;
+  white-space: nowrap;
 }
 
 .card:first-of-type button {
@@ -203,16 +213,23 @@ main {
   color: var(--btn-accent);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     #products {
       grid-template-columns: repeat(2, 1fr);
     }
+    .card-body{
+      padding: 0;
+    }
+    .card-details{
+    padding: 0 20px;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #products {
       grid-template-columns: repeat(1, 1fr);
     }
+    
 }
 
 /* Modal Styles */
@@ -265,7 +282,7 @@ main {
 
 h3 {
     text-align: left;
-    font-size: 2rem;
+    font-size: 1.5em;
     font-weight: bold;
     font-family: var(--ff-metamorphos);
 }
